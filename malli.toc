@@ -1,0 +1,13 @@
+\select@language {finnish}
+\contentsline {section}{\numberline {1}Johdanto}{1}
+\contentsline {section}{\numberline {2}Arkkitehtuurityylien perusideat ja roolijako}{2}
+\contentsline {section}{\numberline {3}Yleisarkkitehtuuri ja keskeisimm\"at variaatiopisteet}{3}
+\contentsline {subsection}{\numberline {3.1}Yleiskuva kehysrakenteesta}{3}
+\contentsline {subsection}{\numberline {3.2}Kehyksen erikoistaminen sovelluskohtaisesti}{3}
+\contentsline {subsection}{\numberline {3.3}Suunnittelumallit}{3}
+\contentsline {subsection}{\numberline {3.4}Esimerkkitapaukset}{3}
+\contentsline {section}{\numberline {4}Kehyksen ja sovelluksen arviointi}{4}
+\contentsline {subsection}{\numberline {4.1}Hyv\"at ja huonot puolet}{4}
+\contentsline {subsection}{\numberline {4.2}Laatuskenaariot}{4}
+\contentsline {subsection}{\numberline {4.3}ATAM}{4}
+\contentsline {section}{L\"ahteet}{5}

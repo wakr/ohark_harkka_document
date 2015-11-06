@@ -1,0 +1,21 @@
+\begin{thebibliography}{EMNV01}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\input babelbst.tex
+\newcommand{\Capitalize}[1]{\uppercase{#1}}
+\newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
+
+\bibitem[BPS98]{bray}
+Bray, T., Paoli, J. \bbland{} Sperberg-McQueen, C., {Extensible Markup Language
+  (XML) 1.0. W3C Recommendation 10-February-1998}.
+\newblock \url{http://www.w3.org/TR/1998/REC-xml-19980210}.
+\newblock [18.1.2000]
+
+\bibitem[EMN01]{erkio01}
+Erkiö, H., Mäkelä, M., Nykänen, M. \bbland{} Verkamo, I., Opinnäytetyön
+  ulkoasun malli.
+\newblock Tieteellisen kirjoittamisen kurssiin liittyvä julkaisematon moniste,
+  Tietojenkäsittelyopin laitos, Helsinki, 2001.
+
+\end{thebibliography}
