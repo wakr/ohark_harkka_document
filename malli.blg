@@ -4,44 +4,47 @@ The top-level auxiliary file: malli.aux
 The style file: tktl.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: lahteet.bib
-You've used 2 entries,
+Warning--to sort, need author or key in yandex
+Warning--empty author in yandex
+You've used 3 entries,
             3861 wiz_defined-function locations,
-            749 strings with 6197 characters,
-and the built_in function-call counts, 833 in all, are:
-= -- 80
-> -- 54
+            754 strings with 6278 characters,
+and the built_in function-call counts, 1074 in all, are:
+= -- 105
+> -- 55
 < -- 0
 + -- 21
 - -- 21
-* -- 58
-:= -- 154
-add.period$ -- 4
-call.type$ -- 2
-change.case$ -- 16
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 25
-empty$ -- 48
+* -- 75
+:= -- 184
+add.period$ -- 6
+call.type$ -- 3
+change.case$ -- 20
+chr.to.int$ -- 3
+cite$ -- 6
+duplicate$ -- 36
+empty$ -- 76
 format.name$ -- 25
-if$ -- 157
+if$ -- 212
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 18
+newline$ -- 23
 num.names$ -- 6
-pop$ -- 18
+pop$ -- 26
 preamble$ -- 1
-purify$ -- 17
+purify$ -- 22
 quote$ -- 0
-skip$ -- 27
+skip$ -- 38
 stack$ -- 0
-substring$ -- 14
+substring$ -- 22
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
-warning$ -- 0
+type$ -- 30
+warning$ -- 2
 while$ -- 6
-width$ -- 3
-write$ -- 33
+width$ -- 5
+write$ -- 44
+(There were 2 warnings)

@@ -26,10 +26,54 @@ I.7.m [Document and text processing]}}
 % PDF --> BIB --> PDF --> PDF -- VIEW
 
 \section{Johdanto}
+Tämän harjoitustyön tarkoituksena on tarkastella Ruby on Rails -web sovelluskehystä ja varsinkin sen arkkitehtuuria tekemäni esimerkkisovelluksen kautta. Tekemäni esimerkkisovellus on yksinkertainen Internetissä oleva käännössivusto, jonka avulla käyttäjä pystyy kääntämään kolmen eri kielen välillä; suomen, englannin ja ruotsin. Itse sivusto on erittäin yksinkertainen eikä toiminnallisuutta ole hirveästi kääntämisen lisäksi, vaan itse keskittyminen tapahtuu sovelluksen pinnan alle kuten arkkitehtuurisiin ratkaisuihin joita Ruby on Rail-kehys tuo mukanaan. 
+
+
+\subsection{Translator}
+Sovellukseneeni viittaan tästä alkaen nimellä \textit{Translator}. 
+
+Translatorin pääidea on siis nimensä mukaisesta kääntää kieleltä toiselle. Käännöksen logiikka hoidetaan ulkopuolista API:a käyttäen \cite{yandex}, joka hoitaa käytännössä kääntämisen sovelluslogiikan. Seuraavassa esitettävä kuvasarja esittää kääntämisen käyttäjän näkökulmasta.
+
+\vfill
+
+\begin{figure}[ht]
+\begin{center}
+\fbox{\includegraphics[width=1\textwidth]{images/ennen_kaannosta.png}}
+\caption{Käyttäjä haluaa kääntää tämän lauseen suomesta englantiin. Osoite: /}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\fbox{\includegraphics[width=1\textwidth]{images/kaannoksen_jalkeen.png}}
+\caption{Uudelleenohjataan selain näyttämään tulos. Osoite: /translations/:id}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\fbox{\includegraphics[width=1\textwidth]{images/kaikkien_listaus.png}}
+\caption{Käyttäjä on navigoinut itsensä kaikkien käännöksien sivulle klikkaamalla linkkiä pääsivulla (linkki on tallennettujen käännöksien määrä). Osoite: /translations.}
+\end{center}
+\end{figure}
+
+\vfill
+\clearpage
+
+
+Edellinen kuvasarja eteni käyttäjän selaimessa seuraavasti: 
+
+root (/)  $\rightarrow$ tallennettu käännös (/translations/:id, jossa :id korvautuu tietokantaan tallennetun tietueen id:llä) $\rightarrow$ root(/) $\rightarrow$ kaikki käännökset (/translations). 
+
+
+
+\subsection{Ruby on Rails}
+ 
+
 Hello \cite{erkio01}.
 \newpage
 
-\section{Arkkitehtuurityylien perusideat ja roolijako}
+\section{Arkkitehtuuri}
 Roolijako here
 \newpage
 

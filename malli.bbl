@@ -18,4 +18,9 @@ Erkiö, H., Mäkelä, M., Nykänen, M. \bbland{} Verkamo, I., Opinnäytetyön
 \newblock Tieteellisen kirjoittamisen kurssiin liittyvä julkaisematon moniste,
   Tietojenkäsittelyopin laitos, Helsinki, 2001.
 
+\bibitem[YANDEX]{yandex}
+{Yandex - Translator API}.
+\newblock \url{https://tech.yandex.com/translate/}.
+\newblock [07.11.2015]
+
 \end{thebibliography}
