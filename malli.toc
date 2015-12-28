@@ -2,14 +2,17 @@
 \contentsline {section}{\numberline {1}Johdanto}{1}
 \contentsline {subsection}{\numberline {1.1}Translator}{1}
 \contentsline {subsection}{\numberline {1.2}Ruby on Rails}{3}
-\contentsline {section}{\numberline {2}Arkkitehtuuri}{4}
-\contentsline {section}{\numberline {3}Yleisarkkitehtuuri ja keskeisimm\"at variaatiopisteet}{5}
-\contentsline {subsection}{\numberline {3.1}Yleiskuva kehysrakenteesta}{5}
-\contentsline {subsection}{\numberline {3.2}Kehyksen erikoistaminen sovelluskohtaisesti}{5}
-\contentsline {subsection}{\numberline {3.3}Suunnittelumallit}{5}
-\contentsline {subsection}{\numberline {3.4}Esimerkkitapaukset}{5}
-\contentsline {section}{\numberline {4}Kehyksen ja sovelluksen arviointi}{6}
-\contentsline {subsection}{\numberline {4.1}Hyv\"at ja huonot puolet}{6}
-\contentsline {subsection}{\numberline {4.2}Laatuskenaariot}{6}
-\contentsline {subsection}{\numberline {4.3}ATAM}{6}
-\contentsline {section}{L\"ahteet}{7}
+\contentsline {paragraph}{MVC-malli}{3}
+\contentsline {paragraph}{REST-rajapinta}{4}
+\contentsline {paragraph}{Konventiot}{5}
+\contentsline {section}{\numberline {2}Arkkitehtuuri}{6}
+\contentsline {section}{\numberline {3}Yleisarkkitehtuuri ja keskeisimm\"at variaatiopisteet}{7}
+\contentsline {subsection}{\numberline {3.1}Yleiskuva kehysrakenteesta}{7}
+\contentsline {subsection}{\numberline {3.2}Kehyksen erikoistaminen sovelluskohtaisesti}{7}
+\contentsline {subsection}{\numberline {3.3}Suunnittelumallit}{7}
+\contentsline {subsection}{\numberline {3.4}Esimerkkitapaukset}{7}
+\contentsline {section}{\numberline {4}Kehyksen ja sovelluksen arviointi}{8}
+\contentsline {subsection}{\numberline {4.1}Hyv\"at ja huonot puolet}{8}
+\contentsline {subsection}{\numberline {4.2}Laatuskenaariot}{8}
+\contentsline {subsection}{\numberline {4.3}ATAM}{8}
+\contentsline {section}{L\"ahteet}{9}

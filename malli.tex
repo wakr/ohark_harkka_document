@@ -2,12 +2,49 @@
 \usepackage[pdftex]{graphicx}
 \usepackage{subfigure}
 \usepackage{url}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Ruby,                 % the language of the code
+  otherkeywords={*,...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+}
+
+
 \begin{document}
 %\doublespacing
 %\singlespacing
 \onehalfspacing
 
-\title{Ruby on Rails -sovelluskehys: case: Translator}
+
+
+\title{Ruby on Rails -sovelluskehys; case: Translator}
 \author{Kristian Wahlroos - 014417003}
 \date{\today}
 
@@ -61,20 +98,80 @@ Translatorin pääidea on siis nimensä mukaisesta kääntää kieleltä toiselle. Käänn
 \clearpage
 
 
-Edellinen kuvasarja eteni käyttäjän selaimessa seuraavasti: 
+Edellinen kuvasarja eteni siis käyttäjän selaimessa seuraavasti: 
 
-root (/)  $\rightarrow$ tallennettu käännös (/translations/:id, jossa :id korvautuu tietokantaan tallennetun tietueen id:llä) $\rightarrow$ root(/) $\rightarrow$ kaikki käännökset (/translations). 
+Root (/)  $\rightarrow$ tallennettu käännös (/translations/:id, jossa :id korvautuu tietokantaan tallennetun tietueen id:llä) $\rightarrow$ root (/) $\rightarrow$ kaikki käännökset (/translations). 
 
 
 
 \subsection{Ruby on Rails}
  
+Ruby on Rails on itsessään sovelluskehys, joka on luotu vuonna 2003 David Heinemeier Hansson toimesta \cite{ror}. Sen näkyvimpiä ominaisuuksia ovat MVC-malli, REST-rajapinnat sekä Convention over Configuration -periaate. Nämä kaikki patternit tulevat esille käytännössä kaikissa Ruby on Rails -kehyksellä tuotetuissa projekteissa ja moni tunteekin kehyksen juuri näistä edellä mainituista laatuvivuista, joita kehyksen käyttö melko automaattisesti tuo mukanaan. 
 
-Hello \cite{erkio01}.
+\paragraph{MVC-malli}
+Ruby on Rails:n Modelina toimii ActiveRecordissa säilytettävät tietokantaobjektit. ActiveRecord huolehtii käytännössä koko toteutettavan järjestelmän logiikasta ja abstrahoi vahvan rajapinnan avulla konkreettista tietokantaa niin, että kehittäjän on helppo vaihtaa tietokanta sekä luoda uusia tietokantaobjekteja. 
+
+ActiveRecord itsessään toteuttaa Active Record-patternin \cite{ar}, joka määrittelee, että miten luokat ja tietokanta kuvautuu toisillensa. Rubyssä tämä kuvautuminen on tehty niin, että tietokannan tietue on aina luokka ja taulut luokan kenttiä. Luokkien metodeilla usein muutetaankin vain ja ainoastaan tietokantataulun rivejä, jolloin olion sisäinen tila muuttuu. Luomassani projektissa uuden käännöksen ja sen tallentaminen tietokantaan on hyvin yksinkertaista tämän vuoksi, eikä kehittäjän tarvitse tietää, että taustalla pyörii SQLite tietokantana: 
+\newline
+\lstset{language=Ruby}  
+\begin{lstlisting}[frame=single]  % Start your code-block
+""
+t = Translation.new
+***
+kenttien alustus
+***
+t.save
+\end{lstlisting}
+
+ActiveRecordin avulla myös suorat tietokantakyselyt on abstrahoitu pois. Kyselyt toimivat aina luokan nimen kautta, jolloin esimerkiksi omassa sovelluksessani kaikki suomesta käännetyt käännökset löytyvät seuraavasti: 
+\newline
+\lstset{language=Ruby}  
+\begin{lstlisting}[frame=single]  % Start your code-block
+""
+Translation.all.where language_from: "fi"
+\end{lstlisting}
+
+
+Viewin vastuuta Ruby on Railsissä hoitaa ActionView, joka on näkymä tietokannan datalle. Kaikessa yksinkertaisuudessaan siis näytettävä HTML-sivu käyttäjälle. Se ladataan Controllerin toimesta oikeasta kansiosta oikealla hetkellä ja usein HTML-tiedosto sisältääkin upotettua Ruby-koodia. Tämä Ruby-koodi on suurimmaksi osaksi toiminnallisuutta näyttää vastaavan mallin tietoja HTML-muodossa. Esimerkiksi sovellukseni kaikki tehdyt käännökset näyttävä sivu on suurimmaksi osaksi upotettua Ruby-koodia, joka iteroi tietokannan kaikki käännökset ja hakee niiden tietokantataulut taulukkoon näytettäväksi dataksi. 
+
+Controlleria kutsutaan ActionController:ksi Ruby on Railsissa ja se vastaa koko järjestelmään kohdistuvien pyyntöjen reitittämisestä sekä yleisestä datan välityksestä. Omassa järjestelmässäni TranslationController vastaa kaikesta käännöksiin liittyvästä toiminnallisuudesta, kuten esimerkiksi aloitussivun näyttämisen logiikasta. Railsissa konventiot tulevatkin vahvasti esille, koska Translation-luokasta vastaavan kontrollerin on oltava samanniminen kuin luokkakin, mutta monikossa (englannin s-päätteellä). Tähän kontrolleriin on myös kirjoitettu kaikki mahdolliset toiminnot, joita mallille on mahdollista tehdä ja näiden avulla rakennetaan myös näkymät.
+
+\paragraph{REST-rajapinta}
+
+Koko Ruby on Railsin käyttöönotto ja sen konventioiden noudattaminen tekee toteutettavasta järjestelmästä melkein pakostikkin REST-rajapintaa noudattavan järjestelmän, koska useat konventiot ovat pakollisia käyttää ja vaikka niiden kiertäminen on teknisesti mahdollista, on usein vain helpompi alistua valmiiksi määriteltyihin konventioihin. Esimerkiksi luodessani Translation-mallia, oli minun pakko luoda TranslationsController-kontrolleri, mutta ennen niiden linkittämistä on tiedostoon /config/routes.rb kerrottava, että mikä osoite linkittyy mihinkin kontrolleriin. Omassa projektissani olen lisännyt seuraavan rivin kyseiseen tiedostoon
+\newline
+\lstset{language=Ruby}  
+\begin{lstlisting}[frame=single]  % Start your code-block
+""
+resources :translations, only: [:show, :new, :create]
+\end{lstlisting}
+
+Tämän avulla olen saanut automaattisesti käyttöön seuraavat osoitteet
+\newline
+\lstset{language=Ruby}  
+\begin{lstlisting}  % Start your code-block
+""
+translations    POST /translations(.:format)     translations#create
+new_translation GET  /translations/new(.:format) translations#new
+translation     GET  /translations/:id(.:format) translations#show
+\end{lstlisting}
+\newpage
+
+
+
+\paragraph{Konventiot}
+- kansiorakenne (app)
+- routes.rb
+- Gems
+- database.yml
+- migraatiot
+- nimeäminen
+- https://github.com/bbatsov/rails-style-guide
+- luokkien linkitys  (UML-style)
 \newpage
 
 \section{Arkkitehtuuri}
-Roolijako here
+Roolijako here (N-tier + http://www.tutorialspoint.com/ruby-on-rails/images/rails-framework.gif)
 \newpage
 
 \section{Yleisarkkitehtuuri ja keskeisimmät variaatiopisteet}

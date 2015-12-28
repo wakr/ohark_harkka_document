@@ -5,46 +5,50 @@ The style file: tktl.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: lahteet.bib
 Warning--to sort, need author or key in yandex
+Warning--to sort, need author or key in ror
+Warning--to sort, need author or key in ar
+Warning--empty author in ar
+Warning--empty author in ror
 Warning--empty author in yandex
-You've used 3 entries,
+You've used 5 entries,
             3861 wiz_defined-function locations,
-            754 strings with 6278 characters,
-and the built_in function-call counts, 1074 in all, are:
-= -- 105
-> -- 55
+            763 strings with 6417 characters,
+and the built_in function-call counts, 1552 in all, are:
+= -- 155
+> -- 57
 < -- 0
 + -- 21
 - -- 21
-* -- 75
-:= -- 184
-add.period$ -- 6
-call.type$ -- 3
-change.case$ -- 20
-chr.to.int$ -- 3
-cite$ -- 6
-duplicate$ -- 36
-empty$ -- 76
+* -- 109
+:= -- 240
+add.period$ -- 10
+call.type$ -- 5
+change.case$ -- 28
+chr.to.int$ -- 5
+cite$ -- 14
+duplicate$ -- 58
+empty$ -- 132
 format.name$ -- 25
-if$ -- 212
+if$ -- 322
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 23
+newline$ -- 33
 num.names$ -- 6
-pop$ -- 26
+pop$ -- 42
 preamble$ -- 1
-purify$ -- 22
+purify$ -- 32
 quote$ -- 0
-skip$ -- 38
+skip$ -- 62
 stack$ -- 0
-substring$ -- 22
+substring$ -- 38
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 30
-warning$ -- 2
+type$ -- 50
+warning$ -- 6
 while$ -- 6
-width$ -- 5
-write$ -- 44
-(There were 2 warnings)
+width$ -- 7
+write$ -- 66
+(There were 6 warnings)
