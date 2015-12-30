@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  28 DEC 2015 19:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  30 DEC 2015 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -351,78 +351,105 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 92--93
 
 [1 <./images/ennen_kaannosta.png>] [2 <./images/kaannoksen_jalkeen.png> <./imag
 es/kaikkien_listaus.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 114--118
+Overfull \hbox (3.01062pt too wide) in paragraph at lines 109--110
+\T1/cmr/m/n/12 REST-rajapinnat, Con-ven-tion over Configuration- ja Don't Re-pe
+at Yourself-periaate.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--122
 
  []
 
 
-Package Listings Warning: Text dropped after begin of listing on input line 118
+Package Listings Warning: Text dropped after begin of listing on input line 122
 .
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 120.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 124.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 120.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--130
+Underfull \hbox (badness 10000) in paragraph at lines 130--134
 
  []
-
-
-Package Listings Warning: Text dropped after begin of listing on input line 130
-.
 
 [3
 
 ]
-Overfull \hbox (9.08827pt too wide) in paragraph at lines 141--145
-\T1/cmr/m/n/12 dat-ta-mi-nen te-kee to-teu-tet-ta-vas-ta jär-jes-tel-mäs-tä mel
--kein pa-kos-tik-kin REST-rajapintaa
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--145
-
- []
-
-
-Package Listings Warning: Text dropped after begin of listing on input line 145
+Package Listings Warning: Text dropped after begin of listing on input line 134
 .
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--153
+Overfull \hbox (29.38475pt too wide) in paragraph at lines 145--149
+\T1/cmr/m/n/12 dat-ta-mi-nen te-kee to-teu-tet-ta-vas-ta jär-jes-tel-mäs-tä mel
+-kein au-to-maat-ti-ses-ti REST-rajapintaa
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--149
 
  []
 
 
-Package Listings Warning: Text dropped after begin of listing on input line 153
+Package Listings Warning: Text dropped after begin of listing on input line 149
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--157
+
+ []
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 157
 .
 
 [4] [5]
-Overfull \hbox (0.43878pt too wide) in paragraph at lines 174--175
-\T1/cmr/m/n/12 Roolijako he-re (N-tier + http://www.tutorialspoint.com/ruby-on-
-rails/images/rails-
+Overfull \hbox (6.66364pt too wide) in paragraph at lines 194--195
+ \T1/cmr/bx/n/12 Asiakas-palvelin[] \T1/cmr/m/n/12 Kom-mu-ni-koin-ti kaik-kien 
+kom-po-nent-tien vä-lil-lä ta-pah-tuu asiakas-
  []
 
-[6] [7] [8] (./malli.bbl (./babelbst.tex (./finnbst.tex))
+<images/RubyCommunication.png, id=36, 786.94pt x 144.54pt>
+File: images/RubyCommunication.png Graphic file (type png)
+
+<use images/RubyCommunication.png>
+Package pdftex.def Info: images/RubyCommunication.png used on input line 200.
+(pdftex.def)             Requested size: 426.79135pt x 78.39006pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 200--201
+ [] 
+ []
+
+[6 <./images/RubyCommunication.png>]
+<images/RubyOnRailsOverArch.png, id=42, 515.9275pt x 361.35pt>
+File: images/RubyOnRailsOverArch.png Graphic file (type png)
+
+<use images/RubyOnRailsOverArch.png>
+Package pdftex.def Info: images/RubyOnRailsOverArch.png used on input line 215.
+
+(pdftex.def)             Requested size: 320.0935pt x 224.19458pt.
+ [7 <./images/RubyOnRailsOverArch.png>]
+[8] [9] (./malli.bbl (./babelbst.tex (./finnbst.tex))
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)) [9
+)) [10
 
 ] (./malli.aux) ) 
 Here is how much of TeX's memory you used:
- 4923 strings out of 493304
- 66457 string characters out of 6139870
- 177553 words of memory out of 5000000
- 8282 multiletter control sequences out of 15000+600000
+ 4933 strings out of 493304
+ 66771 string characters out of 6139870
+ 170553 words of memory out of 5000000
+ 8290 multiletter control sequences out of 15000+600000
  14669 words of font info for 37 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,36p,678b,1415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,36p,726b,1675s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
 re/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1
@@ -431,10 +458,10 @@ x1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/shar
 e/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/
 public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti
 1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on malli.pdf (11 pages, 208418 bytes).
+Output written on malli.pdf (12 pages, 230332 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

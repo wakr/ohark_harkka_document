@@ -104,12 +104,16 @@ Root (/)  $\rightarrow$ tallennettu käännös (/translations/:id, jossa :id korvau
 
 
 
-\subsection{Ruby on Rails}
+\subsection{Ruby on Rails -sovelluskehys}
  
-Ruby on Rails on itsessään sovelluskehys, joka on luotu vuonna 2003 David Heinemeier Hansson toimesta \cite{ror}. Sen näkyvimpiä ominaisuuksia ovat MVC-malli, REST-rajapinnat sekä Convention over Configuration -periaate. Nämä kaikki patternit tulevat esille käytännössä kaikissa Ruby on Rails -kehyksellä tuotetuissa projekteissa ja moni tunteekin kehyksen juuri näistä edellä mainituista laatuvivuista, joita kehyksen käyttö melko automaattisesti tuo mukanaan. 
+Ruby on Rails on itsessään sovelluskehys, joka on luotu vuonna 2003 David Heinemeier Hansson toimesta \cite{ror}. Sen näkyvimpiä ominaisuuksia ovat MVC-malli, REST-rajapinnat, Convention over Configuration- ja Don't Repeat Yourself-periaate. Nämä kaikki tulevat esille käytännössä kaikissa Ruby on Rails -kehyksellä tuotetuissa projekteissa ja moni tunteekin kehyksen juuri näistä edellä mainituista laatuvivuista, joita kehyksen käyttö melko automaattisesti tuo mukanaan. 
 
-\paragraph{MVC-malli}
-Ruby on Rails:n Modelina toimii ActiveRecordissa säilytettävät tietokantaobjektit. ActiveRecord huolehtii käytännössä koko toteutettavan järjestelmän logiikasta ja abstrahoi vahvan rajapinnan avulla konkreettista tietokantaa niin, että kehittäjän on helppo vaihtaa tietokanta sekä luoda uusia tietokantaobjekteja. 
+Yleisimpiä tyylejä ei sovelluskehyksestä suoraan löydy, koska usealla komponentilla ei suoraan löydy vastaavuutta muista tyyleistä MVC:n lisäksi (MVC lasketaan tässä enemmänkin patterniksi), koska niiden vastuut ovat hieman laajempia. Kuitenkin asiakas-palvelin -tyyli on melko selkeästi nähtävissä Ruby on Railsissä.  
+
+
+
+\paragraph{Model-View-Controller -patterni}
+Ruby on Rails:n Modelina toimii ActiveRecordissa säilytettävät tietokantaobjektit. ActiveRecord huolehtii käytännössä koko toteutettavan järjestelmän logiikasta ja abstrahoi vahvan rajapinnan avulla konkreettista tietokantaa niin, että kehittäjän on esimerkiksi helppo vaihtaa tietokanta toiseen versioon sekä luoda uusia tietokantaobjekteja. 
 
 ActiveRecord itsessään toteuttaa Active Record-patternin \cite{ar}, joka määrittelee, että miten luokat ja tietokanta kuvautuu toisillensa. Rubyssä tämä kuvautuminen on tehty niin, että tietokannan tietue on aina luokka ja taulut luokan kenttiä. Luokkien metodeilla usein muutetaankin vain ja ainoastaan tietokantataulun rivejä, jolloin olion sisäinen tila muuttuu. Luomassani projektissa uuden käännöksen ja sen tallentaminen tietokantaan on hyvin yksinkertaista tämän vuoksi, eikä kehittäjän tarvitse tietää, että taustalla pyörii SQLite tietokantana: 
 \newline
@@ -138,7 +142,7 @@ Controlleria kutsutaan ActionController:ksi Ruby on Railsissa ja se vastaa koko 
 
 \paragraph{REST-rajapinta}
 
-Koko Ruby on Railsin käyttöönotto ja sen konventioiden noudattaminen tekee toteutettavasta järjestelmästä melkein pakostikkin REST-rajapintaa noudattavan järjestelmän, koska useat konventiot ovat pakollisia käyttää ja vaikka niiden kiertäminen on teknisesti mahdollista, on usein vain helpompi alistua valmiiksi määriteltyihin konventioihin. Esimerkiksi luodessani Translation-mallia, oli minun pakko luoda TranslationsController-kontrolleri, mutta ennen niiden linkittämistä on tiedostoon /config/routes.rb kerrottava, että mikä osoite linkittyy mihinkin kontrolleriin. Omassa projektissani olen lisännyt seuraavan rivin kyseiseen tiedostoon
+Koko Ruby on Railsin käyttöönotto ja sen konventioiden noudattaminen tekee toteutettavasta järjestelmästä melkein automaattisesti REST-rajapintaa noudattavan järjestelmän, koska useat konventiot ovat pakollisia käyttää ja vaikka niiden kiertäminen on teknisesti mahdollista, on usein vain helpompi alistua valmiiksi määriteltyihin konventioihin. Esimerkiksi luodessani Translation-mallia, oli minun pakko luoda TranslationsController-kontrolleri, mutta ennen niiden linkittämistä on tiedostoon /config/routes.rb kerrottava, että mikä osoite linkittyy mihinkin kontrolleriin. Omassa projektissani olen lisännyt seuraavan rivin kyseiseen tiedostoon
 \newline
 \lstset{language=Ruby}  
 \begin{lstlisting}[frame=single]  % Start your code-block
@@ -146,7 +150,7 @@ Koko Ruby on Railsin käyttöönotto ja sen konventioiden noudattaminen tekee toteu
 resources :translations, only: [:show, :new, :create]
 \end{lstlisting}
 
-Tämän avulla olen saanut automaattisesti käyttöön seuraavat osoitteet
+Tämän avulla olen saanut automaattisesti käyttöön seuraavat osoitteet:
 \newline
 \lstset{language=Ruby}  
 \begin{lstlisting}  % Start your code-block
@@ -155,26 +159,69 @@ translations    POST /translations(.:format)     translations#create
 new_translation GET  /translations/new(.:format) translations#new
 translation     GET  /translations/:id(.:format) translations#show
 \end{lstlisting}
-\newpage
 
 
 
 \paragraph{Konventiot}
-- kansiorakenne (app)
-- routes.rb
-- Gems
-- database.yml
-- migraatiot
-- nimeäminen
-- https://github.com/bbatsov/rails-style-guide
-- luokkien linkitys  (UML-style)
-\newpage
+%- kansiorakenne (app)
+%- routes.rb
+%- Gems
+%- database.yml
+%- migraatiot
+%- nimeäminen
+%- https://github.com/bbatsov/rails-style-guide
+%- luokkien linkitys  (UML-style)
 
-\section{Arkkitehtuuri}
-Roolijako here (N-tier + http://www.tutorialspoint.com/ruby-on-rails/images/rails-framework.gif)
+Konventiot ovat tärkeässä roolissa Ruby on Rails -sovelluskehyksessä. Ne suoraviivaistavat koko toteutettavan järjestelmän arkkitehtuuria, vähentävät ohjelmakoodin määrää, vähentävät toistoa ja tuovat yhtenäisen toimintatavan, jonka avulla jokainen Ruby on Rails:llä tuotettu järjestelmä on hyvin samankaltainen muiden samalla sovelluskehyksellä tuotettujen kanssa. Esimerkiksi nimeämiseen liittyvät konventiot (projektini tietokantataulussani 'translations' sijaitsevat kaikki Translation-mallin ilmentymät, kontrolleri nimeltä 'translations\_controller' huolehtii näiden mallien päivittämisestä sekä oikeiden näkymien näyttämisestä) ovat erittäin näkyvässä roolissa ja osittain jopa pakollisiakin.
+
+Tämän avulla sovelluskehys osaa automaattisesti nimeämisten perusteella ohjata sovelluksen toimintaa haluttuun suuntaa, jolloin tarve konfiguraatio-tiedoistoille vähenee. Ruby on Rails siis pinnan alla automaattisesti päättelee nimien perusteella, että kenelle kyseiseen pyyntöön vastaamisen vastuu kuuluukaan.
+
+\paragraph{Don't Repeat Yourself}
+
+DRY-periaate näkyy vahvasti muun muassa Gemfile:n, routes.rb:n sekä tietokantamigraatioiden kautta. Gemfile-tiedostossa sijaitsee sovelluksen kaikki tarvitsemat Gem:it eli ulkoiset kirjastot, routes.rb-tiedosto taas sisältää kaikki määrittelyt pyyntöjen ohjaukseen oikealle kontrollerille ja tietokantamigraatioille on myös oma paikkansa 'db'-kansion alla. Migraatioiden avulla tehdään muutoksia tietokantaan ja sieltä nähdään kaikki aiemmin tehdyt muutokset ja niiden peruutukset ('rollbackit').
+
+Toisaalta jo aiemmin mainittu ActiveRecord vähentää toistoa, koska kehittäjien ei tarvitse kirjoittaa erikseen ylös tietokantatauluja mallien määrittelytiedostoihin, vaan Ruby on Rails hoitaa kaiken tietokantalogiikan nimeämiskonventioiden avulla.
+
+\subsection{Tyylit}
+
+Kuten aiemmin mainittu, niin Ruby on Railsistä ei suoraan löydy juuri niinkään yhtä tiettyä tyyliä, jota kehys noudattaisi, mutta toisaalta 3-taso- malli on melko lähellä sitä. 
+
+Vastuut ovat siinä jaettu niin, että esimerkiksi tarkasteltessa kehystä tavallisen 3-taso -arkkitehtuurityylin silmin, erottuu joitain melko erilaisiakin vastuita. Näkymätasolla tosin vastuu on aika selkeä: näkymistä huolehtivat HTML-tiedostot, mutta sovellustasosta huolehtii mallit sekä kontrollerit, jotka saavat pyyntöjä UI:lta (HTML/HTTP). Datataso Railsissä koostuu ActiveDirectorystä, tietokannasta sekä varsinkin malleista. Mallit siis kuuluvat periaatteessa sovellustason sekä datatason välimaastoon, koska toisaalta kaikki sovelluslogiikka sijaitsee niissä, mutta toisaalta ne toimivat myös abstraktiona tietokannan tauluille ja koko tietokannan muokkaus tapahtuu suoraan mallien kautta.
+
+
+\paragraph{Asiakas-palvelin}
+
+Kommunikointi kaikkien komponenttien välillä tapahtuu asiakas-palvelin- tyylin perusteella. Kontrollerit odottavat pyyntöjä näkymiltä ja tarjoavat tiedon näkymille mallien kautta. Mallit taas ovat suora linkki tietokantaan tehden muokkauksia sinne omaan tietokantatauluun sekä hakevat tietoa kontrollerien käyttöön. 
+
+% RubyCommunication.png 
+
+\begin{figure}[ht]
+\begin{center}
+\fbox{\includegraphics[width=1\textwidth]{images/RubyCommunication.png}}
+\caption{Havainnekuva kommunikaatiosta.}
+\end{center}
+\end{figure}
+
 \newpage
 
 \section{Yleisarkkitehtuuri ja keskeisimmät variaatiopisteet}
+%Roolijako here (N-tier + 
+% http://www.tutorialspoint.com/ruby-on-rails/images/rails-framework.gif)
+% http://adrianmejia.com/blog/2011/08/11/ruby-on-rails-architectural-design/
+Ruby on Rails toteuttaa yleiseltä arkkitehtuuriltaan erittäin vahvasti jo aiemmin mainittua Model View Controller -tyyliä, mutta kehystä voidaan tarkastella myös perinteisemmän N-tier -tyylin kautta. Siinä vastuidenjako on selvästi jaettuna kolmeen eri kerrokseen: tiedon tallennukseen, käsittelyyn sekä näyttämiseen. Tallennuksesta vastaa yhdessä tietokanta sekä Railsin ActiveDirectory-toteutus, tieto käsitellään kontrollereiden tasolla jossa tapahtuu myös mallien muokkaus ja lopullinen UI-muotoinen tiedon esitys tapahtuu HTML-tiedostojen avulla. Kerroksia ei pysty mitenkään ohittamaan, jolloin datan tallennus suoraan näkymästä on esimerkiksi käytännössä mahdotonta.
+
+\begin{figure}[ht]
+\begin{center}
+\fbox{\includegraphics[width=0.75\textwidth]{images/RubyOnRailsOverArch.png}}
+\caption{Erittäin yleinen arkkitehtuuri Ruby on Rails -järjestelmissä. Datan siirtyminen kuvattu nuolilla.}
+\end{center}
+\end{figure}
+
+MVC-mallisena tarkasteltaessa Ruby on Rails -sovelluskehys näyttäisi seuraavanlaiselta:
+
+
+
+
 
 Luokkakaavio, sekvenssikaavio, stereotyypit.
 
