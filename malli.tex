@@ -4,6 +4,7 @@
 \usepackage{url}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{float}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -66,10 +67,10 @@ I.7.m [Document and text processing]}}
 Tämän harjoitustyön tarkoituksena on tarkastella Ruby on Rails -web sovelluskehystä ja varsinkin sen arkkitehtuuria tekemäni esimerkkisovelluksen kautta. Tekemäni esimerkkisovellus on yksinkertainen Internetissä oleva käännössivusto, jonka avulla käyttäjä pystyy kääntämään kolmen eri kielen välillä; suomen, englannin ja ruotsin. Itse sivusto on erittäin yksinkertainen eikä toiminnallisuutta ole hirveästi kääntämisen lisäksi, vaan itse keskittyminen tapahtuu sovelluksen pinnan alle kuten arkkitehtuurisiin ratkaisuihin joita Ruby on Rail-kehys tuo mukanaan. 
 
 
-\subsection{Translator}
+\subsection{Translator -projekti}
 Sovellukseneeni viittaan tästä alkaen nimellä \textit{Translator}. 
 
-Translatorin pääidea on siis nimensä mukaisesta kääntää kieleltä toiselle. Käännöksen logiikka hoidetaan ulkopuolista API:a käyttäen \cite{yandex}, joka hoitaa käytännössä kääntämisen sovelluslogiikan. Seuraavassa esitettävä kuvasarja esittää kääntämisen käyttäjän näkökulmasta.
+Translatorin pääidea on siis nimensä mukaisesta kääntää annettu teksti kieleltä toiselle. Käännöksen logiikka hoidetaan ulkopuolista API:a käyttäen \cite{yandex}, joka hoitaa käytännössä kääntämisen sovelluslogiikan. Seuraavassa esitettävä kuvasarja esittää kääntämisen käyttäjän näkökulmasta.
 
 \vfill
 
@@ -136,7 +137,7 @@ Translation.all.where language_from: "fi"
 \end{lstlisting}
 
 
-Viewin vastuuta Ruby on Railsissä hoitaa ActionView, joka on näkymä tietokannan datalle. Kaikessa yksinkertaisuudessaan siis näytettävä HTML-sivu käyttäjälle. Se ladataan Controllerin toimesta oikeasta kansiosta oikealla hetkellä ja usein HTML-tiedosto sisältääkin upotettua Ruby-koodia. Tämä Ruby-koodi on suurimmaksi osaksi toiminnallisuutta näyttää vastaavan mallin tietoja HTML-muodossa. Esimerkiksi sovellukseni kaikki tehdyt käännökset näyttävä sivu on suurimmaksi osaksi upotettua Ruby-koodia, joka iteroi tietokannan kaikki käännökset ja hakee niiden tietokantataulut taulukkoon näytettäväksi dataksi. 
+Viewin vastuuta Ruby on Railsissä hoitaa ActionView, joka on näkymä tietokannan datalle. Kaikessa yksinkertaisuudessaan siis näytettävä HTML-sivu käyttäjälle. Se ladataan Controllerin toimesta oikeasta kansiosta oikealla hetkellä ja käytännössä se onkin HTML-tiedosto, joka sisältää upotettua Ruby-koodia. Tämä Ruby-koodi on suurimmaksi osaksi toiminnallisuutta näyttää vastaavan mallin tietoja HTML-muodossa. Esimerkiksi sovellukseni kaikki tehdyt käännökset näyttävä sivu on suurimmaksi osaksi upotettua Ruby-koodia, joka iteroi tietokannan kaikki käännökset ja hakee niiden tietokantataulut taulukkoon näytettäväksi dataksi. 
 
 Controlleria kutsutaan ActionController:ksi Ruby on Railsissa ja se vastaa koko järjestelmään kohdistuvien pyyntöjen reitittämisestä sekä yleisestä datan välityksestä. Omassa järjestelmässäni TranslationController vastaa kaikesta käännöksiin liittyvästä toiminnallisuudesta, kuten esimerkiksi aloitussivun näyttämisen logiikasta. Railsissa konventiot tulevatkin vahvasti esille, koska Translation-luokasta vastaavan kontrollerin on oltava samanniminen kuin luokkakin, mutta monikossa (englannin s-päätteellä). Tähän kontrolleriin on myös kirjoitettu kaikki mahdolliset toiminnot, joita mallille on mahdollista tehdä ja näiden avulla rakennetaan myös näkymät.
 
@@ -162,7 +163,7 @@ translation     GET  /translations/:id(.:format) translations#show
 
 
 
-\paragraph{Konventiot}
+\paragraph{Convention over Configuration}
 %- kansiorakenne (app)
 %- routes.rb
 %- Gems
@@ -191,7 +192,7 @@ Vastuut ovat siinä jaettu niin, että esimerkiksi tarkasteltessa kehystä tavallis
 
 \paragraph{Asiakas-palvelin}
 
-Kommunikointi kaikkien komponenttien välillä tapahtuu asiakas-palvelin- tyylin perusteella. Kontrollerit odottavat pyyntöjä näkymiltä ja tarjoavat tiedon näkymille mallien kautta. Mallit taas ovat suora linkki tietokantaan tehden muokkauksia sinne omaan tietokantatauluun sekä hakevat tietoa kontrollerien käyttöön. 
+Kommunikointi kaikkien komponenttien välillä tapahtuu asiakas-palvelin- tyylin perusteella. Kontrollerit odottavat pyyntöjä näkymiltä ja tarjoavat tiedon näkymille mallien kautta. Mallit taas ovat suora linkki tietokantaan tehden muokkauksia sinne omaan tietokantatauluun sekä hakevat tietoa kontrollerien käyttöön. Ne tarjoavat kontrollereille muokkaus/haku-rajapinnan tietokantaan. Tämä kyseinen kommunikaatio tietokantatauluun tapahtuu aina ActiveDirectoryn kautta, joka muuttaa pyynnöt kyseisen tietokannan osaamalle kielelle (usein SQL).
 
 % RubyCommunication.png 
 
@@ -208,35 +209,61 @@ Kommunikointi kaikkien komponenttien välillä tapahtuu asiakas-palvelin- tyylin p
 %Roolijako here (N-tier + 
 % http://www.tutorialspoint.com/ruby-on-rails/images/rails-framework.gif)
 % http://adrianmejia.com/blog/2011/08/11/ruby-on-rails-architectural-design/
-Ruby on Rails toteuttaa yleiseltä arkkitehtuuriltaan erittäin vahvasti jo aiemmin mainittua Model View Controller -tyyliä, mutta kehystä voidaan tarkastella myös perinteisemmän N-tier -tyylin kautta. Siinä vastuidenjako on selvästi jaettuna kolmeen eri kerrokseen: tiedon tallennukseen, käsittelyyn sekä näyttämiseen. Tallennuksesta vastaa yhdessä tietokanta sekä Railsin ActiveDirectory-toteutus, tieto käsitellään kontrollereiden tasolla jossa tapahtuu myös mallien muokkaus ja lopullinen UI-muotoinen tiedon esitys tapahtuu HTML-tiedostojen avulla. Kerroksia ei pysty mitenkään ohittamaan, jolloin datan tallennus suoraan näkymästä on esimerkiksi käytännössä mahdotonta.
+Ruby on Rails toteuttaa yleiseltä arkkitehtuuriltaan erittäin vahvasti jo aiemmin mainittua Model View Controller -tyyliä, mutta kehystä voidaan tarkastella myös perinteisemmän 3-taso -tyylin kautta. 
+
+Siinä vastuidenjako on selvästi jaettuna kolmeen eri kerrokseen: tiedon tallennukseen, käsittelyyn sekä näyttämiseen. Tallennuksesta vastaa yhdessä tietokanta sekä Railsin ActiveDirectory-toteutus. Tieto itsessään käsitellään kontrollereiden tasolla, jossa tapahtuu myös mallien muokkaus ja lopullinen UI-muotoinen tiedon esitys tapahtuu HTML-tiedostojen avulla. Kerroksia ei pysty mitenkään ohittamaan, jolloin datan tallennus suoraan näkymästä on esimerkiksi käytännössä mahdotonta.
 
 \begin{figure}[ht]
 \begin{center}
 \fbox{\includegraphics[width=0.75\textwidth]{images/RubyOnRailsOverArch.png}}
-\caption{Erittäin yleinen arkkitehtuuri Ruby on Rails -järjestelmissä. Datan siirtyminen kuvattu nuolilla.}
+\caption{Yksinkertaistettu arkkitehtuuri Translator-sovelluksesta 3-tasoisena tarkasteltaessa. Datan virtaus kuvattu nuolilla. Alin taso huolehtii tiedon tallennuksesta, keskimmäinen tiedon käsittelystä ja ylin tiedon näyttämisestä.}
 \end{center}
 \end{figure}
 
-MVC-mallisena tarkasteltaessa Ruby on Rails -sovelluskehys näyttäisi seuraavanlaiselta:
+MVC-mallisena tarkasteltaessa Ruby on Rails -sovelluskehys näyttää seuraavanlaiselta:
+
+\begin{figure}[H]
+\begin{center}
+\fbox{\includegraphics[width=1\textwidth]{images/RoRMVC.png}}
+\caption{Translator-sovellus MVC-mallin silmin. Kuvassa käyttäjä avaa selaimensa '/translations'-osoitteeseen, joka reititetään oikealle kontrollerin metodille (index) routes.rb-tiedoston avulla. Kontrolleri hakee kaikki Translation-mallin ilmentymät mallin avulla tietokannasta. @translations sekä @languages muuttujat välitetään näkymälle, joka luo halutun HTML-tiedoston. Lopuksi kontrolleri esittää (render) tämän dokumentin käyttäjän selaimelle.}
+\end{center}
+\end{figure}
+
+\paragraph{Variaatiopisteet}
+On huomattavaa, että esimerkiksi tietokanta ei sisälly järjestelmän sisälle, vaan ulkopuolelle ja on näin helposti vaihdettavissa. Tämä on toteutettu aiemmin mainitun ActiveRecordin avulla. Myös näkymien vaihdettavuus on erittäin helppoa, koska Ruby on Rails-konventioiden mukaan vain nimeämisellä (ja kansiorakenteella) on väliä, joten kunhan tiedostot sijaitsevat oikeissa kansioissa oikeilla nimillä, niin esimerkiksi näkymät saadaan vaihdettua muuttamalla vain tiedoston nimeä. 
+
+Toisaalta laajemmin ajateltuna ainoaksi yhteiseksi osaksi (variaatiopisteiden kannalta) jää malli, koska se on ainut osa, joka toteuttaa itse business-logiikan ja toimii abstraktiona tosimaailman käännökselle. Tätä ei pysty mitenkään muuttamaan, koska haluan sovelluksen nimenomaan olevan käännös-toimintoa tukeva sivusto, joka pystyy tallentamaan aiemmin tehtyjä käännöksiä. Tämän vuoksi tallenuslogiikalla, näkymillä, eikä ohjainkomponenteille ole kovinkaan tärkeää roolia järjestelmässä ja tästä syystä ne voidaan laskea vaihtuviksi osiksi variaation kannalta Ruby on Rails-kehyksessä. 
+
+\paragraph{Sisärakennemalli}
+asd.
+
+\subsection{Luokka- ja sekvenssikaavio}
+Selotus sovelluksesta ja selitys tapahtumien kulusta.
+\paragraph{Luokkakaavio}
+\paragraph{Sekvenssikaavio}
+
+<<näihin mitkä kuuluvat kehyksen ulkopuolelle>>
+Konfiguraatiotiedostot
 
 
-
-
-
-Luokkakaavio, sekvenssikaavio, stereotyypit.
-
-\subsection{Yleiskuva kehysrakenteesta}
 \subsection{Kehyksen erikoistaminen sovelluskohtaisesti}
+
 \subsection{Suunnittelumallit}
+\paragraph{Periyttäminen}
+\paragraph{}
 \subsection{Esimerkkitapaukset}
+Käännöksen tekeminen
 \newpage
 
 
 \section{Kehyksen ja sovelluksen arviointi}
 \subsection{Hyvät ja huonot puolet}
-Lähdekirjallisuus
+Lähdekirjallisuudessa mainittuja
 \subsection{Laatuskenaariot}
+Laatuominaisuuden testaaminen (saatavuus/muunneltavuus/uudelleenkäyt.)
 \subsection{ATAM}
+Arkkitehtuurin arvioiminen
+Low/Medium/High (vaativuus + työmäärä)
 
 
 
