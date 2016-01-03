@@ -9,18 +9,21 @@
 \contentsline {subsection}{\numberline {1.3}Tyylit}{5}
 \contentsline {paragraph}{Asiakas-palvelin}{6}
 \contentsline {section}{\numberline {2}Yleisarkkitehtuuri ja keskeisimm\"at variaatiopisteet}{7}
-\contentsline {paragraph}{Variaatiopisteet}{8}
-\contentsline {paragraph}{Sis\"arakennemalli}{9}
-\contentsline {subsection}{\numberline {2.1}Luokka- ja sekvenssikaavio}{9}
-\contentsline {paragraph}{Luokkakaavio}{9}
-\contentsline {paragraph}{Sekvenssikaavio}{9}
-\contentsline {subsection}{\numberline {2.2}Kehyksen erikoistaminen sovelluskohtaisesti}{9}
-\contentsline {subsection}{\numberline {2.3}Suunnittelumallit}{9}
-\contentsline {paragraph}{Periytt\"aminen}{9}
-\contentsline {paragraph}{}{9}
-\contentsline {subsection}{\numberline {2.4}Esimerkkitapaukset}{9}
-\contentsline {section}{\numberline {3}Kehyksen ja sovelluksen arviointi}{10}
-\contentsline {subsection}{\numberline {3.1}Hyv\"at ja huonot puolet}{10}
-\contentsline {subsection}{\numberline {3.2}Laatuskenaariot}{10}
-\contentsline {subsection}{\numberline {3.3}ATAM}{10}
-\contentsline {section}{L\"ahteet}{11}
+\contentsline {paragraph}{Sis\"arakennemalli}{8}
+\contentsline {subparagraph}{Web-palvelin}{9}
+\contentsline {subparagraph}{Action Dispatch}{10}
+\contentsline {subparagraph}{Action Controller}{10}
+\contentsline {subparagraph}{Action View}{10}
+\contentsline {subparagraph}{Active Model}{10}
+\contentsline {subparagraph}{Active Record}{10}
+\contentsline {subsection}{\numberline {2.1}Kehyksen erikoistaminen sovelluskohtaisesti}{10}
+\contentsline {subsection}{\numberline {2.2}Luokka- ja sekvenssikaavio}{10}
+\contentsline {paragraph}{Luokkakaavio}{10}
+\contentsline {paragraph}{Sekvenssikaavio}{10}
+\contentsline {subsection}{\numberline {2.3}Suunnittelumallit}{11}
+\contentsline {paragraph}{Periytt\"aminen}{11}
+\contentsline {section}{\numberline {3}Kehyksen ja sovelluksen arviointi}{12}
+\contentsline {subsection}{\numberline {3.1}Hyv\"at ja huonot puolet}{12}
+\contentsline {subsection}{\numberline {3.2}Laatuskenaariot}{12}
+\contentsline {subsection}{\numberline {3.3}ATAM}{12}
+\contentsline {section}{L\"ahteet}{13}

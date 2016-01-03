@@ -229,13 +229,30 @@ MVC-mallisena tarkasteltaessa Ruby on Rails -sovelluskehys näyttää seuraavanlais
 \end{center}
 \end{figure}
 
-\paragraph{Variaatiopisteet}
+\paragraph{Sisärakennemalli}
+Seuraavassa Translator-järjestelmän komponentit.
+\begin{figure}[H]
+\begin{center}
+\fbox{\includegraphics[width=1.1\textwidth, height=0.7\textheight]{images/RorSisarakenne.png}}
+\caption{Yhtenäinen viiva tarkoittaa web-pyyntöä ja katkonainen tietokantayhteyttä. Muut viivat komponenttien välisiä funktiokutsuja, joiden sisältö <<>>-välissä.}
+\end{center}
+\end{figure}
+
+Edellisestä kuvasta erottuu kaksi isoa järjestelmää, josta toinen on Translator-sovellukseni ja toinen Yandex-API, joka huolehtii kääntämisen logiikasta. Translator-sovelluksesta voidaan erotella seuraavat Ruby on Rails -kehyksen kannalta pakolliset komponentit.
+
+\subparagraph{Web-palvelin}
+\subparagraph{Action Dispatch}
+\subparagraph{Action Controller}
+\subparagraph{Action View}
+\subparagraph{Active Model}
+\subparagraph{Active Record}
+Jeejee.
+Jee.
+
+\subsection{Kehyksen erikoistaminen sovelluskohtaisesti}
 On huomattavaa, että esimerkiksi tietokanta ei sisälly järjestelmän sisälle, vaan ulkopuolelle ja on näin helposti vaihdettavissa. Tämä on toteutettu aiemmin mainitun ActiveRecordin avulla. Myös näkymien vaihdettavuus on erittäin helppoa, koska Ruby on Rails-konventioiden mukaan vain nimeämisellä (ja kansiorakenteella) on väliä, joten kunhan tiedostot sijaitsevat oikeissa kansioissa oikeilla nimillä, niin esimerkiksi näkymät saadaan vaihdettua muuttamalla vain tiedoston nimeä. 
 
-Toisaalta laajemmin ajateltuna ainoaksi yhteiseksi osaksi (variaatiopisteiden kannalta) jää malli, koska se on ainut osa, joka toteuttaa itse business-logiikan ja toimii abstraktiona tosimaailman käännökselle. Tätä ei pysty mitenkään muuttamaan, koska haluan sovelluksen nimenomaan olevan käännös-toimintoa tukeva sivusto, joka pystyy tallentamaan aiemmin tehtyjä käännöksiä. Tämän vuoksi tallenuslogiikalla, näkymillä, eikä ohjainkomponenteille ole kovinkaan tärkeää roolia järjestelmässä ja tästä syystä ne voidaan laskea vaihtuviksi osiksi variaation kannalta Ruby on Rails-kehyksessä. 
-
-\paragraph{Sisärakennemalli}
-asd.
+Toisaalta laajemmin ajateltuna ainoaksi yhteiseksi osaksi (variaatiopisteiden kannalta) jää malli, koska se on ainut osa, joka toteuttaa itse business-logiikan ja toimii abstraktiona tosimaailman käännöksen käsitteelle. Tätä ei pysty mitenkään muuttamaan, koska haluan sovelluksen nimenomaan olevan käännös-toimintoa tukeva sivusto, joka pystyy tallentamaan aiemmin tehtyjä käännöksiä. Tämän vuoksi tallenuslogiikalla, näkymillä, eikä ohjainkomponenteille ole kovinkaan tärkeää roolia järjestelmässä ja tästä syystä ne voidaan laskea vaihtuviksi osiksi variaation kannalta Ruby on Rails-kehyksessä. 
 
 \subsection{Luokka- ja sekvenssikaavio}
 Selotus sovelluksesta ja selitys tapahtumien kulusta.
@@ -246,13 +263,8 @@ Selotus sovelluksesta ja selitys tapahtumien kulusta.
 Konfiguraatiotiedostot
 
 
-\subsection{Kehyksen erikoistaminen sovelluskohtaisesti}
-
 \subsection{Suunnittelumallit}
 \paragraph{Periyttäminen}
-\paragraph{}
-\subsection{Esimerkkitapaukset}
-Käännöksen tekeminen
 \newpage
 
 
