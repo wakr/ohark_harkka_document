@@ -23,10 +23,37 @@ Erkiö, H., Mäkelä, M., Nykänen, M. \bbland{} Verkamo, I., Opinnäytetyön
 \newblock Tieteellisen kirjoittamisen kurssiin liittyvä julkaisematon moniste,
   Tietojenkäsittelyopin laitos, Helsinki, 2001.
 
+\bibitem[RHTML]{rhtml}
+{Rails and HTML - RHTML}.
+\newblock
+  \url{http://www.tutorialspoint.com/ruby-on-rails/rails-and-rhtml.htm}.
+\newblock [04.1.2016]
+
+\bibitem[RORAR]{rorar}
+{Active Record}.
+\newblock \url{http://api.rubyonrails.org/classes/ActiveRecord/Base.html}.
+\newblock [02.1.2016]
+
 \bibitem[ROR]{ror}
 {RoR - Ruby on Rails}.
 \newblock \url{http://rubyonrails.org/}.
 \newblock [28.12.2015]
+
+\bibitem[RORAD]{rorad}
+{Ruby on Rails Architectural Design}.
+\newblock
+  \url{http://adrianmejia.com/blog/2011/08/11/ruby-on-rails-architectural-design/}.
+\newblock [30.12.2015]
+
+\bibitem[RUBYSERVER]{rubyserver}
+{Ruby Default Web Server}.
+\newblock \url{https://devcenter.heroku.com/articles/ruby-default-web-server}.
+\newblock [04.1.2016]
+
+\bibitem[WEBRICK]{webrick}
+{WEBrick}.
+\newblock \url{https://en.wikipedia.org/wiki/WEBrick}.
+\newblock [04.1.2016]
 
 \bibitem[YANDEX]{yandex}
 {Yandex - Translator API}.

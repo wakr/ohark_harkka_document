@@ -5,6 +5,7 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{float}
+\usepackage{rotating}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -114,7 +115,7 @@ Yleisimpiä tyylejä ei sovelluskehyksestä suoraan löydy, koska usealla komponenti
 
 
 \paragraph{Model-View-Controller -patterni}
-Ruby on Rails:n Modelina toimii ActiveRecordissa säilytettävät tietokantaobjektit. ActiveRecord huolehtii käytännössä koko toteutettavan järjestelmän logiikasta ja abstrahoi vahvan rajapinnan avulla konkreettista tietokantaa niin, että kehittäjän on esimerkiksi helppo vaihtaa tietokanta toiseen versioon sekä luoda uusia tietokantaobjekteja. 
+Ruby on Rails:n Modelina toimii ActiveRecordin avulla käsiteltävät tietokantaobjektit. ActiveRecord huolehtii käytännössä koko toteutettavan järjestelmän logiikasta ja abstrahoi vahvan rajapinnan avulla konkreettista tietokantaa niin, että kehittäjän on esimerkiksi helppo vaihtaa tietokanta toiseen versioon sekä luoda uusia tietokantaobjekteja. 
 
 ActiveRecord itsessään toteuttaa Active Record-patternin \cite{ar}, joka määrittelee, että miten luokat ja tietokanta kuvautuu toisillensa. Rubyssä tämä kuvautuminen on tehty niin, että tietokannan tietue on aina luokka ja taulut luokan kenttiä. Luokkien metodeilla usein muutetaankin vain ja ainoastaan tietokantataulun rivejä, jolloin olion sisäinen tila muuttuu. Luomassani projektissa uuden käännöksen ja sen tallentaminen tietokantaan on hyvin yksinkertaista tämän vuoksi, eikä kehittäjän tarvitse tietää, että taustalla pyörii SQLite tietokantana: 
 \newline
@@ -241,30 +242,43 @@ Seuraavassa Translator-järjestelmän komponentit.
 Edellisestä kuvasta erottuu kaksi isoa järjestelmää, josta toinen on Translator-sovellukseni ja toinen Yandex-API, joka huolehtii kääntämisen logiikasta. Translator-sovelluksesta voidaan erotella seuraavat Ruby on Rails -kehyksen kannalta pakolliset komponentit.
 
 \subparagraph{Web-palvelin}
+Oletuksena WEBrick Ruby on Rails -kehyksessä \cite{webrick}. Tarjoaa yksinkertaisen HTTP-palvelimen toiminnallisuuden. Voidaan helposti korvata esimerkiksi Apache tai Puma-palvelimella \cite{rubyserver}, sekä usealla muulla sovelluskehyksen tukemalla. 
+
+\subparagraph{Action Pack}
+Tarjoaa kontrolleri- ja näkymäkerroksen Model-View-Controller-patternille. Tässä sijaitsevat komponentit käsittelevät selaimen pyynnöt ja reitittävät pyynnöt oikeille komponenteille jatkokäsittelyä varten, mutta myös vastaavat näkymän toteuttamisesta. Action Pack jakautuu kolmeen eri rajapintaan: Action Dispatch, Action Controller ja Action View.
+
 \subparagraph{Action Dispatch}
+Hoitaa selaimelta tulevien HTTP-pyyntöjen reitittämisen oikealle kontrollerille sekä niiden jäsentelyn. Suurin osa toiminnallisuudesta on määritelty routes.rb-konfiguraatiotiedostoon.
+
 \subparagraph{Action Controller}
+Määrittelee kontrollereiden perustoiminnallisuuden, jota voidaan periyttämällä erikoistaa. Toiminnallisuus koostuu näkymiä ja malleja varten tehdyistä operaatioista. Esimerkiksi datan saaminen näkymälle asti sekä uudelleenohjauksen toiminnallisuuden. 
+
 \subparagraph{Action View}
+Tulee kutsutuksi Action Controllerin kautta. Muodostaa halutun näkymän www-sivustosta käyttäjälle käyttäen hyödykseen erilaisia apukeinoja (esimerkiksi lomakkeiden ja linkkien muodostamiseen), templaatteja sekä hyvin usein RHTML-muotoa. RHTML on muodostettua HTML-koodia, jossa on upotettua ruby-koodia seassa, joka sitten korvautuu täysin HTML-muotoon juuri ennen lopullista esittämistä \cite{rhtml}.   
+
 \subparagraph{Active Model}
+Määrittelee rajapinnan edellä mainitun Action Pack-kokonaisuuden sekä Active Recordin välillä. 
+
 \subparagraph{Active Record}
-Jeejee.
-Jee.
+Huolehtii datan muokkauksesta objektien kautta ja tarjoaa CRUD-rajapinnan tietokantaan (Create Read Update Delete). Jokainen operaatio tapahtuu aina luokan kautta, jolle löytyy vastaavuus tietokannassa. Luottaa paljon nimeämis-konventioihin muualla sovelluksessa, jolloin erinäisiä konfiguraatiotiedostoja ei tarvita. 
 
 \subsection{Kehyksen erikoistaminen sovelluskohtaisesti}
 On huomattavaa, että esimerkiksi tietokanta ei sisälly järjestelmän sisälle, vaan ulkopuolelle ja on näin helposti vaihdettavissa. Tämä on toteutettu aiemmin mainitun ActiveRecordin avulla. Myös näkymien vaihdettavuus on erittäin helppoa, koska Ruby on Rails-konventioiden mukaan vain nimeämisellä (ja kansiorakenteella) on väliä, joten kunhan tiedostot sijaitsevat oikeissa kansioissa oikeilla nimillä, niin esimerkiksi näkymät saadaan vaihdettua muuttamalla vain tiedoston nimeä. 
 
 Toisaalta laajemmin ajateltuna ainoaksi yhteiseksi osaksi (variaatiopisteiden kannalta) jää malli, koska se on ainut osa, joka toteuttaa itse business-logiikan ja toimii abstraktiona tosimaailman käännöksen käsitteelle. Tätä ei pysty mitenkään muuttamaan, koska haluan sovelluksen nimenomaan olevan käännös-toimintoa tukeva sivusto, joka pystyy tallentamaan aiemmin tehtyjä käännöksiä. Tämän vuoksi tallenuslogiikalla, näkymillä, eikä ohjainkomponenteille ole kovinkaan tärkeää roolia järjestelmässä ja tästä syystä ne voidaan laskea vaihtuviksi osiksi variaation kannalta Ruby on Rails-kehyksessä. 
 
-\subsection{Luokka- ja sekvenssikaavio}
-Selotus sovelluksesta ja selitys tapahtumien kulusta.
-\paragraph{Luokkakaavio}
-\paragraph{Sekvenssikaavio}
+Kuvassa 7. olen merkannut kuvaan järjestelmän sisälle tummennettuna ne komponentit, joihin olen tehnyt itse muutoksia. Kuitenkin ':TranslationsController', ':views' ja ':Translation' ovat perittyjä jostain tai toteuttavat jonkun rajapinnan, jolloin niiden toiminnallisuus on suhteellisen rajoitettu ja ennalta määritelty. Ainoastaan ':TranslatorApi' on täysin itsenäinen oma staattinen luokkansa, jota ':Translation' käyttää hyväkseen muodostaessaan kyselyitä ulkopuoliseen Yandex-APIin. 
 
-<<näihin mitkä kuuluvat kehyksen ulkopuolelle>>
-Konfiguraatiotiedostot
+\subsection{Sekvenssikaavio}
+Seuraavassa kuvataan sekvenssikaavion avulla miten uuden käännöksen tekeminen tapahtuu järjestelmässä ja miten se tallentuu tietokantaan. Kuvassa käyttäjä on navigoinut itsensä sivulle etusivule ('/'-osoitteeseen). Hän kirjoittaa lomakkeeseen haluamansa tekstin, valitsee kielen ja painaa 'Translate!'. Sekvenssikaavio alkaa tästä tapahtumasta.
 
+\begin{sidewaysfigure}
+    \centering
+    \includegraphics[width=1.05\textwidth]{images/sekvenssi.png}
+    \caption{Sekvenssikaavio käännöksen tekemisestä ja tallentamisesta.}
+    \label{fig:awesome_image}
+\end{sidewaysfigure}
 
-\subsection{Suunnittelumallit}
-\paragraph{Periyttäminen}
 \newpage
 
 

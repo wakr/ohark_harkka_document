@@ -7,48 +7,58 @@ Database file #1: lahteet.bib
 Warning--to sort, need author or key in yandex
 Warning--to sort, need author or key in ror
 Warning--to sort, need author or key in ar
+Warning--to sort, need author or key in webrick
+Warning--to sort, need author or key in rubyserver
+Warning--to sort, need author or key in rhtml
+Warning--to sort, need author or key in rorad
+Warning--to sort, need author or key in rorar
 Warning--empty author in ar
+Warning--empty author in rhtml
+Warning--empty author in rorar
 Warning--empty author in ror
+Warning--empty author in rorad
+Warning--empty author in rubyserver
+Warning--empty author in webrick
 Warning--empty author in yandex
-You've used 5 entries,
+You've used 10 entries,
             3861 wiz_defined-function locations,
-            763 strings with 6417 characters,
-and the built_in function-call counts, 1552 in all, are:
-= -- 155
-> -- 57
+            786 strings with 6910 characters,
+and the built_in function-call counts, 2753 in all, are:
+= -- 280
+> -- 62
 < -- 0
-+ -- 21
++ -- 23
 - -- 21
-* -- 109
-:= -- 240
-add.period$ -- 10
-call.type$ -- 5
-change.case$ -- 28
-chr.to.int$ -- 5
-cite$ -- 14
-duplicate$ -- 58
-empty$ -- 132
+* -- 194
+:= -- 385
+add.period$ -- 20
+call.type$ -- 10
+change.case$ -- 48
+chr.to.int$ -- 8
+cite$ -- 34
+duplicate$ -- 113
+empty$ -- 272
 format.name$ -- 25
-if$ -- 322
-int.to.chr$ -- 1
+if$ -- 597
+int.to.chr$ -- 3
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 33
+newline$ -- 58
 num.names$ -- 6
-pop$ -- 42
+pop$ -- 82
 preamble$ -- 1
-purify$ -- 32
+purify$ -- 57
 quote$ -- 0
-skip$ -- 62
+skip$ -- 118
 stack$ -- 0
-substring$ -- 38
+substring$ -- 78
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 50
-warning$ -- 6
+type$ -- 100
+warning$ -- 16
 while$ -- 6
-width$ -- 7
-write$ -- 66
-(There were 6 warnings)
+width$ -- 15
+write$ -- 121
+(There were 16 warnings)
