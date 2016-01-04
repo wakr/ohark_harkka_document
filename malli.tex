@@ -270,7 +270,7 @@ Toisaalta laajemmin ajateltuna ainoaksi yhteiseksi osaksi (variaatiopisteiden ka
 Kuvassa 7. olen merkannut kuvaan j‰rjestelm‰n sis‰lle tummennettuna ne komponentit, joihin olen tehnyt itse muutoksia. Kuitenkin ':TranslationsController', ':views' ja ':Translation' ovat perittyj‰ jostain tai toteuttavat jonkun rajapinnan, jolloin niiden toiminnallisuus on suhteellisen rajoitettu ja ennalta m‰‰ritelty. Ainoastaan ':TranslatorApi' on t‰ysin itsen‰inen oma staattinen luokkansa, jota ':Translation' k‰ytt‰‰ hyv‰kseen muodostaessaan kyselyit‰ ulkopuoliseen Yandex-APIin. 
 
 \subsection{Sekvenssikaavio}
-Seuraavassa kuvataan sekvenssikaavion avulla miten uuden k‰‰nnˆksen tekeminen tapahtuu j‰rjestelm‰ss‰ ja miten se tallentuu tietokantaan. Kuvassa k‰ytt‰j‰ on navigoinut itsens‰ sivulle etusivule ('/'-osoitteeseen). H‰n kirjoittaa lomakkeeseen haluamansa tekstin, valitsee kielen ja painaa 'Translate!'. Sekvenssikaavio alkaa t‰st‰ tapahtumasta.
+Seuraavassa kuvataan sekvenssikaavion avulla miten uuden k‰‰nnˆksen tekeminen tapahtuu j‰rjestelm‰ss‰ ja miten se tallentuu tietokantaan. Kuvassa k‰ytt‰j‰ on navigoinut itsens‰ sivulle etusivule ('/'-osoitteeseen). H‰n kirjoittaa lomakkeeseen haluamansa tekstin, valitsee kielen ja painaa 'Translate!'. Sekvenssikaavio alkaa t‰st‰ tapahtumasta, mutta siin‰ on abstrahoitu joitan osia pois (funktiokutsuja) p‰‰osin sen takia, ett‰ kuvaa olisi helpompi tulkita.
 
 \begin{sidewaysfigure}
     \centering
