@@ -184,7 +184,7 @@ DRY-periaate n‰kyy vahvasti muun muassa Gemfile:n, routes.rb:n sek‰ tietokantami
 
 Toisaalta jo aiemmin mainittu ActiveRecord v‰hent‰‰ toistoa, koska kehitt‰jien ei tarvitse kirjoittaa erikseen ylˆs tietokantatauluja mallien m‰‰rittelytiedostoihin, vaan Ruby on Rails hoitaa kaiken tietokantalogiikan nime‰miskonventioiden avulla.
 
-\subsection{Tyylit}
+\subsection{Arkkitehtuuriset tyylit}
 
 Kuten aiemmin mainittu, niin Ruby on Railsist‰ ei suoraan lˆydy juuri niink‰‰n yht‰ tietty‰ tyyli‰, jota kehys noudattaisi, mutta toisaalta 3-taso- malli on melko l‰hell‰ sit‰. 
 
@@ -270,7 +270,7 @@ Toisaalta laajemmin ajateltuna ainoaksi yhteiseksi osaksi (variaatiopisteiden ka
 Kuvassa 7. olen merkannut kuvaan j‰rjestelm‰n sis‰lle tummennettuna ne komponentit, joihin olen tehnyt itse muutoksia. Kuitenkin ':TranslationsController', ':views' ja ':Translation' ovat perittyj‰ jostain tai toteuttavat jonkun rajapinnan, jolloin niiden toiminnallisuus on suhteellisen rajoitettu ja ennalta m‰‰ritelty. Ainoastaan ':TranslatorApi' on t‰ysin itsen‰inen oma staattinen luokkansa, jota ':Translation' k‰ytt‰‰ hyv‰kseen muodostaessaan kyselyit‰ ulkopuoliseen Yandex-APIin. 
 
 \subsection{Sekvenssikaavio}
-Seuraavassa kuvataan sekvenssikaavion avulla miten uuden k‰‰nnˆksen tekeminen tapahtuu j‰rjestelm‰ss‰ ja miten se tallentuu tietokantaan. Kuvassa k‰ytt‰j‰ on navigoinut itsens‰ sivulle etusivule ('/'-osoitteeseen). H‰n kirjoittaa lomakkeeseen haluamansa tekstin, valitsee kielen ja painaa 'Translate!'. Sekvenssikaavio alkaa t‰st‰ tapahtumasta, mutta siin‰ on abstrahoitu joitan osia pois (funktiokutsuja) p‰‰osin sen takia, ett‰ kuvaa olisi helpompi tulkita.
+Seuraavassa kuvataan sekvenssikaavion avulla miten uuden k‰‰nnˆksen tekeminen tapahtuu j‰rjestelm‰ss‰ ja miten se tallentuu tietokantaan. Kuvassa k‰ytt‰j‰ on navigoinut itsens‰ sivulle etusivule ('/'-osoitteeseen). H‰n kirjoittaa lomakkeeseen haluamansa tekstin, valitsee kielen ja painaa 'Translate!' (Kuva 1). Sekvenssikaavio alkaa t‰st‰ tapahtumasta, mutta siin‰ on abstrahoitu joitan osia pois (funktiokutsuja) p‰‰osin sen takia, ett‰ kuvaa olisi helpompi tulkita.
 
 \begin{sidewaysfigure}
     \centering
@@ -283,14 +283,54 @@ Seuraavassa kuvataan sekvenssikaavion avulla miten uuden k‰‰nnˆksen tekeminen ta
 
 
 \section{Kehyksen ja sovelluksen arviointi}
+Mihin perustuu. Omat kokemukset. Arvioidaan kehyst‰ ja sen avulla toteutetun sovelluksen arkkitehtuuria. 
+
+Sovelluskehyksen‰ Ruby on Rails on eritt‰in tarkka sen omista k‰yt‰nneist‰, kun sit‰ verrataan esimerkiksi toiseen eritt‰in suosittuun backend-sovelluskehykseen NodeJS:‰‰n. NodeJS tarjoaa samalla tavalla kehyksen tuottaa web-palveluita, mutta se on rakenteellisesti paljon kevyempi ja v‰hemm‰n rajoittava. Toisaalta Ruby on Rails sopii hyvin aloitteleville ohjelmoijille sek‰ pienehkˆille start-up -henkisille yrityksille juuri sen k‰yt‰nteiden vuoksi. Niit‰ noudattamalla pystyt‰‰n todella nopeasti kehitt‰m‰‰n palveluita asiakkaille.
+
+Kuitenkin muutama heikkous kehyksess‰ nousee esille. N‰it‰ ovat muun muassa suoritusteho, sovelluksen saaminen verkkoon, legacy-j‰rjestelm‰n kanssa kommunikointi sek‰ sovelluskehyksen tuoma rajoittuneisuus \cite{rorad}.
+
+\paragraph{Suoritustehon heikkous}
+Interpreted, no threads, 
+\paragraph{Sovelluksen vaikea deployaus} 
+Ruby on Rails vaatii paljon esiasennusta + itsess‰‰n isohko j‰rjestelm‰. Ruby ei ole tuettuina koneissa automaattisesti. Rails pit‰‰ itsess‰‰n asentaa
+
+\paragraph{Legacy-ongelmat} 
+Konventiot.
+\paragraph{Rajoittuneisuus}
+Konventiot.
+
+\paragraph{Sopiiko suunniteltu arkkitehtuuri j‰rjestelm‰lle?}
+\paragraph{Mik‰ vaihtoehtoisista arkkitehtuureista sopii parhaiten j‰rjestelm‰lle
+ja miksi?}
+\paragraph{Miten hyv‰ tulee olemaan j‰rjestelm‰n jokin tietty laadullinen
+ominaisuus, olettaen j‰rkev‰ toteutustapa?}
+
 \subsection{Hyv‰t ja huonot puolet}
 L‰hdekirjallisuudessa mainittuja
-\subsection{Laatuskenaariot}
-Laatuominaisuuden testaaminen (saatavuus/muunneltavuus/uudelleenk‰yt.)
-\subsection{ATAM}
+\subsection{ATAM-arviointi}
+ pienehkˆ joukko (laatu-) skenaarioita jonkin laatuominaisuuden testaamiseksi - sek‰ odotettavissa olevia ett‰ j‰rjestelm‰n rajoja m‰‰rittelevi‰ (katso luentokurssin materiaalit arkkitehtuurin arvioinnista ja ATAM:sta) 
+
+Esitet‰‰n konkreettisia
+esimerkkitilanteita, joissa tietyt
+laatuominaisuudet tulevat esiin
+
+\paragraph{Laatuominaisuuden testaaminen - muunneltavuus ja uudelleenk‰ytett‰vyys}
+ (saatavuus/muunneltavuus/uudelleenk‰yt.)
 Arkkitehtuurin arvioiminen
 Low/Medium/High (vaativuus + tyˆm‰‰r‰)
 
+Jos tarkastellaan muutettavuutta, skenaario k‰sittelee jotakin
+muutostarvetta j‰rjestelm‰n evoluutiossa
+
+Jos tarkastellaan uudelleenk‰ytett‰vyytt‰, skenaario k‰sittelee
+jonkin uuden sovelluksen tekemist‰ uudelleen k‰ytt‰m‰ll‰
+j‰rjestelm‰‰ (= tuoterunko)
+
+(.json-rajapinta)
+
+Laatupuu
+
+Identifioidaan riskit, turvalliset ratkaisut, herkkyyskohdat ja tasapainottelukohdat.
 
 
 \newpage

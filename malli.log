@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  4 JAN 2016 21:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  5 JAN 2016 19:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -517,10 +517,16 @@ Overfull \hbox (32.72266pt too wide) in paragraph at lines 277--278
  [][] 
  []
 
-[11] [12 <./images/sekvenssi.png>] [13] (./malli.bbl (./babelbst.tex
-(./finnbst.tex))
+[11] [12 <./images/sekvenssi.png>] [13]
+Overfull \hbox (10.75163pt too wide) in paragraph at lines 318--321
+\T1/cmr/bx/n/12 vyys[] \T1/cmr/m/n/12 (saa-ta-vuus/-muun-nel-ta-vuus/uu-del-lee
+n-käyt.) Ark-ki-teh-tuu-rin ar-vioi-mi-nen Low/-
+ []
+
+[14] (./malli.bbl (./babelbst.tex (./finnbst.tex))
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Underfull \hbox (badness 10000) in paragraph at lines 33--36
@@ -528,13 +534,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--36
 . org / classes /
  []
 
-) [14
+) [15
 
 ] (./malli.aux) ) 
 Here is how much of TeX's memory you used:
  5120 strings out of 493304
  69334 string characters out of 6139870
- 174486 words of memory out of 5000000
+ 173486 words of memory out of 5000000
  8463 multiletter control sequences out of 15000+600000
  14669 words of font info for 37 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -547,10 +553,10 @@ x1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/shar
 e/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/
 public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti
 1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on malli.pdf (16 pages, 354292 bytes).
+Output written on malli.pdf (17 pages, 356851 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
