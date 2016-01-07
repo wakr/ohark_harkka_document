@@ -283,30 +283,39 @@ Seuraavassa kuvataan sekvenssikaavion avulla miten uuden k‰‰nnˆksen tekeminen ta
 
 
 \section{Kehyksen ja sovelluksen arviointi}
-Mihin perustuu. Omat kokemukset. Arvioidaan kehyst‰ ja sen avulla toteutetun sovelluksen arkkitehtuuria. 
 
 Sovelluskehyksen‰ Ruby on Rails on eritt‰in tarkka sen omista k‰yt‰nneist‰, kun sit‰ verrataan esimerkiksi toiseen eritt‰in suosittuun backend-sovelluskehykseen NodeJS:‰‰n. NodeJS tarjoaa samalla tavalla kehyksen tuottaa web-palveluita, mutta se on rakenteellisesti paljon kevyempi ja v‰hemm‰n rajoittava. Toisaalta Ruby on Rails sopii hyvin aloitteleville ohjelmoijille sek‰ pienehkˆille start-up -henkisille yrityksille juuri sen k‰yt‰nteiden vuoksi. Niit‰ noudattamalla pystyt‰‰n todella nopeasti kehitt‰m‰‰n palveluita asiakkaille.
 
 Kuitenkin muutama heikkous kehyksess‰ nousee esille. N‰it‰ ovat muun muassa suoritusteho, sovelluksen saaminen verkkoon, legacy-j‰rjestelm‰n kanssa kommunikointi sek‰ sovelluskehyksen tuoma rajoittuneisuus \cite{rorad}.
 
-\paragraph{Suoritustehon heikkous}
-Interpreted, no threads, 
-\paragraph{Sovelluksen vaikea deployaus} 
-Ruby on Rails vaatii paljon esiasennusta + itsess‰‰n isohko j‰rjestelm‰. Ruby ei ole tuettuina koneissa automaattisesti. Rails pit‰‰ itsess‰‰n asentaa
-
-\paragraph{Legacy-ongelmat} 
-Konventiot.
-\paragraph{Rajoittuneisuus}
-Konventiot.
 
 \paragraph{Sopiiko suunniteltu arkkitehtuuri j‰rjestelm‰lle?}
-\paragraph{Mik‰ vaihtoehtoisista arkkitehtuureista sopii parhaiten j‰rjestelm‰lle
-ja miksi?}
-\paragraph{Miten hyv‰ tulee olemaan j‰rjestelm‰n jokin tietty laadullinen
-ominaisuus, olettaen j‰rkev‰ toteutustapa?}
+
+Kehys ja kehyksest‰ johdettu MVC-mallinen arkkitehtuuri sopii todella hyvin tekem‰lleni j‰rjestelm‰lle. Se on todella helposti muokattavissa sek‰ erilaisten n‰kymien/tietokannan vaihtaminen onnistuu hyvinkin nopeasti. 
+
+Suurimmat laadulliset vaatimukset j‰rjestelm‰lleni olivat alussa, ett‰ se on nopea saada pystyyn, nopeaa kehitt‰‰ ja monipuolinen jatkon kannalta. Sovelluskehys tarjosi mielest‰ni n‰m‰ kaikki ja sivussa tuli muutama laatuvipukin. 
 
 \subsection{Hyv‰t ja huonot puolet}
-L‰hdekirjallisuudessa mainittuja
+
+Kehyksen huonot puolet tulevat suurimmalta osin konventioiden pakollisuudesta sek‰ Ruby-kielest‰.
+
+\paragraph{Suoritustehon heikkous} 
+
+Ruby on itsess‰‰n tulkattava kieli, joten suoritusteholtaan se h‰vi‰‰ k‰‰nnett‰ville kielille esimerkkin‰ Java Spring. Toisaalta Ruby on Rails-kehyksen teho tulee tuottavuuden nopeudesta, mutta tuottavuus ei ratkaise yht‰ Railsin suurinta ongelmaa; eritt‰in huonoa tukea s‰ikeist‰miselle. T‰m‰ tuottaa paljon ongelmia, jos j‰rjestelm‰n yht‰aikaiset k‰ytt‰j‰m‰‰r‰t kasvavat suuriksi, koska s‰ikeist‰misen avulla ei pystyt‰ tasapainottamaan syntynytt‰ kuormaa (load balance). T‰ten Ruby on Rails soveltuu melko huonosti sovelluksille, jossa nopeus on oltava suuri k‰ytt‰j‰m‰‰rien ollessa myˆs suuria. Skaalautuuvus on myˆs tuottanut paljon puheita sek‰ puolesta, ett‰ vastaan \cite{rorsca}.
+
+\paragraph{Sovelluksen vaikea tuotantoo saattaminen} 
+
+Rails-kehys vaatii paljon esiasennusta, koska esimerkiksi tavallisissa Linux-jakeluissa ei edes ole Ruby-kirjastoa valmiina. T‰m‰n p‰‰lle pit‰‰ asentaa itse kehys ja se vie suhteellisen paljon enemm‰n tilaa ja aikaa, kuin muut paljon kevyemm‰t kehykset. T‰st‰ johtuu suhteellisen huono palvelimien tuki Ruby on Rails-kehykselle ja aikaa saa kulumaan palvelimen s‰‰t‰misess‰ Railsia varten. 
+
+\paragraph{Rajoittuneisuus}
+
+Rails painottaa sis‰isesti eleganttia syntaksia, tuotteliaisuutta sek‰ yll‰pidett‰vyytt‰ nopeuden ja resurssien hallinan kustannuksella. N‰m‰ on toteutettu suurimallta osin konventioiden avulla, joten kehys saattaa tuntua kehitt‰jille todella rajoittavalta. Vaikka konventioista voi poiketa, niin jokainen poikkeama mahdollistaa potentiaalisen virheen myˆhemmin j‰rjestelm‰n elinkaaressa. Konventiot myˆs rajoittavat legacy-j‰rjestelmien kanssa toimimista ja varsinkin legacy-tietokannan kanssa tyˆskentely vaatii kehyksess‰ jopa todella paljon konfigurointia \cite{rorlegacy}.
+
+
+Miksi kuitenkin suurinosa startup-yrityksist‰ k‰ytt‰‰ kehyst‰?
+http://www.nascenia.com/why-startups-use-ruby-on-rails/
+
+
 \subsection{ATAM-arviointi}
  pienehkˆ joukko (laatu-) skenaarioita jonkin laatuominaisuuden testaamiseksi - sek‰ odotettavissa olevia ett‰ j‰rjestelm‰n rajoja m‰‰rittelevi‰ (katso luentokurssin materiaalit arkkitehtuurin arvioinnista ja ATAM:sta) 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  5 JAN 2016 19:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  7 JAN 2016 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -518,12 +518,18 @@ Overfull \hbox (32.72266pt too wide) in paragraph at lines 277--278
  []
 
 [11] [12 <./images/sekvenssi.png>] [13]
-Overfull \hbox (10.75163pt too wide) in paragraph at lines 318--321
+Overfull \hbox (54.37967pt too wide) in paragraph at lines 315--317
+[]\T1/cmr/m/n/12 Miksi kui-ten-kin suu-rin-osa startup-yrityksist‰ k‰yt-t‰‰ ke-
+hys-t‰? http://www.nascenia.com/why-
+ []
+
+
+Overfull \hbox (10.75163pt too wide) in paragraph at lines 327--330
 \T1/cmr/bx/n/12 vyys[] \T1/cmr/m/n/12 (saa-ta-vuus/-muun-nel-ta-vuus/uu-del-lee
 n-k‰yt.) Ark-ki-teh-tuu-rin ar-vioi-mi-nen Low/-
  []
 
-[14] (./malli.bbl (./babelbst.tex (./finnbst.tex))
+[14] [15] (./malli.bbl (./babelbst.tex (./finnbst.tex))
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -534,29 +540,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--36
 . org / classes /
  []
 
-) [15
 
-] (./malli.aux) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 49--53
+[]\T1/cmr/m/n/12 Using Rails with a le-gacy da-ta-ba-se sche-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--53
+\T1/cmr/m/n/12 ma.  $\T1/cmtt/m/n/12 https : / / schneide . wordpress . com / 2
+014 / 03 / 10 /
+ []
+
+) [16
+
+] (./malli.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5120 strings out of 493304
- 69334 string characters out of 6139870
+ 5122 strings out of 493304
+ 69353 string characters out of 6139870
  173486 words of memory out of 5000000
- 8463 multiletter control sequences out of 15000+600000
+ 8465 multiletter control sequences out of 15000+600000
  14669 words of font info for 37 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,8n,36p,726b,1675s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1
-/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfb
-x1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/shar
-e/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti
-1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on malli.pdf (17 pages, 356851 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on malli.pdf (18 pages, 359050 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 112 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

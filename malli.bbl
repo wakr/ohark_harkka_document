@@ -45,6 +45,17 @@ Erkiö, H., Mäkelä, M., Nykänen, M. \bbland{} Verkamo, I., Opinnäytetyön
   \url{http://adrianmejia.com/blog/2011/08/11/ruby-on-rails-architectural-design/}.
 \newblock [30.12.2015]
 
+\bibitem[RORLEGACY]{rorlegacy}
+{Using Rails with a legacy database schema}.
+\newblock
+  \url{https://schneide.wordpress.com/2014/03/10/using-rails-with-a-legacy-database-schema/}.
+\newblock [07.1.2016]
+
+\bibitem[RORSCA]{rorsca}
+{Why Do They Say Rails Doesn't Scale?}
+\newblock \url{http://codefol.io/posts/why-do-they-say-rails-doesnt-scale}.
+\newblock [07.1.2016]
+
 \bibitem[RUBYSERVER]{rubyserver}
 {Ruby Default Web Server}.
 \newblock \url{https://devcenter.heroku.com/articles/ruby-default-web-server}.

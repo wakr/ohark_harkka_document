@@ -20,14 +20,11 @@
 \contentsline {subsection}{\numberline {2.1}Kehyksen erikoistaminen sovelluskohtaisesti}{11}
 \contentsline {subsection}{\numberline {2.2}Sekvenssikaavio}{11}
 \contentsline {section}{\numberline {3}Kehyksen ja sovelluksen arviointi}{13}
-\contentsline {paragraph}{Suoritustehon heikkous}{13}
-\contentsline {paragraph}{Sovelluksen vaikea deployaus}{13}
-\contentsline {paragraph}{Legacy-ongelmat}{13}
-\contentsline {paragraph}{Rajoittuneisuus}{13}
 \contentsline {paragraph}{Sopiiko suunniteltu arkkitehtuuri j\"arjestelm\"alle?}{13}
-\contentsline {paragraph}{Mik\"a vaihtoehtoisista arkkitehtuureista sopii parhaiten j\"arjestelm\"alle ja miksi?}{13}
-\contentsline {paragraph}{Miten hyv\"a tulee olemaan j\"arjestelm\"an jokin tietty laadullinen ominaisuus, olettaen j\"arkev\"a toteutustapa?}{13}
-\contentsline {subsection}{\numberline {3.1}Hyv\"at ja huonot puolet}{14}
+\contentsline {subsection}{\numberline {3.1}Hyv\"at ja huonot puolet}{13}
+\contentsline {paragraph}{Suoritustehon heikkous}{13}
+\contentsline {paragraph}{Sovelluksen vaikea tuotantoo saattaminen}{14}
+\contentsline {paragraph}{Rajoittuneisuus}{14}
 \contentsline {subsection}{\numberline {3.2}ATAM-arviointi}{14}
 \contentsline {paragraph}{Laatuominaisuuden testaaminen - muunneltavuus ja uudelleenk\"aytett\"avyys}{14}
-\contentsline {section}{L\"ahteet}{15}
+\contentsline {section}{L\"ahteet}{16}

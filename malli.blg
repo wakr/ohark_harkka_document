@@ -11,54 +11,58 @@ Warning--to sort, need author or key in webrick
 Warning--to sort, need author or key in rubyserver
 Warning--to sort, need author or key in rhtml
 Warning--to sort, need author or key in rorad
+Warning--to sort, need author or key in rorsca
+Warning--to sort, need author or key in rorlegacy
 Warning--to sort, need author or key in rorar
 Warning--empty author in ar
 Warning--empty author in rhtml
 Warning--empty author in rorar
 Warning--empty author in ror
 Warning--empty author in rorad
+Warning--empty author in rorlegacy
+Warning--empty author in rorsca
 Warning--empty author in rubyserver
 Warning--empty author in webrick
 Warning--empty author in yandex
-You've used 10 entries,
+You've used 12 entries,
             3861 wiz_defined-function locations,
-            786 strings with 6910 characters,
-and the built_in function-call counts, 2753 in all, are:
-= -- 280
-> -- 62
+            795 strings with 7172 characters,
+and the built_in function-call counts, 3231 in all, are:
+= -- 330
+> -- 64
 < -- 0
-+ -- 23
++ -- 25
 - -- 21
-* -- 194
-:= -- 385
-add.period$ -- 20
-call.type$ -- 10
-change.case$ -- 48
+* -- 228
+:= -- 439
+add.period$ -- 24
+call.type$ -- 12
+change.case$ -- 56
 chr.to.int$ -- 8
-cite$ -- 34
-duplicate$ -- 113
-empty$ -- 272
+cite$ -- 42
+duplicate$ -- 135
+empty$ -- 328
 format.name$ -- 25
-if$ -- 597
-int.to.chr$ -- 3
+if$ -- 707
+int.to.chr$ -- 5
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 58
+newline$ -- 68
 num.names$ -- 6
-pop$ -- 82
+pop$ -- 98
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 67
 quote$ -- 0
-skip$ -- 118
+skip$ -- 142
 stack$ -- 0
-substring$ -- 78
+substring$ -- 94
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 100
-warning$ -- 16
+type$ -- 120
+warning$ -- 20
 while$ -- 6
-width$ -- 15
-write$ -- 121
-(There were 16 warnings)
+width$ -- 17
+write$ -- 143
+(There were 20 warnings)
