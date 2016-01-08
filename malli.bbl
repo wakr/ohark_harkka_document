@@ -11,6 +11,12 @@
 \newblock \url{https://en.wikipedia.org/wiki/Active_record_pattern}.
 \newblock [28.12.2015]
 
+\bibitem[BITZESTY]{bitzesty}
+{Ruby on Rails: What It Is and Why We Use It For Web Applications}.
+\newblock
+  \url{http://bitzesty.com/2014/01/10/ruby-on-rails-what-it-is-and-why-we-use-it-for-web-applications/}.
+\newblock [08.1.2016]
+
 \bibitem[BPS98]{bray}
 Bray, T., Paoli, J. \bbland{} Sperberg-McQueen, C., {Extensible Markup Language
   (XML) 1.0. W3C Recommendation 10-February-1998}.
@@ -65,6 +71,11 @@ Erkiö, H., Mäkelä, M., Nykänen, M. \bbland{} Verkamo, I., Opinnäytetyön
 {WEBrick}.
 \newblock \url{https://en.wikipedia.org/wiki/WEBrick}.
 \newblock [04.1.2016]
+
+\bibitem[WSUROR]{wsuror}
+{Why Startups Use Ruby on Rails?}
+\newblock \url{http://www.nascenia.com/why-startups-use-ruby-on-rails/}.
+\newblock [08.1.2016]
 
 \bibitem[YANDEX]{yandex}
 {Yandex - Translator API}.

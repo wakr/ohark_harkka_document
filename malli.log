@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  7 JAN 2016 18:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  8 JAN 2016 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -517,67 +517,80 @@ Overfull \hbox (32.72266pt too wide) in paragraph at lines 277--278
  [][] 
  []
 
-[11] [12 <./images/sekvenssi.png>] [13]
-Overfull \hbox (54.37967pt too wide) in paragraph at lines 315--317
-[]\T1/cmr/m/n/12 Miksi kui-ten-kin suu-rin-osa startup-yrityksist‰ k‰yt-t‰‰ ke-
-hys-t‰? http://www.nascenia.com/why-
+[11] [12 <./images/sekvenssi.png>]
+Overfull \hbox (23.76358pt too wide) in paragraph at lines 304--305
+\T1/cmr/m/n/12 lii-tet-t‰-v‰t ul-ko-puo-li-set kir-jas-tot ovat suu-rim-mal-ta 
+osin avoin-ta l‰h-de-koo-dia [[]]. 
  []
 
-
-Overfull \hbox (10.75163pt too wide) in paragraph at lines 327--330
+[13] [14]
+Overfull \hbox (10.75163pt too wide) in paragraph at lines 334--337
 \T1/cmr/bx/n/12 vyys[] \T1/cmr/m/n/12 (saa-ta-vuus/-muun-nel-ta-vuus/uu-del-lee
 n-k‰yt.) Ark-ki-teh-tuu-rin ar-vioi-mi-nen Low/-
  []
 
-[14] [15] (./malli.bbl (./babelbst.tex (./finnbst.tex))
+[15] (./malli.bbl (./babelbst.tex (./finnbst.tex))
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 33--36
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
+[]\T1/cmr/m/n/12 Ruby on Rails: What It Is and Why We Use It For
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
+\T1/cmr/m/n/12 Web Applica-tions.  $\T1/cmtt/m/n/12 http : / / bitzesty . com /
+ 2014 / 01 / 10 /
+ []
+
+
+Overfull \hbox (42.68584pt too wide) in paragraph at lines 15--19
+\T1/cmtt/m/n/12 ruby-[]on-[]rails-[]what-[]it-[]is-[]and-[]why-[]we-[]use-[]it-
+[]for-[]web-[]applications/$\T1/cmr/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
 []\T1/cmr/m/n/12 Active Record.  $\T1/cmtt/m/n/12 http : / / api . rubyonrails 
 . org / classes /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--53
+Underfull \hbox (badness 10000) in paragraph at lines 55--59
 []\T1/cmr/m/n/12 Using Rails with a le-gacy da-ta-ba-se sche-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--53
+Underfull \hbox (badness 10000) in paragraph at lines 55--59
 \T1/cmr/m/n/12 ma.  $\T1/cmtt/m/n/12 https : / / schneide . wordpress . com / 2
 014 / 03 / 10 /
  []
 
-) [16
+[16
 
-] (./malli.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+]) [17] (./malli.aux) ) 
 Here is how much of TeX's memory you used:
- 5122 strings out of 493304
- 69353 string characters out of 6139870
+ 5124 strings out of 493304
+ 69371 string characters out of 6139870
  173486 words of memory out of 5000000
- 8465 multiletter control sequences out of 15000+600000
+ 8467 multiletter control sequences out of 15000+600000
  14669 words of font info for 37 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,8n,36p,726b,1675s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/t
-ype1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super
-/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/
-share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on malli.pdf (18 pages, 359050 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.e
+nc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on malli.pdf (19 pages, 361030 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 116 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

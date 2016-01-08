@@ -297,7 +297,17 @@ Suurimmat laadulliset vaatimukset järjestelmälleni olivat alussa, että se on nop
 
 \subsection{Hyvät ja huonot puolet}
 
-Kehyksen huonot puolet tulevat suurimmalta osin konventioiden pakollisuudesta sekä Ruby-kielestä.
+Hyvät puolet kehyksessä ovat selkeästi kehittämisen nopeus sekä konventioiden tuoma järjestelmien virtaviivaistaminen, kun taas huonot puolet tulevat suurimmalta osin konventioiden pakollisuudesta sekä Ruby-kielestä.
+
+\subsubsection{Hyvät puolet}
+
+Kehyksen hyvät puolet tulevat melkein automaattisesti noudattamalla jopa toisinaan tiukkoja Railsin konventioita. Hyviin puoliin lukeutuvat muun muassa konventioiden kautta tuleva REST-rajapinta; nopea kehitys, joka sopii hyvin Agile-projekteihin; konventiot itsessään, jotka auttavat kehittäjiä siirtymään helposti Rails projektien välillä; kielenä Rubyn itsedokumentoiva tyyli sekä useimmat kehykseen liitettävät ulkopuoliset kirjastot ovat suurimmalta osin avointa lähdekoodia \cite{bitzesty}.
+
+Rails on tullut suosituksi myös startup-yrityksissä. Tähän on ollut syynä pääosin kehyksen: koventiot, kehys on käytännössä ilmainen kirjastoja myöten, erittäin hyvä PaaS-tuki (Platform as a Service), gem-ideologia (riippuvuudet yhdessä tiedostossa ja niiden helppo hallinta) sekä Rails on alustana kasvava ja reagoi uusiin tarpeisiin web-ympäristössä jatkuvasti \cite{wsuror}. 
+
+
+\subsubsection{Huonot puolet}
+
 
 \paragraph{Suoritustehon heikkous} 
 
@@ -305,15 +315,12 @@ Ruby on itsessään tulkattava kieli, joten suoritusteholtaan se häviää käännettäv
 
 \paragraph{Sovelluksen vaikea tuotantoo saattaminen} 
 
-Rails-kehys vaatii paljon esiasennusta, koska esimerkiksi tavallisissa Linux-jakeluissa ei edes ole Ruby-kirjastoa valmiina. Tämän päälle pitää asentaa itse kehys ja se vie suhteellisen paljon enemmän tilaa ja aikaa, kuin muut paljon kevyemmät kehykset. Tästä johtuu suhteellisen huono palvelimien tuki Ruby on Rails-kehykselle ja aikaa saa kulumaan palvelimen säätämisessä Railsia varten. 
+Rails-kehys vaatii paljon esiasennusta, koska esimerkiksi tavallisissa Linux-jakeluissa ei edes ole Ruby-kirjastoa valmiina. Tämän päälle pitää asentaa itse kehys ja se vie suhteellisen paljon enemmän tilaa ja aikaa, kuin muut paljon kevyemmät kehykset \cite{bitzesty}. Tästä johtuu suhteellisen huono palvelimien tuki Ruby on Rails-kehykselle ja aikaa saa kulumaan palvelimen säätämisessä Railsia varten. 
 
 \paragraph{Rajoittuneisuus}
 
 Rails painottaa sisäisesti eleganttia syntaksia, tuotteliaisuutta sekä ylläpidettävyyttä nopeuden ja resurssien hallinan kustannuksella. Nämä on toteutettu suurimallta osin konventioiden avulla, joten kehys saattaa tuntua kehittäjille todella rajoittavalta. Vaikka konventioista voi poiketa, niin jokainen poikkeama mahdollistaa potentiaalisen virheen myöhemmin järjestelmän elinkaaressa. Konventiot myös rajoittavat legacy-järjestelmien kanssa toimimista ja varsinkin legacy-tietokannan kanssa työskentely vaatii kehyksessä jopa todella paljon konfigurointia \cite{rorlegacy}.
 
-
-Miksi kuitenkin suurinosa startup-yrityksistä käyttää kehystä?
-http://www.nascenia.com/why-startups-use-ruby-on-rails/
 
 
 \subsection{ATAM-arviointi}
