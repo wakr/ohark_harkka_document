@@ -28,5 +28,6 @@
 \contentsline {paragraph}{Sovelluksen vaikea tuotantoo saattaminen}{14}
 \contentsline {paragraph}{Rajoittuneisuus}{14}
 \contentsline {subsection}{\numberline {3.2}ATAM-arviointi}{15}
+\contentsline {paragraph}{Laatupuu}{15}
 \contentsline {paragraph}{Laatuominaisuuden testaaminen - muunneltavuus ja uudelleenk\"aytett\"avyys}{15}
-\contentsline {section}{L\"ahteet}{16}
+\contentsline {section}{L\"ahteet}{17}

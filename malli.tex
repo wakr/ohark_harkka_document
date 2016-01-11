@@ -6,6 +6,8 @@
 \usepackage{color}
 \usepackage{float}
 \usepackage{rotating}
+
+\usepackage[T1]{fontenc}
 \usepackage{lmodern}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
@@ -325,15 +327,31 @@ Rails painottaa sisäisesti eleganttia syntaksia, tuotteliaisuutta sekä ylläpidet
 
 
 \subsection{ATAM-arviointi}
- pienehkö joukko (laatu-) skenaarioita jonkin laatuominaisuuden testaamiseksi - sekä odotettavissa olevia että järjestelmän rajoja määritteleviä (katso luentokurssin materiaalit arkkitehtuurin arvioinnista ja ATAM:sta) 
+
 
 Esitetään konkreettisia
 esimerkkitilanteita, joissa tietyt
 laatuominaisuudet tulevat esiin
 
+Rajoja kartoittavat skenaariot
+Etsivät järjestelmän rajoja: esim, kuormitusmuutoksia, alustan
+vaihto, palvelimen rikkoutuminen
+
+
+Identifioidaan riskit, turvalliset ratkaisut, herkkyyskohdat ja tasapainottelukohdat.
+
+\paragraph{Laatupuu}
+asd.
+
+\begin{figure}[H]
+\begin{center}
+\fbox{\includegraphics[width=1\textwidth]{images/laatupuu.png}}
+\caption{Skenaariot sijaitsevat oikealla ja jokainen on arvioitu niin, että ensimmäisenä on suluissa skenaarion vaativuus ja sen jälkeen työmäärä.}
+\end{center}
+\end{figure}
+
+
 \paragraph{Laatuominaisuuden testaaminen - muunneltavuus ja uudelleenkäytettävyys}
- (saatavuus/muunneltavuus/uudelleenkäyt.)
-Arkkitehtuurin arvioiminen
 Low/Medium/High (vaativuus + työmäärä)
 
 Jos tarkastellaan muutettavuutta, skenaario käsittelee jotakin
@@ -345,9 +363,10 @@ järjestelmää (= tuoterunko)
 
 (.json-rajapinta)
 
-Laatupuu
+https://www.quora.com/Is-Ruby-on-Rails-useful-for-a-single-page-application
 
-Identifioidaan riskit, turvalliset ratkaisut, herkkyyskohdat ja tasapainottelukohdat.
+
+
 
 
 \newpage

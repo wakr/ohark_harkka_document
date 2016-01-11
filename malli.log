@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  8 JAN 2016 15:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  10 JAN 2016 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -204,6 +204,13 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box31
 \rot@mess@toks=\toks21
 )
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
 (/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -247,19 +254,19 @@ File: lstlang2.sty 2013/08/26 1.5b listings language file
 ) (./malli.aux)
 \openout1 = `malli.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 45.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -399,10 +406,10 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 File: images/ennen_kaannosta.png Graphic file (type png)
 
 <use images/ennen_kaannosta.png>
-Package pdftex.def Info: images/ennen_kaannosta.png used on input line 81.
+Package pdftex.def Info: images/ennen_kaannosta.png used on input line 83.
 (pdftex.def)             Requested size: 426.79135pt x 266.37216pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 81--82
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 83--84
  [] 
  []
 
@@ -410,10 +417,10 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 81--82
 File: images/kaannoksen_jalkeen.png Graphic file (type png)
 
 <use images/kaannoksen_jalkeen.png>
-Package pdftex.def Info: images/kaannoksen_jalkeen.png used on input line 88.
+Package pdftex.def Info: images/kaannoksen_jalkeen.png used on input line 90.
 (pdftex.def)             Requested size: 426.79135pt x 223.18826pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 88--89
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 90--91
  [] 
  []
 
@@ -421,38 +428,38 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 88--89
 File: images/kaikkien_listaus.png Graphic file (type png)
 
 <use images/kaikkien_listaus.png>
-Package pdftex.def Info: images/kaikkien_listaus.png used on input line 95.
+Package pdftex.def Info: images/kaikkien_listaus.png used on input line 97.
 (pdftex.def)             Requested size: 426.79135pt x 147.60902pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 95--96
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 97--98
  [] 
  []
 
 [1 <./images/ennen_kaannosta.png>] [2 <./images/kaannoksen_jalkeen.png> <./imag
 es/kaikkien_listaus.png>]
-Overfull \hbox (2.78905pt too wide) in paragraph at lines 112--113
+Overfull \hbox (2.78905pt too wide) in paragraph at lines 114--115
 \T1/lmr/m/n/12 REST-rajapinnat, Con-ven-tion over Configuration- ja Don't Re-pe
 at Yourself-periaate.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--125
+Underfull \hbox (badness 10000) in paragraph at lines 123--127
 
  []
 
 
-Package Listings Warning: Text dropped after begin of listing on input line 125
+Package Listings Warning: Text dropped after begin of listing on input line 127
 .
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 127.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 129.
 
 (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 127.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 129.
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
+Underfull \hbox (badness 10000) in paragraph at lines 135--139
 
  []
 
@@ -460,35 +467,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--137
 
 ]
 
-Package Listings Warning: Text dropped after begin of listing on input line 137
+Package Listings Warning: Text dropped after begin of listing on input line 139
 .
 
 
-Overfull \hbox (29.16826pt too wide) in paragraph at lines 148--152
+Overfull \hbox (29.16826pt too wide) in paragraph at lines 150--154
 \T1/lmr/m/n/12 dat-ta-mi-nen te-kee to-teu-tet-ta-vas-ta j‰r-jes-tel-m‰s-t‰ mel
 -kein au-to-maat-ti-ses-ti REST-rajapintaa
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--152
+Underfull \hbox (badness 10000) in paragraph at lines 150--154
 
  []
 
 
-Package Listings Warning: Text dropped after begin of listing on input line 152
+Package Listings Warning: Text dropped after begin of listing on input line 154
 .
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--160
+Underfull \hbox (badness 10000) in paragraph at lines 158--162
 
  []
 
 
-Package Listings Warning: Text dropped after begin of listing on input line 160
+Package Listings Warning: Text dropped after begin of listing on input line 162
 .
 
 [4] [5]
-Overfull \hbox (8.8288pt too wide) in paragraph at lines 197--198
+Overfull \hbox (8.8288pt too wide) in paragraph at lines 199--200
  \T1/lmr/bx/n/12 Asiakas-palvelin[] \T1/lmr/m/n/12 Kom-mu-ni-koin-ti kaik-kien 
 kom-po-nent-tien v‰-lil-l‰ ta-pah-tuu asiakas-
  []
@@ -497,15 +504,15 @@ kom-po-nent-tien v‰-lil-l‰ ta-pah-tuu asiakas-
 File: images/RubyCommunication.png Graphic file (type png)
 
 <use images/RubyCommunication.png>
-Package pdftex.def Info: images/RubyCommunication.png used on input line 203.
+Package pdftex.def Info: images/RubyCommunication.png used on input line 205.
 (pdftex.def)             Requested size: 426.79135pt x 78.39006pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 203--204
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 205--206
  [] 
  []
 
 [6 <./images/RubyCommunication.png>]
-Overfull \hbox (1.86174pt too wide) in paragraph at lines 210--210
+Overfull \hbox (1.86174pt too wide) in paragraph at lines 212--212
 []\T1/lmr/bx/n/17.28 Yleisarkkitehtuuri ja kes-kei-sim-m‰t va-ri-aa-tio-pis-
  []
 
@@ -513,17 +520,17 @@ Overfull \hbox (1.86174pt too wide) in paragraph at lines 210--210
 File: images/RubyOnRailsOverArch.png Graphic file (type png)
 
 <use images/RubyOnRailsOverArch.png>
-Package pdftex.def Info: images/RubyOnRailsOverArch.png used on input line 220.
+Package pdftex.def Info: images/RubyOnRailsOverArch.png used on input line 222.
 
 (pdftex.def)             Requested size: 320.0935pt x 224.19458pt.
 
 <images/RoRMVC.png, id=41, 789.95125pt x 540.0175pt>
 File: images/RoRMVC.png Graphic file (type png)
  <use images/RoRMVC.png>
-Package pdftex.def Info: images/RoRMVC.png used on input line 229.
+Package pdftex.def Info: images/RoRMVC.png used on input line 231.
 (pdftex.def)             Requested size: 426.79135pt x 291.76166pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 229--230
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 231--232
  [] 
  []
 
@@ -532,39 +539,39 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 229--230
 File: images/RorSisarakenne.png Graphic file (type png)
 
 <use images/RorSisarakenne.png>
-Package pdftex.def Info: images/RorSisarakenne.png used on input line 238.
+Package pdftex.def Info: images/RorSisarakenne.png used on input line 240.
 (pdftex.def)             Requested size: 469.47343pt x 458.08438pt.
 
-Overfull \hbox (49.48207pt too wide) in paragraph at lines 238--239
+Overfull \hbox (49.48207pt too wide) in paragraph at lines 240--241
  [] 
  []
 
 [8 <./images/RoRMVC.png>]
-Overfull \hbox (25.74455pt too wide) in paragraph at lines 243--244
+Overfull \hbox (25.74455pt too wide) in paragraph at lines 245--246
 []\T1/lmr/m/n/12 Edellisest‰ ku-vas-ta erot-tuu kak-si isoa j‰r-jes-tel-m‰‰, jo
 s-ta toi-nen on Translator-sovellukseni
  []
 
 
-Overfull \hbox (3.93025pt too wide) in paragraph at lines 243--244
+Overfull \hbox (3.93025pt too wide) in paragraph at lines 245--246
 \T1/lmr/m/n/12 ja toi-nen Yandex-API, jo-ka huo-leh-tii k‰‰n-t‰-mi-sen lo-gii-k
 as-ta. Translator-sovelluksesta
  []
 
 [9 <./images/RorSisarakenne.png>]
-Overfull \hbox (2.07982pt too wide) in paragraph at lines 258--259
+Overfull \hbox (2.07982pt too wide) in paragraph at lines 260--261
 \T1/lmr/m/n/12 RHTML-muotoa. RHTML on muo-dos-tet-tua HTML-koodia, jos-sa on up
 o-tet-tua ruby-
  []
 
 
-Overfull \hbox (3.3452pt too wide) in paragraph at lines 261--262
+Overfull \hbox (3.3452pt too wide) in paragraph at lines 263--264
  \T1/lmr/bx/n/12 Ac-ti-ve Mo-del[] \T1/lmr/m/n/12 M‰‰-rit-te-lee ra-ja-pin-nan 
 edel-l‰ mai-ni-tun Ac-tion Pack-kokonaisuuden
  []
 
 
-Overfull \hbox (5.28561pt too wide) in paragraph at lines 264--265
+Overfull \hbox (5.28561pt too wide) in paragraph at lines 266--267
  \T1/lmr/bx/n/12 Ac-ti-ve Record[] \T1/lmr/m/n/12 Huo-leh-tii da-tan muok-kauk-
 ses-ta ob-jek-tien kaut-ta ja tar-jo-aa CRUD-
  []
@@ -573,28 +580,32 @@ ses-ta ob-jek-tien kaut-ta ja tar-jo-aa CRUD-
 File: images/sekvenssi.png Graphic file (type png)
 
 <use images/sekvenssi.png>
-Package pdftex.def Info: images/sekvenssi.png used on input line 278.
+Package pdftex.def Info: images/sekvenssi.png used on input line 280.
 (pdftex.def)             Requested size: 687.13603pt x 275.76924pt.
 
-Overfull \hbox (32.72266pt too wide) in paragraph at lines 278--279
+Overfull \hbox (32.72266pt too wide) in paragraph at lines 280--281
  [][] 
  []
 
 [11] [12 <./images/sekvenssi.png>]
-Overfull \hbox (23.87587pt too wide) in paragraph at lines 305--306
+Overfull \hbox (23.87587pt too wide) in paragraph at lines 307--308
 \T1/lmr/m/n/12 lii-tet-t‰-v‰t ul-ko-puo-li-set kir-jas-tot ovat suu-rim-mal-ta 
 osin avoin-ta l‰h-de-koo-dia [[]]. 
  []
 
-[13] [14]
-Overfull \hbox (11.51376pt too wide) in paragraph at lines 335--338
-\T1/lmr/bx/n/12 vyys[] \T1/lmr/m/n/12 (saa-ta-vuus/-muun-nel-ta-vuus/uu-del-lee
-n-k‰yt.) Ark-ki-teh-tuu-rin ar-vioi-mi-nen Low/-
+[13] [14] <images/laatupuu.png, id=72, 705.63625pt x 514.92375pt>
+File: images/laatupuu.png Graphic file (type png)
+
+<use images/laatupuu.png>
+Package pdftex.def Info: images/laatupuu.png used on input line 348.
+(pdftex.def)             Requested size: 426.79135pt x 311.43947pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 348--349
+ [] 
  []
 
-[15] (./malli.bbl (./babelbst.tex (./finnbst.tex))
+[15 <./images/laatupuu.png>] [16] (./malli.bbl (./babelbst.tex (./finnbst.tex))
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 11.
-
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -631,14 +642,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--59
 014 / 03 / 10 /
  []
 
-[16
+[17
 
-]) [17] (./malli.aux) ) 
+]) [18] (./malli.aux) ) 
 Here is how much of TeX's memory you used:
- 5247 strings out of 493304
- 71777 string characters out of 6139870
- 173552 words of memory out of 5000000
- 8570 multiletter control sequences out of 15000+600000
+ 5256 strings out of 493304
+ 72104 string characters out of 6139870
+ 173566 words of memory out of 5000000
+ 8574 multiletter control sequences out of 15000+600000
  47943 words of font info for 41 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,8n,36p,726b,1675s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -649,10 +660,10 @@ mf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts
 /type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
 
-Output written on malli.pdf (19 pages, 345777 bytes).
+Output written on malli.pdf (20 pages, 383080 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
