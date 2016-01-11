@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  10 JAN 2016 13:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  11 JAN 2016 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -593,19 +593,32 @@ Overfull \hbox (23.87587pt too wide) in paragraph at lines 307--308
 osin avoin-ta l‰h-de-koo-dia [[]]. 
  []
 
-[13] [14] <images/laatupuu.png, id=72, 705.63625pt x 514.92375pt>
+[13]
+Overfull \hbox (3.32083pt too wide) in paragraph at lines 331--332
+\T1/lmr/m/n/12 Kehyst‰ ar-vioi-des-sa kes-ki-ty-t‰‰n t‰s-s‰ ra-por-tis-sa kah-t
+een laa-dul-li-seen te-ki-j‰‰n: muun-
+ []
+
+[14] <images/laatupuu.png, id=72, 705.63625pt x 514.92375pt>
 File: images/laatupuu.png Graphic file (type png)
 
 <use images/laatupuu.png>
-Package pdftex.def Info: images/laatupuu.png used on input line 348.
+Package pdftex.def Info: images/laatupuu.png used on input line 340.
 (pdftex.def)             Requested size: 426.79135pt x 311.43947pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 348--349
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 340--341
  [] 
  []
 
-[15 <./images/laatupuu.png>] [16] (./malli.bbl (./babelbst.tex (./finnbst.tex))
+[15 <./images/laatupuu.png>]
+Overfull \hbox (4.1693pt too wide) in paragraph at lines 352--353
+\T1/lmr/m/n/12 si sil-loin, kun pro-jek-tis-sa on yk-si ke-hit-t‰-j‰, jo-ka k‰y
+t-t‰‰ Windows-k‰yttˆj‰rjestelm‰‰.
+ []
+
+[16] [17] (./malli.bbl (./babelbst.tex (./finnbst.tex))
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 11.
+
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -626,44 +639,77 @@ Overfull \hbox (42.79694pt too wide) in paragraph at lines 15--19
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--42
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
 []\T1/lmr/m/n/12 Active Record.  $\T1/lmtt/m/n/12 http : / / api . rubyonrails 
 . org / classes /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
+[]\T1/lmr/m/n/12 Is Ru-by on Rails use-ful for a single pa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
+\T1/lmr/m/n/12 ge applica-tion?  $\T1/lmtt/m/n/12 https : / / www . quora . com
+ /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
+\T1/lmtt/m/n/12 Is-[]Ruby-[]on-[]Rails-[]useful-[]for-[]a-[]single-[]page-[]app
+lication$\T1/lmr/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 60--63
+[]\T1/lmr/m/n/12 Ruby on Rails Per-for-mance Tu-ning.  $\T1/lmtt/m/n/12 https :
+ / / hackhands . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 []\T1/lmr/m/n/12 Using Rails with a le-gacy da-ta-ba-se sche-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 \T1/lmr/m/n/12 ma.  $\T1/lmtt/m/n/12 https : / / schneide . wordpress . com / 2
 014 / 03 / 10 /
  []
 
-[17
+[18
 
-]) [18] (./malli.aux) ) 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
+[]\T1/lmr/m/n/12 Convert a Ru-by on Rails app from sq-li-te to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
+\T1/lmr/m/n/12 MySQL?  $\T1/lmtt/m/n/12 http : / / stackoverflow . com / questi
+ons / 1670154 /
+ []
+
+) [19] (./malli.aux) ) 
 Here is how much of TeX's memory you used:
- 5256 strings out of 493304
- 72104 string characters out of 6139870
+ 5259 strings out of 493304
+ 72129 string characters out of 6139870
  173566 words of memory out of 5000000
- 8574 multiletter control sequences out of 15000+600000
+ 8577 multiletter control sequences out of 15000+600000
  47943 words of font info for 41 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,8n,36p,726b,1675s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/sha
-re/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/
-lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-
-Output written on malli.pdf (20 pages, 383080 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/shar
+e/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/l
+m/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on malli.pdf (21 pages, 387795 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

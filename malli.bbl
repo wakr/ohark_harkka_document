@@ -17,12 +17,6 @@
   \url{http://bitzesty.com/2014/01/10/ruby-on-rails-what-it-is-and-why-we-use-it-for-web-applications/}.
 \newblock [08.1.2016]
 
-\bibitem[BPS98]{bray}
-Bray, T., Paoli, J. \bbland{} Sperberg-McQueen, C., {Extensible Markup Language
-  (XML) 1.0. W3C Recommendation 10-February-1998}.
-\newblock \url{http://www.w3.org/TR/1998/REC-xml-19980210}.
-\newblock [18.1.2000]
-
 \bibitem[EMN01]{erkio01}
 Erkiö, H., Mäkelä, M., Nykänen, M. \bbland{} Verkamo, I., Opinnäytetyön
   ulkoasun malli.
@@ -40,6 +34,17 @@ Erkiö, H., Mäkelä, M., Nykänen, M. \bbland{} Verkamo, I., Opinnäytetyön
 \newblock \url{http://api.rubyonrails.org/classes/ActiveRecord/Base.html}.
 \newblock [02.1.2016]
 
+\bibitem[RORSPI]{rorspi}
+{Is Ruby on Rails useful for a single page application?}
+\newblock
+  \url{https://www.quora.com/Is-Ruby-on-Rails-useful-for-a-single-page-application}.
+\newblock [11.1.2016]
+
+\bibitem[RORAPI]{rorapi}
+{Rails for API only applications}.
+\newblock \url{https://github.com/rails-api/rails-api}.
+\newblock [11.1.2016]
+
 \bibitem[ROR]{ror}
 {RoR - Ruby on Rails}.
 \newblock \url{http://rubyonrails.org/}.
@@ -50,6 +55,11 @@ Erkiö, H., Mäkelä, M., Nykänen, M. \bbland{} Verkamo, I., Opinnäytetyön
 \newblock
   \url{http://adrianmejia.com/blog/2011/08/11/ruby-on-rails-architectural-design/}.
 \newblock [30.12.2015]
+
+\bibitem[RORPER]{rorper}
+{Ruby on Rails Performance Tuning}.
+\newblock \url{https://hackhands.com/ruby-rails-performance-tuning/}.
+\newblock [11.1.2016]
 
 \bibitem[RORLEGACY]{rorlegacy}
 {Using Rails with a legacy database schema}.
@@ -66,6 +76,12 @@ Erkiö, H., Mäkelä, M., Nykänen, M. \bbland{} Verkamo, I., Opinnäytetyön
 {Ruby Default Web Server}.
 \newblock \url{https://devcenter.heroku.com/articles/ruby-default-web-server}.
 \newblock [04.1.2016]
+
+\bibitem[SOROR]{soror}
+{Convert a Ruby on Rails app from sqlite to MySQL?}
+\newblock
+  \url{http://stackoverflow.com/questions/1670154/convert-a-ruby-on-rails-app-from-sqlite-to-mysql}.
+\newblock [10.1.2016]
 
 \bibitem[WEBRICK]{webrick}
 {WEBrick}.

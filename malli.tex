@@ -326,44 +326,43 @@ Rails painottaa sisäisesti eleganttia syntaksia, tuotteliaisuutta sekä ylläpidet
 
 
 
-\subsection{ATAM-arviointi}
+\subsection{Arviointi}
 
+Kehystä arvioidessa keskitytään tässä raportissa kahteen laadulliseen tekijään: muunneltavuus sekä uudellenkäytettävyys. Nämä ovat myös tekijöitä, jotka tulevat esille melkein jatkuvasti Ruby on Rails-kehyksessä ja tuntuu, että ne ovat myös asioita joita kehys haluaa korostaa. Tarkastelussa kuitenkin huomataan tiettyjä riskejä, joita kehyksen käyttö ja nykyiset arkkitehtuuriset ratkaisut tuovat mukanaan. 
 
-Esitetään konkreettisia
-esimerkkitilanteita, joissa tietyt
-laatuominaisuudet tulevat esiin
-
-Rajoja kartoittavat skenaariot
-Etsivät järjestelmän rajoja: esim, kuormitusmuutoksia, alustan
-vaihto, palvelimen rikkoutuminen
-
-
-Identifioidaan riskit, turvalliset ratkaisut, herkkyyskohdat ja tasapainottelukohdat.
 
 \paragraph{Laatupuu}
-asd.
+Muodostetut laatuskenaariot ovat luotu laatupuun avulla. Osa niistä on valittu  mittaamaan järjestelmän riskialttiita kohtia, kun taas osa on todella yleisiä tapauksia, joita saattaa tulla eteen kehyksen käytössä.
+
 
 \begin{figure}[H]
 \begin{center}
 \fbox{\includegraphics[width=1\textwidth]{images/laatupuu.png}}
-\caption{Skenaariot sijaitsevat oikealla ja jokainen on arvioitu niin, että ensimmäisenä on suluissa skenaarion vaativuus ja sen jälkeen työmäärä.}
+\caption{Skenaariot sijaitsevat oikealla ja jokainen on arvioitu niin, että ensimmäisenä on suluissa skenaarion vaativuus ja sen jälkeen arvioitu työmäärä. L = Low, M = Medium, H = High.}
 \end{center}
 \end{figure}
 
 
-\paragraph{Laatuominaisuuden testaaminen - muunneltavuus ja uudelleenkäytettävyys}
-Low/Medium/High (vaativuus + työmäärä)
+\subsubsection{Muodostettujen skenaarioiden analysointi}
 
-Jos tarkastellaan muutettavuutta, skenaario käsittelee jotakin
-muutostarvetta järjestelmän evoluutiossa
+\paragraph{Web-näkymä moderniksi single-page -sivustoksi}
+Näkymän vaihtaminen on kehyksessä todella helppoa kuten aiemmin on mainittu, mutta vain jos näkymän rakenne noudattelee perinteisempää web-sivustoa. Nykyaikaisen yhden sivun näkymän tekeminen vaatii paljon Javascript-yhteensopivuutta ja kehykseltä standardisointia JSON-rajapinnoille \cite{rorspi}. Tätä kuitenkin hankaloittaa hieman Rails-kehys ja sen vahva MVC-patterni. Kuitenkin tähänkin ongelmaan löytyy valmiiksi ulkoinen kirjasto (gem), jonka avulla ongelma saadaan ratkaistua. Tästä syystä skenaarion vaativuus on matala, mutta sen toteutuminen vaatii kuitenkin ylimääräistä työtä. 
 
-Jos tarkastellaan uudelleenkäytettävyyttä, skenaario käsittelee
-jonkin uuden sovelluksen tekemistä uudelleen käyttämällä
-järjestelmää (= tuoterunko)
+\paragraph{Vaihtaminen Unixista Windowsiin}
+Skenaario saattaa tulla eteen jo esimerkiksi silloin, kun projektissa on yksi kehittäjä, joka käyttää Windows-käyttöjärjestelmää. Jotta kehittäjä pystyisi jatkamaan projektia, niin tarvitaan todella suuri määrä konfigurointia projektiin Windowsia varten, koska suurin osa Rails-sovelluksista on tehty Unix-järjestelmän avulla. Tämä johtaa myös siihen, että harva ulkoinen kirjasto toimii enää ja jos projekti käyttää paljon ulkoisia kirjastoja, niin melkein jokaiselle on löydettävä vaihtoehto Windowsia varten. Tämä tuottaa todella paljon ylimääräistä työtä ja sen takia tälle skenaariolle on annettu korkeimmat mahdolliset arviot.
 
-(.json-rajapinta)
+\paragraph{Kannan vaihtaminen SQLitestä MySQL:ään}
+Tietokannan vaihtaminen onnistuu Rails-kehyksellä jopa vain muutamalla komennolla \cite{soror}, mutta vain jos vanha kanta on seurannut kehyksen konventioita. Kehys on varautunut toimimaan useilla eri relaatiotietokannoilla, mutta esimerkiksi dokumenttikannat vaativat jo ulkoisia kirjastoja. Kuitenkin SQLite on hyvin lähellä MySQL-tietokantaa, joten vaihtaminen onnistuu erittäin kivuttomasti. Vaihtoa helpottaa myös aiemmin mainittu ActiveDirectory-patterni, joten kannan vaihto ei vaadi yhtään ylimääräistä sisäistä konfigurointia esimerkiksi kyselyiden näkökulmasta. Tämän takia vaativuus on skenaariossa matala ja työmäärä keskitasoa. Työmäärä saattaa nousta juuri konventioista poikkeamalla. 
 
-https://www.quora.com/Is-Ruby-on-Rails-useful-for-a-single-page-application
+\paragraph{API:n luominen nykyisestä järjestelmästä}
+Uudelleenkäytettävyyteen liittyvä skenaario on helppo toteuttaa Rails-kehyksestä, koska Rails tukee erittäin hyvin JSON-tietomuotoa sisäisesti. Pelkästään noudattamalla konventioita saa luotua automaattisesti JSON-rajapinnan järjestelmästään. Sitä muokkaamalla ja muutamalla ulkoisella kirjastolla saa luotua erittäin helposti API:n järjestelmää varten \cite{rorapi}. Suurin työ tulee pelkästään API:n suunnittelusta ja muusta kehyksen ulkopuolisesta työstä. 
+
+\subsubsection{Skenaarioista johdetut päätelmät}
+
+Suurin riski kehyksessä on alustan vaihtaminen, koska kehys on sidottu hyvin vahvasti siihen käyttöjärjestelmään, jolla järjestelmän kehitys on aloitettu. Tämä heikentää todella paljon muokattavuutta, koska esimerkiksi jos järjestelmä täytyy siirtää eri palvelimien välillä, niin on otettava erittäin tarkasti huomioon millä käyttöjärjestelmällä palvelin pyörii. Tästä johtuvaa muunneltavuuden huonontumista voidaan estää ottamalla etukäteen selvää ulkoisten kirjastojen tuista tai käyttämällä mahdollisimman vähän ulkoisia kirjastoja. 
+
+Vahvaa MVC-patternia kehyksessä voidaan pitää herkkyyskohtana, koska niin moni kehyksen tarjoamista laadullisista ominaisuuksista perustuu tähän. Siitä poikkeaminen johtaa ongelmiin kehyksen konventioiden kanssa ja saattaa huonontaa merkittävästi järjestelmän yleistä muunneltavuutta. Konventioista luopuminen taas heikentää merkittävästi tätä laatuominaisuutta, mutta toisaalta konventiot voidaan laskea kuuluvan myös tasapainottelukohtaan, koska ne edistävät muunneltavuutta, mutta muunneltavuuden parantaminen heikentää suorituskykyä. Tästä esimerkkinä ActiveRecord, jonka muodostamat käskyt saattavat joskus olla hyvinkin suuria ja hitaita \cite{rorper}.
+
 
 
 
