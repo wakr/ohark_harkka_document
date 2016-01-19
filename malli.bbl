@@ -1,4 +1,4 @@
-\begin{thebibliography}{EMNV01}
+\begin{thebibliography}{rorh}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
@@ -16,12 +16,6 @@
 \newblock
   \url{http://bitzesty.com/2014/01/10/ruby-on-rails-what-it-is-and-why-we-use-it-for-web-applications/}.
 \newblock [08.1.2016]
-
-\bibitem[EMN01]{erkio01}
-Erkiö, H., Mäkelä, M., Nykänen, M. \bbland{} Verkamo, I., Opinnäytetyön
-  ulkoasun malli.
-\newblock Tieteellisen kirjoittamisen kurssiin liittyvä julkaisematon moniste,
-  Tietojenkäsittelyopin laitos, Helsinki, 2001.
 
 \bibitem[RHTML]{rhtml}
 {Rails and HTML - RHTML}.
@@ -49,6 +43,11 @@ Erkiö, H., Mäkelä, M., Nykänen, M. \bbland{} Verkamo, I., Opinnäytetyön
 {RoR - Ruby on Rails}.
 \newblock \url{http://rubyonrails.org/}.
 \newblock [28.12.2015]
+
+\bibitem[RORNC]{rornc}
+{Ruby and Rails Naming Conventions}.
+\newblock \url{http://itsignals.cascadia.com.au/?p=7}.
+\newblock [19.01.2015]
 
 \bibitem[RORAD]{rorad}
 {Ruby on Rails Architectural Design}.
