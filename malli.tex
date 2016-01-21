@@ -184,9 +184,18 @@ Toisaalta jo aiemmin mainittu ActiveRecord vähentää myös toistoa, koska kehittäj
 
 Ruby on Railsistä ei suoraan löydy juuri niinkään yhtä tiettyä tyyliä, jota kehys noudattaisi, mutta kehystä voidaan tarkastella 3-taso -ja asiakas-palvelin -mallin kautta.
 
-\paragraph{3-taso}
-Vastuut ovat siinä jaettu niin, että näkymistä huolehtivat HTML-tiedostot, sovellustasosta huolehtivat mallit sekä kontrollerit, jotka saavat pyyntöjä UI:lta 
-(HTML/HTTP). Datataso Railsissä koostuu ActiveDirectorystä, tietokannasta sekä varsinkin malleista. Mallit siis kuuluvat periaatteessa sovellustason sekä datatason välimaastoon, koska toisaalta kaikki sovelluslogiikka sijaitsee niissä, mutta toisaalta ne toimivat abstraktiona tietokannan tauluille ja koko tietokannan muokkaus tapahtuu suoraan mallien kautta.
+\paragraph{3-taso -malli}
+Vastuut ovat kolmitasoisena tarkasteltuna jaettu niin, että näkymätasosta huolehtivat HTML-tiedostot, sovellustasosta huolehtivat mallit sekä kontrollerit. Kontrollerit saavat pyyntöjä UI:lta 
+(HTML/HTTP) ja niissä tapahtuu mallien muokkaus. Datataso Railsissä koostuu ActiveDirectorystä, tietokannasta sekä varsinkin malleista. Mallit siis kuuluvat periaatteessa sovellustason sekä datatason välimaastoon, koska toisaalta kaikki sovelluslogiikka sijaitsee niissä, mutta toisaalta ne toimivat abstraktiona tietokannan tauluille ja koko tietokannan muokkaus tapahtuu suoraan mallien kautta. 
+
+Itse kerroksia ei pysty mitenkään ohittamaan, jolloin datan tallennus suoraan näkymästä on esimerkiksi käytännössä mahdotonta. Seuraavassa kuvassa on havainnollistettu tekemäni järjestelmää 3-taso -mallin avulla, josta nähdään tämä kyseinen rajoite.
+
+\begin{figure}[ht]
+\begin{center}
+\fbox{\includegraphics[width=0.75\textwidth]{images/RubyOnRailsOverArch.png}}
+\caption{Yksinkertaistettu arkkitehtuuri Translator-sovelluksesta 3-tasoisena tarkasteltaessa. Datan virtaus kuvattu nuolilla. Alin taso huolehtii tiedon tallennuksesta, keskimmäinen tiedon käsittelystä ja ylin tiedon näyttämisestä.}
+\end{center}
+\end{figure}
 
 
 \paragraph{Asiakas-palvelin}
@@ -205,31 +214,18 @@ Kommunikointi kaikkien komponenttien välillä tapahtuu asiakas-palvelin- tyylin p
 \newpage
 
 \section{Yleisarkkitehtuuri ja keskeisimmät variaatiopisteet}
-%Roolijako here (N-tier + 
-% http://www.tutorialspoint.com/ruby-on-rails/images/rails-framework.gif)
-% http://adrianmejia.com/blog/2011/08/11/ruby-on-rails-architectural-design/
-Ruby on Rails toteuttaa yleiseltä arkkitehtuuriltaan erittäin vahvasti jo aiemmin mainittua Model View Controller -tyyliä, mutta kehystä voidaan tarkastella myös perinteisemmän 3-taso -tyylin kautta. 
-
-Siinä vastuidenjako on selvästi jaettuna kolmeen eri kerrokseen: tiedon tallennukseen, käsittelyyn sekä näyttämiseen. Tallennuksesta vastaa yhdessä tietokanta sekä Railsin ActiveDirectory-toteutus. Tieto itsessään käsitellään kontrollereiden tasolla, jossa tapahtuu myös mallien muokkaus ja lopullinen UI-muotoinen tiedon esitys tapahtuu HTML-tiedostojen avulla. Kerroksia ei pysty mitenkään ohittamaan, jolloin datan tallennus suoraan näkymästä on esimerkiksi käytännössä mahdotonta.
-
-\begin{figure}[ht]
-\begin{center}
-\fbox{\includegraphics[width=0.75\textwidth]{images/RubyOnRailsOverArch.png}}
-\caption{Yksinkertaistettu arkkitehtuuri Translator-sovelluksesta 3-tasoisena tarkasteltaessa. Datan virtaus kuvattu nuolilla. Alin taso huolehtii tiedon tallennuksesta, keskimmäinen tiedon käsittelystä ja ylin tiedon näyttämisestä.}
-\end{center}
-\end{figure}
-
-MVC-mallisena tarkasteltaessa Ruby on Rails -sovelluskehys näyttää seuraavanlaiselta:
+Ruby on Rails toteuttaa yleiseltä arkkitehtuuriltaan erittäin vahvasti jo aiemmin mainittua Model View Controller -tyyliä ja todella moni kehyksellä tehdyistä sovelluksista onkin arkkitehtuuriltansa MVC-mallinen. MVC-mallisena tarkasteltaessa Ruby on Rails -sovelluskehys näyttää seuraavanlaiselta:
 
 \begin{figure}[H]
 \begin{center}
 \fbox{\includegraphics[width=1\textwidth]{images/RoRMVC.png}}
-\caption{Translator-sovellus MVC-mallin silmin. Kuvassa käyttäjä avaa selaimensa '/translations'-osoitteeseen, joka reititetään oikealle kontrollerin metodille (index) routes.rb-tiedoston avulla. Kontrolleri hakee kaikki Translation-mallin ilmentymät mallin avulla tietokannasta. @translations sekä @languages muuttujat välitetään näkymälle, joka luo halutun HTML-tiedoston. Lopuksi kontrolleri esittää (render) tämän dokumentin käyttäjän selaimelle.}
+\caption{Translator-sovellus MVC-mallin silmin. Kuvassa käyttäjä avaa selaimensa '/translations'-osoitteeseen, joka reititetään oikealle kontrollerin metodille (index) routes.rb-tiedoston avulla. Kontrolleri hakee kaikki Translation-mallin ilmentymät mallin avulla tietokannasta. @translations sekä @languages muuttujat välitetään tämän jälkeen näkymälle, joka luo halutun HTML-tiedoston. Lopuksi kontrolleri palauttaa tämän dokumentin käyttäjän selaimelle.}
 \end{center}
 \end{figure}
 
 \paragraph{Sisärakennemalli}
-Seuraavassa Translator-järjestelmän komponentit.
+Seuraavassa tarkastellaan Translator-järjestelmää komponenteittain, josta erottuu kaksi isoa järjestelmää. Toinen on Translator-sovellukseni ja toinen Yandex-API, joka huolehtii kääntämisen logiikasta. Näiden järjestelmien välisestä kommunikaatiosta huolehtii TranslatorApi-komponentti, joka muodostaa tarvittavat HTTP-pyynnöt ja palauttaa niiden tuloksen Translation-mallille sellaisessa muodossa, että se pystytään välittämään järkevässä muodossa eteenpäin.
+
 \begin{figure}[H]
 \begin{center}
 \fbox{\includegraphics[width=1.1\textwidth, height=0.7\textheight]{images/RorSisarakenne.png}}
@@ -237,7 +233,7 @@ Seuraavassa Translator-järjestelmän komponentit.
 \end{center}
 \end{figure}
 
-Edellisestä kuvasta erottuu kaksi isoa järjestelmää, josta toinen on Translator-sovellukseni ja toinen Yandex-API, joka huolehtii kääntämisen logiikasta. Translator-sovelluksesta voidaan erotella seuraavat Ruby on Rails -kehyksen kannalta pakolliset komponentit.
+Translator-sovelluksesta voidaan erotella seuraavat Ruby on Rails -kehyksen kannalta pakolliset komponentit, jotka mahdollistavat pohjatoiminnallisuuden koko järjestelmälle. Osa näistä ei näy kehittäjälle välttämättä ollenkaan, jolloin kehittäjä voi keskittyä vain oman järjestelmänsä kannalta relevantteihin asioihin. 
 
 \subparagraph{Web-palvelin}
 Oletuksena WEBrick Ruby on Rails -kehyksessä \cite{webrick}. Tarjoaa yksinkertaisen HTTP-palvelimen toiminnallisuuden. Voidaan helposti korvata esimerkiksi Apache tai Puma-palvelimella \cite{rubyserver}, sekä usealla muulla sovelluskehyksen tukemalla. 
@@ -258,17 +254,24 @@ Tulee kutsutuksi Action Controllerin kautta. Muodostaa halutun näkymän www-sivus
 Määrittelee rajapinnan edellä mainitun Action Pack-kokonaisuuden sekä Active Recordin välillä. 
 
 \subparagraph{Active Record}
-Huolehtii datan muokkauksesta objektien kautta ja tarjoaa CRUD-rajapinnan tietokantaan (Create Read Update Delete). Jokainen operaatio tapahtuu aina luokan kautta, jolle löytyy vastaavuus tietokannassa. Luottaa paljon nimeämis-konventioihin muualla sovelluksessa, jolloin erinäisiä konfiguraatiotiedostoja ei tarvita. 
+Huolehtii datan muokkauksesta objektien kautta ja tarjoaa CRUD-rajapinnan (Create Read Update Delete) tietokantaan. Jokainen operaatio tapahtuu aina luokan kautta, jolle löytyy vastaavuus tietokannassa. ActiveRecord luottaa paljon nimeämiskonventioihin muualla sovelluksessa, jolloin erinäisiä konfiguraatiotiedostoja ei tarvita. 
+
+\subsection{Käytettävät suunnittelumallit}
+Is there any?
 
 \subsection{Kehyksen erikoistaminen sovelluskohtaisesti}
-On huomattavaa, että esimerkiksi tietokanta ei sisälly järjestelmän sisälle, vaan ulkopuolelle ja on näin helposti vaihdettavissa. Tämä on toteutettu aiemmin mainitun ActiveRecordin avulla. Myös näkymien vaihdettavuus on erittäin helppoa, koska Ruby on Rails-konventioiden mukaan vain nimeämisellä (ja kansiorakenteella) on väliä, joten kunhan tiedostot sijaitsevat oikeissa kansioissa oikeilla nimillä, niin esimerkiksi näkymät saadaan vaihdettua muuttamalla vain tiedoston nimeä. 
+On huomattavaa, että esimerkiksi tietokanta ei sisälly järjestelmän sisälle, vaan ulkopuolelle ja on näin helposti vaihdettavissa. Tämä on toteutettu aiemmin mainitun ActiveRecordin avulla. Näkymien vaihdettavuus on erittäin helppoa, koska Ruby on Rails-konventioiden mukaan vain nimeämisellä (ja kansiorakenteella) on väliä, joten kunhan tiedostot sijaitsevat oikeissa kansioissa oikeilla nimillä, niin esimerkiksi näkymät saadaan vaihdettua muuttamalla vain tiedoston nimeä. 
 
-Toisaalta laajemmin ajateltuna ainoaksi yhteiseksi osaksi (variaatiopisteiden kannalta) jää malli, koska se on ainut osa, joka toteuttaa itse business-logiikan ja toimii abstraktiona tosimaailman käännöksen käsitteelle. Tätä ei pysty mitenkään muuttamaan, koska haluan sovelluksen nimenomaan olevan käännös-toimintoa tukeva sivusto, joka pystyy tallentamaan aiemmin tehtyjä käännöksiä. Tämän vuoksi tallenuslogiikalla, näkymillä, eikä ohjainkomponenteille ole kovinkaan tärkeää roolia järjestelmässä ja tästä syystä ne voidaan laskea vaihtuviksi osiksi variaation kannalta Ruby on Rails-kehyksessä. 
+Toisaalta laajemmin ajateltuna ainoaksi yhteiseksi osaksi variaatiopisteiden kannalta jää malli, koska se on ainut osa, joka toteuttaa itse business-logiikan ja toimii abstraktiona tosimaailman käännöksen käsitteelle. Järjestelmässäni Translation-malli on hyvin sidottu, koska haluan sovelluksen nimenomaan olevan käännös-toimintoa tukeva sivusto, joka pystyy tallentamaan aiemmin tehtyjä käännöksiä. Tämän vuoksi tallenuslogiikalla, näkymillä, eikä ohjainkomponenteille ole kovinkaan tärkeää roolia järjestelmässä ja tästä syystä ne voidaan laskea vaihtuviksi osiksi variaation kannalta Ruby on Rails-kehyksessä. 
 
-Kuvassa 7. olen merkannut kuvaan järjestelmän sisälle tummennettuna ne komponentit, joihin olen tehnyt itse muutoksia. Kuitenkin ':TranslationsController', ':views' ja ':Translation' ovat perittyjä jostain tai toteuttavat jonkun rajapinnan, jolloin niiden toiminnallisuus on suhteellisen rajoitettu ja ennalta määritelty. Ainoastaan ':TranslatorApi' on täysin itsenäinen oma staattinen luokkansa, jota ':Translation' käyttää hyväkseen muodostaessaan kyselyitä ulkopuoliseen Yandex-APIin. 
+Itse kehyksen erikoistaminen tapahtuu pääosin periyttämällä valmiita rajapintoja. Esimerkiksi mallit perivät Active Model-rajapinnan, jotta niihin saadaan oikea toiminnallisuus, mutta jos kehittäjä haluaa täysin itsenäisiä luokkia, niin silloin luokkien ei tarvitse periä mitään. Tällöin niistä tosin katoaa valmista toiminnallisuutta, mutta myös rajoitteet katoavat luokilta. Katoavana rajoitteena esimerkiksi nimeäminen, joka vapautuu täysin.
+
+Kuvassa 7 olen merkannut kuvaan järjestelmän sisälle tummennettuna ne komponentit, joihin olen tehnyt itse muutoksia. Kuitenkin ':TranslationsController', ':views' ja ':Translation' ovat perittyjä jostain tai toteuttavat jonkun rajapinnan, jolloin niiden toiminnallisuus on suhteellisen rajoitettu ja ennalta määritelty. Ainoastaan ':TranslatorApi' on täysin itsenäinen oma staattinen luokkansa, jota ':Translation' käyttää hyväkseen muodostaessaan kyselyitä ulkopuoliseen Yandex-APIin. 
 
 \subsection{Sekvenssikaavio}
-Seuraavassa kuvataan sekvenssikaavion avulla miten uuden käännöksen tekeminen tapahtuu järjestelmässä ja miten se tallentuu tietokantaan. Kuvassa käyttäjä on navigoinut itsensä sivulle etusivule ('/'-osoitteeseen). Hän kirjoittaa lomakkeeseen haluamansa tekstin, valitsee kielen ja painaa 'Translate!' (Kuva 1). Sekvenssikaavio alkaa tästä tapahtumasta, mutta siinä on abstrahoitu joitan osia pois (funktiokutsuja) pääosin sen takia, että kuvaa olisi helpompi tulkita.
+Seuraavalla sivulla kuvataan sekvenssikaavion avulla miten uuden käännöksen tekeminen tapahtuu järjestelmässä ja miten se tallentuu tietokantaan. Kuvassa käyttäjä on navigoinut itsensä sivulle etusivulle ('/'-osoitteeseen). Hän kirjoittaa lomakkeeseen haluamansa tekstin, valitsee kielen ja painaa 'Translate!'-nappia (Kuva 1). Sekvenssikaavio alkaa tästä tapahtumasta, mutta siinä on abstrahoitu joitan osia pois (funktiokutsuja) pääosin sen takia, että kuvaa olisi helpompi tulkita.
+
+On huomattavaa, että juuri kontrolleri luo instanssin Translation-mallista käyttäjän syöttämillä parametreilla ja hoitaa funktiokutsun ':TranslatorApi'-luokalle parametrinaan juuri luotu instanssi. Tässä tulee esille se fakta, että suurin osa logiikasta tapahtuu juuri kontrollerin/mallin toimesta RUby on Rails -kehyksessä. 
 
 \begin{sidewaysfigure}
     \centering

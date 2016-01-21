@@ -1,17 +1,17 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.28)  19 JAN 2016 19:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.21)  21 JAN 2016 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **malli.tex
 (./malli.tex
-LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (./tktltiki.cls
 Document Class: tktltiki 2007/09/12 v1.1 Dokumenttiluokka TiKi-kurssia varten
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -29,31 +29,31 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
-(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2008/03/30 v1.1d Input encoding file
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/latin9.def
-File: latin9.def 2008/03/30 v1.1d Input encoding file
+File: latin9.def 2015/03/17 v1.2c Input encoding file
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2013/12/03 3.9h The Babel package
+Package: babel 2014/09/25 3.9l The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-finnish/finnish.ldf
 Language: finnish 2007/10/20 v1.3q Finnish support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2013/12/03 3.9h Babel common definitions
+File: babel.def 2014/09/25 3.9l Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
@@ -63,7 +63,7 @@ Package babel Info: Making " an active character on input line 89.
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
@@ -100,10 +100,10 @@ Package geometry Warning: Over-specification in `h'-direction.
 \@abstract=\box26
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
@@ -111,7 +111,7 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -166,23 +166,23 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \lst@maxwidth=\dimen119
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count104
 \lst@skipnumbers=\count105
 \lst@framebox=\box28
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2013/08/26 1.5b listings configuration
+File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package: listings 2013/08/26 1.5b (Carsten Heinz)
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
+Package color Info: Driver file: pdftex.def on input line 142.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
@@ -196,7 +196,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count107
 \rotFPtop=\skip49
@@ -209,7 +209,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -247,10 +247,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2013/08/26 1.5b listings language file
+File: lstlang2.sty 2015/06/04 1.6 listings language file
 ) (./malli.aux)
 \openout1 = `malli.aux'.
 
@@ -500,129 +500,117 @@ Overfull \hbox (1.30385pt too wide) in paragraph at lines 175--176
 sil-le konfiguraatio-tiedoistoille
  []
 
-[5]
-Overfull \hbox (8.8288pt too wide) in paragraph at lines 194--195
+[5] <images/RubyOnRailsOverArch.png, id=34, 515.9275pt x 361.35pt>
+File: images/RubyOnRailsOverArch.png Graphic file (type png)
+
+<use images/RubyOnRailsOverArch.png>
+Package pdftex.def Info: images/RubyOnRailsOverArch.png used on input line 195.
+
+(pdftex.def)             Requested size: 320.0935pt x 224.19458pt.
+
+Overfull \hbox (8.8288pt too wide) in paragraph at lines 203--204
  \T1/lmr/bx/n/12 Asiakas-palvelin[] \T1/lmr/m/n/12 Kom-mu-ni-koin-ti kaik-kien 
 kom-po-nent-tien v‰-lil-l‰ ta-pah-tuu asiakas-
  []
 
-<images/RubyCommunication.png, id=34, 786.94pt x 144.54pt>
+[6 <./images/RubyOnRailsOverArch.png>]
+<images/RubyCommunication.png, id=38, 786.94pt x 144.54pt>
 File: images/RubyCommunication.png Graphic file (type png)
 
 <use images/RubyCommunication.png>
-Package pdftex.def Info: images/RubyCommunication.png used on input line 200.
+Package pdftex.def Info: images/RubyCommunication.png used on input line 209.
 (pdftex.def)             Requested size: 426.79135pt x 78.39006pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 200--201
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 209--210
  [] 
  []
 
-[6 <./images/RubyCommunication.png>]
-Overfull \hbox (1.86174pt too wide) in paragraph at lines 207--207
+[7 <./images/RubyCommunication.png>]
+Overfull \hbox (1.86174pt too wide) in paragraph at lines 216--216
 []\T1/lmr/bx/n/17.28 Yleisarkkitehtuuri ja kes-kei-sim-m‰t va-ri-aa-tio-pis-
  []
 
-<images/RubyOnRailsOverArch.png, id=40, 515.9275pt x 361.35pt>
-File: images/RubyOnRailsOverArch.png Graphic file (type png)
-
-<use images/RubyOnRailsOverArch.png>
-Package pdftex.def Info: images/RubyOnRailsOverArch.png used on input line 217.
-
-(pdftex.def)             Requested size: 320.0935pt x 224.19458pt.
-
-<images/RoRMVC.png, id=41, 789.95125pt x 540.0175pt>
+<images/RoRMVC.png, id=44, 789.95125pt x 540.0175pt>
 File: images/RoRMVC.png Graphic file (type png)
  <use images/RoRMVC.png>
-Package pdftex.def Info: images/RoRMVC.png used on input line 226.
+Package pdftex.def Info: images/RoRMVC.png used on input line 221.
 (pdftex.def)             Requested size: 426.79135pt x 291.76166pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 226--227
- [] 
- []
-
-[7 <./images/RubyOnRailsOverArch.png>]
-<images/RorSisarakenne.png, id=45, 816.04875pt x 739.76375pt>
-File: images/RorSisarakenne.png Graphic file (type png)
-
-<use images/RorSisarakenne.png>
-Package pdftex.def Info: images/RorSisarakenne.png used on input line 235.
-(pdftex.def)             Requested size: 469.47343pt x 458.08438pt.
-
-Overfull \hbox (49.48207pt too wide) in paragraph at lines 235--236
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 221--222
  [] 
  []
 
 [8 <./images/RoRMVC.png>]
-Overfull \hbox (25.74455pt too wide) in paragraph at lines 240--241
-[]\T1/lmr/m/n/12 Edellisest‰ ku-vas-ta erot-tuu kak-si isoa j‰r-jes-tel-m‰‰, jo
-s-ta toi-nen on Translator-sovellukseni
- []
+<images/RorSisarakenne.png, id=49, 816.04875pt x 739.76375pt>
+File: images/RorSisarakenne.png Graphic file (type png)
 
+<use images/RorSisarakenne.png>
+Package pdftex.def Info: images/RorSisarakenne.png used on input line 231.
+(pdftex.def)             Requested size: 469.47343pt x 458.08438pt.
 
-Overfull \hbox (3.93025pt too wide) in paragraph at lines 240--241
-\T1/lmr/m/n/12 ja toi-nen Yandex-API, jo-ka huo-leh-tii k‰‰n-t‰-mi-sen lo-gii-k
-as-ta. Translator-sovelluksesta
+Overfull \hbox (49.48207pt too wide) in paragraph at lines 231--232
+ [] 
  []
 
 [9 <./images/RorSisarakenne.png>]
-Overfull \hbox (2.07982pt too wide) in paragraph at lines 255--256
+Overfull \hbox (2.07982pt too wide) in paragraph at lines 251--252
 \T1/lmr/m/n/12 RHTML-muotoa. RHTML on muo-dos-tet-tua HTML-koodia, jos-sa on up
 o-tet-tua ruby-
  []
 
 
-Overfull \hbox (3.3452pt too wide) in paragraph at lines 258--259
+Overfull \hbox (3.3452pt too wide) in paragraph at lines 254--255
  \T1/lmr/bx/n/12 Ac-ti-ve Mo-del[] \T1/lmr/m/n/12 M‰‰-rit-te-lee ra-ja-pin-nan 
 edel-l‰ mai-ni-tun Ac-tion Pack-kokonaisuuden
  []
 
 
-Overfull \hbox (5.28561pt too wide) in paragraph at lines 261--262
+Overfull \hbox (5.28561pt too wide) in paragraph at lines 257--258
  \T1/lmr/bx/n/12 Ac-ti-ve Record[] \T1/lmr/m/n/12 Huo-leh-tii da-tan muok-kauk-
 ses-ta ob-jek-tien kaut-ta ja tar-jo-aa CRUD-
  []
 
-[10] <images/sekvenssi.png, id=57, 1358.07375pt x 545.03625pt>
+[10] [11] <images/sekvenssi.png, id=61, 1358.07375pt x 545.03625pt>
 File: images/sekvenssi.png Graphic file (type png)
 
 <use images/sekvenssi.png>
-Package pdftex.def Info: images/sekvenssi.png used on input line 275.
+Package pdftex.def Info: images/sekvenssi.png used on input line 278.
 (pdftex.def)             Requested size: 687.13603pt x 275.76924pt.
 
-Overfull \hbox (32.72266pt too wide) in paragraph at lines 275--276
+Overfull \hbox (32.72266pt too wide) in paragraph at lines 278--279
  [][] 
  []
 
-[11] [12 <./images/sekvenssi.png>]
-Overfull \hbox (23.87587pt too wide) in paragraph at lines 302--303
+[12] [13 <./images/sekvenssi.png>]
+Overfull \hbox (23.87587pt too wide) in paragraph at lines 305--306
 \T1/lmr/m/n/12 lii-tet-t‰-v‰t ul-ko-puo-li-set kir-jas-tot ovat suu-rim-mal-ta 
 osin avoin-ta l‰h-de-koo-dia [[]]. 
  []
 
-[13]
-Overfull \hbox (3.32083pt too wide) in paragraph at lines 326--327
+[14]
+Overfull \hbox (3.32083pt too wide) in paragraph at lines 329--330
 \T1/lmr/m/n/12 Kehyst‰ ar-vioi-des-sa kes-ki-ty-t‰‰n t‰s-s‰ ra-por-tis-sa kah-t
 een laa-dul-li-seen te-ki-j‰‰n: muun-
  []
 
-[14] <images/laatupuu.png, id=72, 705.63625pt x 514.92375pt>
+[15] <images/laatupuu.png, id=75, 705.63625pt x 514.92375pt>
 File: images/laatupuu.png Graphic file (type png)
 
 <use images/laatupuu.png>
-Package pdftex.def Info: images/laatupuu.png used on input line 335.
+Package pdftex.def Info: images/laatupuu.png used on input line 338.
 (pdftex.def)             Requested size: 426.79135pt x 311.43947pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 335--336
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 338--339
  [] 
  []
 
-[15 <./images/laatupuu.png>]
-Overfull \hbox (4.1693pt too wide) in paragraph at lines 347--348
+[16 <./images/laatupuu.png>]
+Overfull \hbox (4.1693pt too wide) in paragraph at lines 350--351
 \T1/lmr/m/n/12 si sil-loin, kun pro-jek-tis-sa on yk-si ke-hit-t‰-j‰, jo-ka k‰y
 t-t‰‰ Windows-k‰yttˆj‰rjestelm‰‰.
  []
 
-[16] [17] (./malli.bbl (./babelbst.tex (./finnbst.tex))
+[17] [18] (./malli.bbl (./babelbst.tex (./finnbst.tex))
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 11.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
@@ -684,7 +672,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--68
 014 / 03 / 10 /
  []
 
-[18
+[19
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 80--84
@@ -697,14 +685,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--84
 ons / 1670154 /
  []
 
-) [19] (./malli.aux) ) 
+) [20] (./malli.aux) ) 
 Here is how much of TeX's memory you used:
- 5259 strings out of 493304
- 72127 string characters out of 6139870
- 173566 words of memory out of 5000000
- 8577 multiletter control sequences out of 15000+600000
+ 5283 strings out of 493085
+ 72446 string characters out of 6136917
+ 175339 words of memory out of 5000000
+ 8627 multiletter control sequences out of 15000+600000
  47943 words of font info for 41 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  38i,8n,36p,785b,1415s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/shar
 e/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/l
@@ -712,10 +700,10 @@ m/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on malli.pdf (21 pages, 388425 bytes).
+Output written on malli.pdf (22 pages, 389935 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 120 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

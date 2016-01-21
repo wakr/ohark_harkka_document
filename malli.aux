@@ -23,16 +23,16 @@
 \@writefile{toc}{\contentsline {paragraph}{Convention over Configuration}{5}}
 \@writefile{toc}{\contentsline {paragraph}{Don't Repeat Yourself}{5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Arkkitehtuuriset tyylit}{6}}
-\@writefile{toc}{\contentsline {paragraph}{3-taso}{6}}
-\@writefile{toc}{\contentsline {paragraph}{Asiakas-palvelin}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Havainnekuva kommunikaatiosta.}}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Yleisarkkitehtuuri ja keskeisimm\"at variaatiopisteet}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Yksinkertaistettu arkkitehtuuri Translator-sovelluksesta 3-tasoisena tarkasteltaessa. Datan virtaus kuvattu nuolilla. Alin taso huolehtii tiedon tallennuksesta, keskimm\"ainen tiedon k\"asittelyst\"a ja ylin tiedon n\"aytt\"amisest\"a.}}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Translator-sovellus MVC-mallin silmin. Kuvassa k\"aytt\"aj\"a avaa selaimensa '/translations'-osoitteeseen, joka reititet\"a\"an oikealle kontrollerin metodille (index) routes.rb-tiedoston avulla. Kontrolleri hakee kaikki Translation-mallin ilmentym\"at mallin avulla tietokannasta. @translations sek\"a @languages muuttujat v\"alitet\"a\"an n\"akym\"alle, joka luo halutun HTML-tiedoston. Lopuksi kontrolleri esitt\"a\"a (render) t\"am\"an dokumentin k\"aytt\"aj\"an selaimelle.}}{8}}
+\@writefile{toc}{\contentsline {paragraph}{3-taso -malli}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Yksinkertaistettu arkkitehtuuri Translator-sovelluksesta 3-tasoisena tarkasteltaessa. Datan virtaus kuvattu nuolilla. Alin taso huolehtii tiedon tallennuksesta, keskimm\"ainen tiedon k\"asittelyst\"a ja ylin tiedon n\"aytt\"amisest\"a.}}{6}}
+\@writefile{toc}{\contentsline {paragraph}{Asiakas-palvelin}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Havainnekuva kommunikaatiosta.}}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Yleisarkkitehtuuri ja keskeisimm\"at variaatiopisteet}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Translator-sovellus MVC-mallin silmin. Kuvassa k\"aytt\"aj\"a avaa selaimensa '/translations'-osoitteeseen, joka reititet\"a\"an oikealle kontrollerin metodille (index) routes.rb-tiedoston avulla. Kontrolleri hakee kaikki Translation-mallin ilmentym\"at mallin avulla tietokannasta. @translations sek\"a @languages muuttujat v\"alitet\"a\"an t\"am\"an j\"alkeen n\"akym\"alle, joka luo halutun HTML-tiedoston. Lopuksi kontrolleri palauttaa t\"am\"an dokumentin k\"aytt\"aj\"an selaimelle.}}{8}}
 \@writefile{toc}{\contentsline {paragraph}{Sis\"arakennemalli}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Yhten\"ainen viiva tarkoittaa web-pyynt\"o\"a ja katkonainen tietokantayhteytt\"a. Muut viivat komponenttien v\"alisi\"a funktiokutsuja, joiden sis\"alt\"o <<>>-v\"aliss\"a.}}{9}}
 \citation{webrick}
 \citation{rubyserver}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Yhten\"ainen viiva tarkoittaa web-pyynt\"o\"a ja katkonainen tietokantayhteytt\"a. Muut viivat komponenttien v\"alisi\"a funktiokutsuja, joiden sis\"alt\"o <<>>-v\"aliss\"a.}}{9}}
 \citation{rhtml}
 \@writefile{toc}{\contentsline {subparagraph}{Web-palvelin}{10}}
 \@writefile{toc}{\contentsline {subparagraph}{Action Pack}{10}}
@@ -41,38 +41,39 @@
 \@writefile{toc}{\contentsline {subparagraph}{Action View}{10}}
 \@writefile{toc}{\contentsline {subparagraph}{Active Model}{10}}
 \@writefile{toc}{\contentsline {subparagraph}{Active Record}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Kehyksen erikoistaminen sovelluskohtaisesti}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Sekvenssikaavio}{11}}
-\newlabel{RF1}{12}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Sekvenssikaavio k\"a\"ann\"oksen tekemisest\"a ja tallentamisesta.}}{12}}
-\newlabel{fig:awesome_image}{{8}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}K\"aytett\"av\"at suunnittelumallit}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Kehyksen erikoistaminen sovelluskohtaisesti}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Sekvenssikaavio}{12}}
+\newlabel{RF1}{13}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Sekvenssikaavio k\"a\"ann\"oksen tekemisest\"a ja tallentamisesta.}}{13}}
+\newlabel{fig:awesome_image}{{8}{13}}
 \citation{rorad}
 \citation{bitzesty}
 \citation{wsuror}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Kehyksen ja sovelluksen arviointi}{13}}
-\@writefile{toc}{\contentsline {paragraph}{Sopiiko suunniteltu arkkitehtuuri j\"arjestelm\"alle?}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Hyv\"at ja huonot puolet}{13}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Hyv\"at puolet}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Kehyksen ja sovelluksen arviointi}{14}}
+\@writefile{toc}{\contentsline {paragraph}{Sopiiko suunniteltu arkkitehtuuri j\"arjestelm\"alle?}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Hyv\"at ja huonot puolet}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Hyv\"at puolet}{14}}
 \citation{rorsca}
 \citation{bitzesty}
 \citation{rorlegacy}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Huonot puolet}{14}}
-\@writefile{toc}{\contentsline {paragraph}{Suoritustehon heikkous}{14}}
-\@writefile{toc}{\contentsline {paragraph}{Sovelluksen vaikea tuotantoo saattaminen}{14}}
-\@writefile{toc}{\contentsline {paragraph}{Rajoittuneisuus}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Huonot puolet}{15}}
+\@writefile{toc}{\contentsline {paragraph}{Suoritustehon heikkous}{15}}
+\@writefile{toc}{\contentsline {paragraph}{Sovelluksen vaikea tuotantoo saattaminen}{15}}
+\@writefile{toc}{\contentsline {paragraph}{Rajoittuneisuus}{15}}
 \citation{rorspi}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Arviointi}{15}}
-\@writefile{toc}{\contentsline {paragraph}{Laatupuu}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Skenaariot sijaitsevat oikealla ja jokainen on arvioitu niin, ett\"a ensimm\"aisen\"a on suluissa skenaarion vaativuus ja sen j\"alkeen arvioitu ty\"om\"a\"ar\"a. L = Low, M = Medium, H = High.}}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Arviointi}{16}}
+\@writefile{toc}{\contentsline {paragraph}{Laatupuu}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Skenaariot sijaitsevat oikealla ja jokainen on arvioitu niin, ett\"a ensimm\"aisen\"a on suluissa skenaarion vaativuus ja sen j\"alkeen arvioitu ty\"om\"a\"ar\"a. L = Low, M = Medium, H = High.}}{16}}
 \citation{soror}
 \citation{rorapi}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Muodostettujen skenaarioiden analysointi}{16}}
-\@writefile{toc}{\contentsline {paragraph}{Web-n\"akym\"a moderniksi single-page -sivustoksi}{16}}
-\@writefile{toc}{\contentsline {paragraph}{Vaihtaminen Unixista Windowsiin}{16}}
-\@writefile{toc}{\contentsline {paragraph}{Kannan vaihtaminen SQLitest\"a MySQL:\"a\"an}{16}}
-\@writefile{toc}{\contentsline {paragraph}{API:n luominen nykyisest\"a j\"arjestelm\"ast\"a}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Muodostettujen skenaarioiden analysointi}{17}}
+\@writefile{toc}{\contentsline {paragraph}{Web-n\"akym\"a moderniksi single-page -sivustoksi}{17}}
+\@writefile{toc}{\contentsline {paragraph}{Vaihtaminen Unixista Windowsiin}{17}}
+\@writefile{toc}{\contentsline {paragraph}{Kannan vaihtaminen SQLitest\"a MySQL:\"a\"an}{17}}
+\@writefile{toc}{\contentsline {paragraph}{API:n luominen nykyisest\"a j\"arjestelm\"ast\"a}{17}}
 \citation{rorper}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Skenaarioista johdetut p\"a\"atelm\"at}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Skenaarioista johdetut p\"a\"atelm\"at}{18}}
 \citation{*}
 \bibstyle{tktl}
 \bibdata{lahteet}
@@ -89,10 +90,10 @@
 \bibcite{rorlegacy}{RORLEGACY}
 \bibcite{rorsca}{RORSCA}
 \bibcite{rubyserver}{RUBYSERVER}
-\@writefile{toc}{\contentsline {section}{L\"ahteet}{18}}
+\@writefile{toc}{\contentsline {section}{L\"ahteet}{19}}
 \bibcite{soror}{SOROR}
 \bibcite{webrick}{WEBRICK}
 \bibcite{wsuror}{WSUROR}
 \bibcite{yandex}{YANDEX}
-\newlabel{lastpage}{{3.2.2}{19}}
+\newlabel{lastpage}{{3.2.2}{20}}
 \newlabel{@lastappendixpage}{{0}{0}}
