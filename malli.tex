@@ -251,27 +251,27 @@ Määrittelee kontrollereiden perustoiminnallisuuden, jota voidaan periyttämällä e
 Tulee kutsutuksi Action Controllerin kautta. Muodostaa halutun näkymän www-sivustosta käyttäjälle käyttäen hyödykseen erilaisia apukeinoja (esimerkiksi lomakkeiden ja linkkien muodostamiseen), templaatteja sekä hyvin usein RHTML-muotoa. RHTML on muodostettua HTML-koodia, jossa on upotettua ruby-koodia seassa, joka sitten korvautuu täysin HTML-muotoon juuri ennen lopullista esittämistä \cite{rhtml}.   
 
 \subparagraph{Active Model}
-Määrittelee rajapinnan edellä mainitun Action Pack-kokonaisuuden sekä Active Recordin välillä. 
+Määrittelee rajapinnan edellä mainitun Action Pack-kokonaisuuden sekä Active Recordin välillä. Kaikki mallit, jotka haluavat toimia tietokannan kautta toteuttavat tämän rajapinnan.
 
 \subparagraph{Active Record}
 Huolehtii datan muokkauksesta objektien kautta ja tarjoaa CRUD-rajapinnan (Create Read Update Delete) tietokantaan. Jokainen operaatio tapahtuu aina luokan kautta, jolle löytyy vastaavuus tietokannassa. ActiveRecord luottaa paljon nimeämiskonventioihin muualla sovelluksessa, jolloin erinäisiä konfiguraatiotiedostoja ei tarvita. 
 
-\subsection{Käytettävät suunnittelumallit}
-Is there any?
+\subsection{Ohjelmistotason suunnittelumallit}
+Rakentamassani järjestelmässä ei ole tarkoituksella käytetty mitään tiettyä ohjelmistotason sunnittelumallia, mutta itse Rails-kehyskään ei sisäisesti toteuta raportin alussa mainittujen lisäksi muita, koska iso osa joustavuudesta tulee jo itse Ruby kielestä ja sen ominaisuuksista. Toisaalta kuitenkin ActiveRecord toteuttaa Object-relational mapping -mallia piilottaessaan tietokantakyselyt luokkien taakse, mutta tämän lisäksi ei muita ohjelmistotason suunnittelumalleja löydy. 
 
 \subsection{Kehyksen erikoistaminen sovelluskohtaisesti}
 On huomattavaa, että esimerkiksi tietokanta ei sisälly järjestelmän sisälle, vaan ulkopuolelle ja on näin helposti vaihdettavissa. Tämä on toteutettu aiemmin mainitun ActiveRecordin avulla. Näkymien vaihdettavuus on erittäin helppoa, koska Ruby on Rails-konventioiden mukaan vain nimeämisellä (ja kansiorakenteella) on väliä, joten kunhan tiedostot sijaitsevat oikeissa kansioissa oikeilla nimillä, niin esimerkiksi näkymät saadaan vaihdettua muuttamalla vain tiedoston nimeä. 
 
 Toisaalta laajemmin ajateltuna ainoaksi yhteiseksi osaksi variaatiopisteiden kannalta jää malli, koska se on ainut osa, joka toteuttaa itse business-logiikan ja toimii abstraktiona tosimaailman käännöksen käsitteelle. Järjestelmässäni Translation-malli on hyvin sidottu, koska haluan sovelluksen nimenomaan olevan käännös-toimintoa tukeva sivusto, joka pystyy tallentamaan aiemmin tehtyjä käännöksiä. Tämän vuoksi tallenuslogiikalla, näkymillä, eikä ohjainkomponenteille ole kovinkaan tärkeää roolia järjestelmässä ja tästä syystä ne voidaan laskea vaihtuviksi osiksi variaation kannalta Ruby on Rails-kehyksessä. 
 
-Itse kehyksen erikoistaminen tapahtuu pääosin periyttämällä valmiita rajapintoja. Esimerkiksi mallit perivät Active Model-rajapinnan, jotta niihin saadaan oikea toiminnallisuus, mutta jos kehittäjä haluaa täysin itsenäisiä luokkia, niin silloin luokkien ei tarvitse periä mitään. Tällöin niistä tosin katoaa valmista toiminnallisuutta, mutta myös rajoitteet katoavat luokilta. Katoavana rajoitteena esimerkiksi nimeäminen, joka vapautuu täysin.
+Itse kehyksen erikoistaminen tapahtuu pääosin periyttämällä valmiita rajapintoja. Esimerkiksi mallit perivät Active Model-rajapinnan, jotta niihin saadaan oikea toiminnallisuus, mutta jos kehittäjä haluaa täysin itsenäisiä luokkia, niin silloin luokkien ei tarvitse periä mitään. Tällöin niistä tosin katoaa valmista toiminnallisuutta, mutta myös rajoitteet katoavat. Katoavana rajoitteena esimerkiksi nimeäminen, joka vapautuu täysin kehittäjän päätettäväksi.
 
-Kuvassa 7 olen merkannut kuvaan järjestelmän sisälle tummennettuna ne komponentit, joihin olen tehnyt itse muutoksia. Kuitenkin ':TranslationsController', ':views' ja ':Translation' ovat perittyjä jostain tai toteuttavat jonkun rajapinnan, jolloin niiden toiminnallisuus on suhteellisen rajoitettu ja ennalta määritelty. Ainoastaan ':TranslatorApi' on täysin itsenäinen oma staattinen luokkansa, jota ':Translation' käyttää hyväkseen muodostaessaan kyselyitä ulkopuoliseen Yandex-APIin. 
+Kuvassa 7 olen merkannut kuvaan järjestelmän sisälle tummennettuna ne komponentit, joihin olen tehnyt itse muutoksia. Kuitenkin ':TranslationsController', ':views' ja ':Translation' ovat perittyjä jostain tai toteuttavat jonkun rajapinnan, jolloin niiden toiminnallisuus on suhteellisen rajoitettu ja ennalta määriteltyä. Ainoastaan ':TranslatorApi' on täysin itsenäinen oma staattinen luokkansa, jota ':Translation' käyttää hyväkseen muodostaessaan kyselyitä ulkopuoliseen Yandex-APIin. 
 
 \subsection{Sekvenssikaavio}
 Seuraavalla sivulla kuvataan sekvenssikaavion avulla miten uuden käännöksen tekeminen tapahtuu järjestelmässä ja miten se tallentuu tietokantaan. Kuvassa käyttäjä on navigoinut itsensä sivulle etusivulle ('/'-osoitteeseen). Hän kirjoittaa lomakkeeseen haluamansa tekstin, valitsee kielen ja painaa 'Translate!'-nappia (Kuva 1). Sekvenssikaavio alkaa tästä tapahtumasta, mutta siinä on abstrahoitu joitan osia pois (funktiokutsuja) pääosin sen takia, että kuvaa olisi helpompi tulkita.
 
-On huomattavaa, että juuri kontrolleri luo instanssin Translation-mallista käyttäjän syöttämillä parametreilla ja hoitaa funktiokutsun ':TranslatorApi'-luokalle parametrinaan juuri luotu instanssi. Tässä tulee esille se fakta, että suurin osa logiikasta tapahtuu juuri kontrollerin/mallin toimesta RUby on Rails -kehyksessä. 
+On huomattavaa, että juuri kontrolleri luo instanssin Translation-mallista käyttäjän syöttämillä parametreilla ja hoitaa funktiokutsun ':TranslatorApi'-luokalle parametrinaan juuri luotu instanssi. Tässä tulee esille kontrollerin toiminta juuri tietovuon ohjaajana ja hallitsina, kun taas itse kääntäminen tapahtuu mallin kautta (Translation-mallilla julkinen translate-metodi). 
 
 \begin{sidewaysfigure}
     \centering
@@ -285,7 +285,7 @@ On huomattavaa, että juuri kontrolleri luo instanssin Translation-mallista käytt
 
 \section{Kehyksen ja sovelluksen arviointi}
 
-Sovelluskehyksenä Ruby on Rails on erittäin tarkka sen omista käytänneistä, kun sitä verrataan esimerkiksi toiseen erittäin suosittuun backend-sovelluskehykseen NodeJS:ään. NodeJS tarjoaa samalla tavalla kehyksen tuottaa web-palveluita, mutta se on rakenteellisesti paljon kevyempi ja vähemmän rajoittava. Toisaalta Ruby on Rails sopii hyvin aloitteleville ohjelmoijille sekä pienehköille start-up -henkisille yrityksille juuri sen käytänteiden vuoksi. Niitä noudattamalla pystytään todella nopeasti kehittämään palveluita asiakkaille.
+Sovelluskehyksenä Ruby on Rails on erittäin tarkka sen omista käytänneistä, kun sitä verrataan esimerkiksi toiseen erittäin suosittuun backend-sovelluskehykseen NodeJS:ään. NodeJS tarjoaa samalla tavalla kehyksen tuottaa web-palveluita, mutta se on rakenteellisesti paljon kevyempi ja vähemmän rajoittava. Toisaalta Ruby on Rails sopii hyvin aloitteleville ohjelmoijille sekä pienehköille start-up -henkisille yrityksille juuri sen käytänteiden vuoksi. Niitä noudattamalla pystytään todella nopeasti kehittämään palveluita asiakkaille samalla kaavalla.
 
 Kuitenkin muutama heikkous kehyksessä nousee esille. Näitä ovat muun muassa suoritusteho, sovelluksen saaminen verkkoon, legacy-järjestelmän kanssa kommunikointi sekä sovelluskehyksen tuoma rajoittuneisuus \cite{rorad}.
 
@@ -302,7 +302,7 @@ Hyvät puolet kehyksessä ovat selkeästi kehittämisen nopeus sekä konventioiden tu
 
 \subsubsection{Hyvät puolet}
 
-Kehyksen hyvät puolet tulevat melkein automaattisesti noudattamalla jopa toisinaan tiukkoja Railsin konventioita. Hyviin puoliin lukeutuvat muun muassa konventioiden kautta tuleva REST-rajapinta; nopea kehitys, joka sopii hyvin Agile-projekteihin; konventiot itsessään, jotka auttavat kehittäjiä siirtymään helposti Rails projektien välillä; kielenä Rubyn itsedokumentoiva tyyli sekä useimmat kehykseen liitettävät ulkopuoliset kirjastot ovat suurimmalta osin avointa lähdekoodia \cite{bitzesty}.
+Kehyksen hyvät puolet tulevat melkein automaattisesti noudattamalla jopa toisinaan tiukkoja Railsin konventioita. Hyviin puoliin lukeutuvat muun muassa konventioiden kautta tuleva REST-rajapinta; nopea kehitys, joka sopii hyvin Agile-projekteihin; konventiot itsessään, jotka auttavat kehittäjiä siirtymään helposti Rails projektien välillä; kielenä Rubyn itsedokumentoiva tyyli sekä useimmat kehykseen liitettävät ulkopuoliset kirjastot, jotka ovat suurimmalta osin avointa lähdekoodia \cite{bitzesty}.
 
 Rails on tullut suosituksi myös startup-yrityksissä. Tähän on ollut syynä pääosin kehyksen: koventiot, kehys on käytännössä ilmainen kirjastoja myöten, erittäin hyvä PaaS-tuki (Platform as a Service), gem-ideologia (riippuvuudet yhdessä tiedostossa ja niiden helppo hallinta) sekä Rails on alustana kasvava ja reagoi uusiin tarpeisiin web-ympäristössä jatkuvasti \cite{wsuror}. 
 
@@ -312,7 +312,7 @@ Rails on tullut suosituksi myös startup-yrityksissä. Tähän on ollut syynä pääosi
 
 \paragraph{Suoritustehon heikkous} 
 
-Ruby on itsessään tulkattava kieli, joten suoritusteholtaan se häviää käännettäville kielille esimerkkinä Java Spring. Toisaalta Ruby on Rails-kehyksen teho tulee tuottavuuden nopeudesta, mutta tuottavuus ei ratkaise yhtä Railsin suurinta ongelmaa; erittäin huonoa tukea säikeistämiselle. Tämä tuottaa paljon ongelmia, jos järjestelmän yhtäaikaiset käyttäjämäärät kasvavat suuriksi, koska säikeistämisen avulla ei pystytä tasapainottamaan syntynyttä kuormaa (load balance). Täten Ruby on Rails soveltuu melko huonosti sovelluksille, jossa nopeus on oltava suuri käyttäjämäärien ollessa myös suuria. Skaalautuuvus on myös tuottanut paljon puheita sekä puolesta, että vastaan \cite{rorsca}.
+Ruby on itsessään tulkattava kieli, joten suoritusteholtaan se häviää käännettäville kielille esimerkkinä Java Spring. Toisaalta Ruby on Rails -kehyksen teho tulee tuottavuuden nopeudesta, mutta tuottavuus ei ratkaise yhtä Railsin suurinta ongelmaa; erittäin huonoa tukea säikeistämiselle, joka johtuu Rubyn globaalista tulkitsemisen lukitsemisesta (global interpreter lock) \cite{mtmri}. Tämä tuottaa paljon ongelmia, jos järjestelmän yhtäaikaiset käyttäjämäärät kasvavat suuriksi, koska säikeistämisen avulla ei pystytä tasapainottamaan syntynyttä kuormaa (load balance). Täten Ruby on Rails soveltuu melko huonosti sovelluksille, jossa nopeus on oltava suuri myös silloin, kun käyttäjämäärät ovat suuria. Skaalautuuvus on myös tuottanut paljon puheita sekä puolesta, että vastaan \cite{rorsca}.
 
 \paragraph{Sovelluksen vaikea tuotantoo saattaminen} 
 
@@ -347,7 +347,7 @@ Muodostetut laatuskenaariot ovat luotu laatupuun avulla. Osa niistä on valittu  
 Näkymän vaihtaminen on kehyksessä todella helppoa kuten aiemmin on mainittu, mutta vain jos näkymän rakenne noudattelee perinteisempää web-sivustoa. Nykyaikaisen yhden sivun näkymän tekeminen vaatii paljon Javascript-yhteensopivuutta ja kehykseltä standardisointia JSON-rajapinnoille \cite{rorspi}. Tätä kuitenkin hankaloittaa hieman Rails-kehys ja sen vahva MVC-patterni. Kuitenkin tähänkin ongelmaan löytyy valmiiksi ulkoinen kirjasto (gem), jonka avulla ongelma saadaan ratkaistua. Tästä syystä skenaarion vaativuus on matala, mutta sen toteutuminen vaatii kuitenkin ylimääräistä työtä. 
 
 \paragraph{Vaihtaminen Unixista Windowsiin}
-Skenaario saattaa tulla eteen jo esimerkiksi silloin, kun projektissa on yksi kehittäjä, joka käyttää Windows-käyttöjärjestelmää. Jotta kehittäjä pystyisi jatkamaan projektia, niin tarvitaan todella suuri määrä konfigurointia projektiin Windowsia varten, koska suurin osa Rails-sovelluksista on tehty Unix-järjestelmän avulla. Tämä johtaa myös siihen, että harva ulkoinen kirjasto toimii enää ja jos projekti käyttää paljon ulkoisia kirjastoja, niin melkein jokaiselle on löydettävä vaihtoehto Windowsia varten. Tämä tuottaa todella paljon ylimääräistä työtä ja sen takia tälle skenaariolle on annettu korkeimmat mahdolliset arviot.
+Skenaario saattaa tulla eteen jo esimerkiksi silloin, kun projektissa on yksi kehittäjä, joka käyttää Windows-käyttöjärjestelmää. Jotta kehittäjä pystyisi jatkamaan projektia, niin tarvitaan todella suuri määrä konfigurointia projektiin Windowsia varten, koska suurin osa Rails-kirjastoista on tehty Unix-järjestelmää varten. Tämä johtaa siihen, että harva ulkoinen kirjasto toimii enää ja jos projekti käyttää paljon ulkoisia kirjastoja, niin melkein jokaiselle on löydettävä vaihtoehto Windowsia varten. Tämä tuottaa todella paljon ylimääräistä työtä ja sen takia tälle skenaariolle on annettu korkeimmat mahdolliset arviot.
 
 \paragraph{Kannan vaihtaminen SQLitestä MySQL:ään}
 Tietokannan vaihtaminen onnistuu Rails-kehyksellä jopa vain muutamalla komennolla \cite{soror}, mutta vain jos vanha kanta on seurannut kehyksen konventioita. Kehys on varautunut toimimaan useilla eri relaatiotietokannoilla, mutta esimerkiksi dokumenttikannat vaativat jo ulkoisia kirjastoja. Kuitenkin SQLite on hyvin lähellä MySQL-tietokantaa, joten vaihtaminen onnistuu erittäin kivuttomasti. Vaihtoa helpottaa myös aiemmin mainittu ActiveDirectory-patterni, joten kannan vaihto ei vaadi yhtään ylimääräistä sisäistä konfigurointia esimerkiksi kyselyiden näkökulmasta. Tämän takia vaativuus on skenaariossa matala ja työmäärä keskitasoa. Työmäärä saattaa nousta juuri konventioista poikkeamalla. 
@@ -357,7 +357,7 @@ Uudelleenkäytettävyyteen liittyvä skenaario on helppo toteuttaa Rails-kehyksestä
 
 \subsubsection{Skenaarioista johdetut päätelmät}
 
-Suurin riski kehyksessä on alustan vaihtaminen, koska kehys on sidottu hyvin vahvasti siihen käyttöjärjestelmään, jolla järjestelmän kehitys on aloitettu. Tämä heikentää todella paljon muokattavuutta, koska esimerkiksi jos järjestelmä täytyy siirtää eri palvelimien välillä, niin on otettava erittäin tarkasti huomioon millä käyttöjärjestelmällä palvelin pyörii. Tästä johtuvaa muunneltavuuden huonontumista voidaan estää ottamalla etukäteen selvää ulkoisten kirjastojen tuista tai käyttämällä mahdollisimman vähän ulkoisia kirjastoja. 
+Suurin riski kehyksessä on alustan vaihtaminen, koska kehys on sidottu hyvin vahvasti siihen käyttöjärjestelmään, jolla järjestelmän kehitys on aloitettu. Tämä heikentää todella paljon muokattavuutta, koska esimerkiksi jos järjestelmä täytyy siirtää eri palvelimien välillä, niin on otettava erittäin tarkasti huomioon millä käyttöjärjestelmällä palvelin pyörii; varsinkin jos kyseessä on Windows. Tästä johtuvaa muunneltavuuden huonontumista voidaan estää muunmuassa kartoittamalla sovellusaluetta tarkasti, ottamalla etukäteen selvää ulkoisten kirjastojen tuista tai käyttämällä mahdollisimman vähän ulkoisia kirjastoja. 
 
 Vahvaa MVC-patternia kehyksessä voidaan pitää herkkyyskohtana, koska niin moni kehyksen tarjoamista laadullisista ominaisuuksista perustuu tähän. Siitä poikkeaminen johtaa ongelmiin kehyksen konventioiden kanssa ja saattaa huonontaa merkittävästi järjestelmän yleistä muunneltavuutta. Konventioista luopuminen taas heikentää merkittävästi tätä laatuominaisuutta, mutta toisaalta konventiot voidaan laskea kuuluvan myös tasapainottelukohtaan, koska ne edistävät muunneltavuutta, mutta muunneltavuuden parantaminen heikentää suorituskykyä. Tästä esimerkkinä ActiveRecord joka luo joustavan rajapinnan tietokantaan, mutta, jonka muodostamat käskyt saattavat joskus olla hyvinkin suuria ja hitaita \cite{rorper}.
 

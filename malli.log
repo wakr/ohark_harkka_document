@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.21)  21 JAN 2016 18:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.21)  22 JAN 2016 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -581,13 +581,7 @@ Overfull \hbox (32.72266pt too wide) in paragraph at lines 278--279
  [][] 
  []
 
-[12] [13 <./images/sekvenssi.png>]
-Overfull \hbox (23.87587pt too wide) in paragraph at lines 305--306
-\T1/lmr/m/n/12 lii-tet-t‰-v‰t ul-ko-puo-li-set kir-jas-tot ovat suu-rim-mal-ta 
-osin avoin-ta l‰h-de-koo-dia [[]]. 
- []
-
-[14]
+[12] [13 <./images/sekvenssi.png>] [14]
 Overfull \hbox (3.32083pt too wide) in paragraph at lines 329--330
 \T1/lmr/m/n/12 Kehyst‰ ar-vioi-des-sa kes-ki-ty-t‰‰n t‰s-s‰ ra-por-tis-sa kah-t
 een laa-dul-li-seen te-ki-j‰‰n: muun-
@@ -633,41 +627,52 @@ Overfull \hbox (42.79694pt too wide) in paragraph at lines 15--19
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--30
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
+[]\T1/lmr/m/n/12 Multithreading in the MRI Ru-by In-terpre-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
+\T1/lmr/m/n/12 ter.  $\T1/lmtt/m/n/12 http : / / www . csinaction . com / 2014 
+/ 10 / 10 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
 []\T1/lmr/m/n/12 Active Record.  $\T1/lmtt/m/n/12 http : / / api . rubyonrails 
 . org / classes /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
 []\T1/lmr/m/n/12 Is Ru-by on Rails use-ful for a single pa-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
 \T1/lmr/m/n/12 ge applica-tion?  $\T1/lmtt/m/n/12 https : / / www . quora . com
  /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
 \T1/lmtt/m/n/12 Is-[]Ruby-[]on-[]Rails-[]useful-[]for-[]a-[]single-[]page-[]app
 lication$\T1/lmr/m/n/12 .
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 59--62
+Underfull \hbox (badness 1895) in paragraph at lines 65--68
 []\T1/lmr/m/n/12 Ruby on Rails Per-for-mance Tu-ning.  $\T1/lmtt/m/n/12 https :
  / / hackhands . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--68
+Underfull \hbox (badness 10000) in paragraph at lines 70--74
 []\T1/lmr/m/n/12 Using Rails with a le-gacy da-ta-ba-se sche-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--68
+Underfull \hbox (badness 10000) in paragraph at lines 70--74
 \T1/lmr/m/n/12 ma.  $\T1/lmtt/m/n/12 https : / / schneide . wordpress . com / 2
 014 / 03 / 10 /
  []
@@ -675,32 +680,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--68
 [19
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 80--84
+Underfull \hbox (badness 4859) in paragraph at lines 81--84
+[]\T1/lmr/m/n/12 Ruby De-fault Web Ser-ver.  $\T1/lmtt/m/n/12 https : / / devce
+nter . heroku . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--90
 []\T1/lmr/m/n/12 Convert a Ru-by on Rails app from sq-li-te to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--84
+Underfull \hbox (badness 10000) in paragraph at lines 86--90
 \T1/lmr/m/n/12 MySQL?  $\T1/lmtt/m/n/12 http : / / stackoverflow . com / questi
 ons / 1670154 /
  []
 
 ) [20] (./malli.aux) ) 
 Here is how much of TeX's memory you used:
- 5283 strings out of 493085
- 72446 string characters out of 6136917
+ 5284 strings out of 493085
+ 72453 string characters out of 6136917
  175339 words of memory out of 5000000
- 8627 multiletter control sequences out of 15000+600000
+ 8628 multiletter control sequences out of 15000+600000
  47943 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,36p,785b,1415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,36p,824b,1415s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/shar
 e/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/l
 m/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on malli.pdf (22 pages, 389935 bytes).
+Output written on malli.pdf (22 pages, 390441 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream

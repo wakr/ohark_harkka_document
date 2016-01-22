@@ -18,7 +18,7 @@
 \contentsline {subparagraph}{Action View}{10}
 \contentsline {subparagraph}{Active Model}{10}
 \contentsline {subparagraph}{Active Record}{10}
-\contentsline {subsection}{\numberline {2.1}K\"aytett\"av\"at suunnittelumallit}{11}
+\contentsline {subsection}{\numberline {2.1}Ohjelmistotason suunnittelumallit}{11}
 \contentsline {subsection}{\numberline {2.2}Kehyksen erikoistaminen sovelluskohtaisesti}{11}
 \contentsline {subsection}{\numberline {2.3}Sekvenssikaavio}{12}
 \contentsline {section}{\numberline {3}Kehyksen ja sovelluksen arviointi}{14}

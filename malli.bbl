@@ -1,4 +1,4 @@
-\begin{thebibliography}{rorh}
+\begin{thebibliography}{mtm}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
@@ -6,16 +6,22 @@
 \newcommand{\Capitalize}[1]{\uppercase{#1}}
 \newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
 
-\bibitem[AR]{ar}
+\bibitem[ARP]{ar}
 {Active Record -pattern}.
 \newblock \url{https://en.wikipedia.org/wiki/Active_record_pattern}.
 \newblock [28.12.2015]
 
-\bibitem[BITZESTY]{bitzesty}
+\bibitem[RRWI]{bitzesty}
 {Ruby on Rails: What It Is and Why We Use It For Web Applications}.
 \newblock
   \url{http://bitzesty.com/2014/01/10/ruby-on-rails-what-it-is-and-why-we-use-it-for-web-applications/}.
 \newblock [08.1.2016]
+
+\bibitem[MMRI]{mtmri}
+{Multithreading in the MRI Ruby Interpreter}.
+\newblock
+  \url{http://www.csinaction.com/2014/10/10/multithreading-in-the-mri-ruby-interpreter/}.
+\newblock [22.01.2015]
 
 \bibitem[RHTML]{rhtml}
 {Rails and HTML - RHTML}.
@@ -23,18 +29,18 @@
   \url{http://www.tutorialspoint.com/ruby-on-rails/rails-and-rhtml.htm}.
 \newblock [04.1.2016]
 
-\bibitem[RORAR]{rorar}
+\bibitem[AR]{rorar}
 {Active Record}.
 \newblock \url{http://api.rubyonrails.org/classes/ActiveRecord/Base.html}.
 \newblock [02.1.2016]
 
-\bibitem[RORSPI]{rorspi}
+\bibitem[IRRU]{rorspi}
 {Is Ruby on Rails useful for a single page application?}
 \newblock
   \url{https://www.quora.com/Is-Ruby-on-Rails-useful-for-a-single-page-application}.
 \newblock [11.1.2016]
 
-\bibitem[RORAPI]{rorapi}
+\bibitem[RFAP]{rorapi}
 {Rails for API only applications}.
 \newblock \url{https://github.com/rails-api/rails-api}.
 \newblock [11.1.2016]
@@ -44,55 +50,55 @@
 \newblock \url{http://rubyonrails.org/}.
 \newblock [28.12.2015]
 
-\bibitem[RORNC]{rornc}
+\bibitem[RARN]{rornc}
 {Ruby and Rails Naming Conventions}.
 \newblock \url{http://itsignals.cascadia.com.au/?p=7}.
 \newblock [19.01.2015]
 
-\bibitem[RORAD]{rorad}
+\bibitem[RRAD]{rorad}
 {Ruby on Rails Architectural Design}.
 \newblock
   \url{http://adrianmejia.com/blog/2011/08/11/ruby-on-rails-architectural-design/}.
 \newblock [30.12.2015]
 
-\bibitem[RORPER]{rorper}
+\bibitem[RRPT]{rorper}
 {Ruby on Rails Performance Tuning}.
 \newblock \url{https://hackhands.com/ruby-rails-performance-tuning/}.
 \newblock [11.1.2016]
 
-\bibitem[RORLEGACY]{rorlegacy}
+\bibitem[URWL]{rorlegacy}
 {Using Rails with a legacy database schema}.
 \newblock
   \url{https://schneide.wordpress.com/2014/03/10/using-rails-with-a-legacy-database-schema/}.
 \newblock [07.1.2016]
 
-\bibitem[RORSCA]{rorsca}
+\bibitem[WDTS]{rorsca}
 {Why Do They Say Rails Doesn't Scale?}
 \newblock \url{http://codefol.io/posts/why-do-they-say-rails-doesnt-scale}.
 \newblock [07.1.2016]
 
-\bibitem[RUBYSERVER]{rubyserver}
+\bibitem[RDWS]{rubyserver}
 {Ruby Default Web Server}.
 \newblock \url{https://devcenter.heroku.com/articles/ruby-default-web-server}.
 \newblock [04.1.2016]
 
-\bibitem[SOROR]{soror}
+\bibitem[CRRA]{soror}
 {Convert a Ruby on Rails app from sqlite to MySQL?}
 \newblock
   \url{http://stackoverflow.com/questions/1670154/convert-a-ruby-on-rails-app-from-sqlite-to-mysql}.
 \newblock [10.1.2016]
 
-\bibitem[WEBRICK]{webrick}
+\bibitem[WEBR]{webrick}
 {WEBrick}.
 \newblock \url{https://en.wikipedia.org/wiki/WEBrick}.
 \newblock [04.1.2016]
 
-\bibitem[WSUROR]{wsuror}
+\bibitem[WSUR]{wsuror}
 {Why Startups Use Ruby on Rails?}
 \newblock \url{http://www.nascenia.com/why-startups-use-ruby-on-rails/}.
 \newblock [08.1.2016]
 
-\bibitem[YANDEX]{yandex}
+\bibitem[YAPI]{yandex}
 {Yandex - Translator API}.
 \newblock \url{https://tech.yandex.com/translate/}.
 \newblock [07.11.2015]
