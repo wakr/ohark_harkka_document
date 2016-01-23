@@ -120,7 +120,7 @@ Yleisimpiä arkkitehtuurisia tyylejä ei sovelluskehyksestä suoraan löydy, koska k
 \paragraph{Model-View-Controller -patterni}
 Ruby on Rails:n Modelina toimii ActiveRecordin avulla käsiteltävät tietokantaobjektit. ActiveRecord huolehtii käytännössä koko toteutettavan järjestelmän logiikasta ja abstrahoi vahvan rajapinnan avulla konkreettista tietokantaa niin, että kehittäjän on esimerkiksi helppo vaihtaa tietokanta toiseen versioon sekä luoda uusia tietokantaobjekteja. 
 
-Kehyksen ActiveRecord itsessään toteuttaa Active Record-patternin \cite{ar}, joka määrittelee, että miten luokat ja tietokanta kuvautuu toisillensa. Railsissa tämä kuvautuminen on tehty niin, että tietokannan tietue on aina luokka ja taulut luokan kenttiä. Luokkien metodeilla usein muutetaankin vain ja ainoastaan tietokantataulun rivejä, jolloin olion sisäinen tila muuttuu. Luomassani projektissa uuden käännöksen ja sen tallentaminen tietokantaan on hyvin yksinkertaista tämän vuoksi, eikä kehittäjän tarvitse tietää, että taustalla pyörii SQLite tietokantana: 
+Kehyksen ActiveRecord itsessään toteuttaa Active Record-patternin \cite{ar}, joka määrittelee, että miten luokat ja tietokanta kuvautuu toisillensa. Railsissa tämä kuvautuminen on tehty niin, että tietokannan tietue on aina luokka ja taulut luokan kenttiä. Luokkien metodeilla usein muutetaankin vain ja ainoastaan tietokantataulun rivejä, jolloin olion sisäinen tila muuttuu. Luomassani projektissa uuden käännöksen luominen ja sen tallentaminen tietokantaan on hyvin yksinkertaista tämän vuoksi, eikä kehittäjän tarvitse tietää, että taustalla pyörii SQLite tietokantana: 
 \newline
 \lstset{language=Ruby}  
 \begin{lstlisting}[frame=single]  % Start your code-block
@@ -142,9 +142,9 @@ Translation.all.where language_from: "fi"
 \end{lstlisting}
 
 
-Viewin vastuuta Ruby on Railsissä hoitaa ActionView, joka on näkymä tietokannan datalle. Kaikessa yksinkertaisuudessaan siis näytettävä HTML-sivu käyttäjälle. Se ladataan kontrollerin toimesta oikeasta kansiosta oikealla hetkellä ja käytännössä se onkin HTML-tiedosto, joka sisältää upotettua Ruby-koodia. Tämä Ruby-koodi on suurimmaksi osaksi toiminnallisuutta näyttää vastaavan mallin tietoja HTML-muodossa. Esimerkiksi sovellukseni kaikki tehdyt käännökset näyttävä sivu on suurimmaksi osaksi upotettua Ruby-koodia, joka iteroi tietokannan kaikki käännökset ja hakee niiden tietokantataulut taulukkoon näytettäväksi dataksi. 
+Viewin vastuuta Ruby on Railsissä hoitaa ActionView, joka on näkymä tietokannan datalle. Kaikessa yksinkertaisuudessaan siis näytettävä HTML-sivu käyttäjälle. Se ladataan kontrollerin toimesta oikeasta kansiosta oikealla hetkellä ja käytännössä se onkin HTML-tiedosto, joka sisältää upotettua Ruby-koodia. Tämä Ruby-koodi on suurimmaksi osaksi toiminnallisuutta näyttää mallin tietoja HTML-muodossa. Esimerkiksi sovellukseni kaikki tehdyt käännökset näyttävä sivu on suurimmaksi osaksi upotettua Ruby-koodia, joka iteroi tietokannan kaikki käännökset ja hakee niiden tietokantataulut taulukkoon näytettäväksi dataksi. 
 
-Controlleria kutsutaan ActionControlleriksi Ruby on Railsissa ja se vastaa koko järjestelmään kohdistuvien pyyntöjen reitittämisestä sekä yleisestä datan välityksestä. Omassa järjestelmässäni TranslationsController vastaa kaikesta käännöksiin liittyvästä toiminnallisuudesta, kuten esimerkiksi aloitussivun näyttämisen logiikasta. Railsissa konventiot tulevatkin vahvasti esille, koska Translation-luokasta vastaavan kontrollerin on oltava samanniminen kuin luokkakin, mutta monikossa (englannin s-päätteellä). Tähän kontrolleriin on myös kirjoitettu kaikki mahdolliset toiminnot, joita mallille on mahdollista tehdä ja näiden avulla rakennetaan myös toimintoja vastaavat näkymät.
+Controlleria kutsutaan ActionControlleriksi Ruby on Railsissa ja se vastaa koko järjestelmään kohdistuvien pyyntöjen reitittämisestä sekä yleisestä datan välityksestä. Omassa järjestelmässäni TranslationsController vastaa kaikesta käännöksiin liittyvästä toiminnallisuudesta, kuten esimerkiksi aloitussivun näyttämisen logiikasta. 
 
 \paragraph{REST-rajapinta}
 
@@ -169,10 +169,11 @@ translation     GET  /translations/:id(.:format) translations#show
 
 
 \paragraph{Convention over Configuration}
+Railsissa konventiot tulevat vahvasti esille, koska esimerkiksi Translator-projektin Translation-luokasta vastaavan kontrollerin on oltava samanniminen kuin luokkakin, mutta monikossa (englannin s-päätteellä). Tähän kontrolleriin on myös kirjoitettu kaikki mahdolliset toiminnot, joita mallille on mahdollista tehdä ja näiden avulla rakennetaan myös toimintoja vastaavat näkymät.
 
-Konventiot ovat tärkeässä roolissa Ruby on Rails -sovelluskehyksessä. Ne suoraviivaistavat koko toteutettavan järjestelmän arkkitehtuuria, vähentävät ohjelmakoodin määrää, vähentävät toistoa ja tuovat yhtenäisen toimintatavan, jonka avulla jokainen Ruby on Rails:llä tuotettu järjestelmä on hyvin samankaltainen muiden Rails-sovelluskehyksellä tuotettujen kanssa. Esimerkiksi nimeämiseen liittyvät konventiot ovat erittäin näkyvässä roolissa ja osittain jopa pakollisiakin \cite{rornc}. Nimeämiset näkyvät projektissani esimerkiksi, että projektini tietokantataulussani 'translations' sijaitsevat kaikki Translation-mallin ilmentymät, kontrolleri nimeltä 'TranslationsController' huolehtii näiden mallien päivittämisestä sekä oikeiden näkymien näyttämisestä. 
+Konventiot ovatkin yksi keskeisimmistä osista Ruby on Rails -sovelluskehyksessä. Ne suoraviivaistavat koko toteutettavan järjestelmän arkkitehtuuria, vähentävät ohjelmakoodin määrää, vähentävät toistoa ja tuovat yhtenäisen toimintatavan, jonka avulla jokainen Ruby on Railsilla tuotettu järjestelmä on hyvin samankaltainen muiden Rails-sovelluskehyksellä tuotettujen kanssa. Esimerkiksi nimeämiseen liittyvät konventiot ovat erittäin näkyvässä roolissa ja osittain jopa pakollisiakin \cite{rornc}. Nimeämiset näkyvät projektissani esimerkiksi, että projektini tietokantataulussani 'translations' sijaitsevat kaikki Translation-mallin ilmentymät, kontrolleri nimeltä 'TranslationsController' huolehtii näiden mallien päivittämisestä sekä oikeiden näkymien näyttämisestä. 
 
-Nimeämiskonvention avulla sovelluskehys osaa automaattisesti ohjata sovelluksen toimintaa haluttuun suuntaa, jolloin tarve monimutkaisille konfiguraatio-tiedoistoille vähenee. Ruby on Rails siis pinnan alla automaattisesti päättelee nimien perusteella, että kenen vastuulle tiettyyn pyyntöön vastaamisen kuuluukaan.
+Nimeämiskonvention avulla sovelluskehys osaa automaattisesti ohjata sovelluksen toimintaa haluttuun suuntaan, jolloin tarve monimutkaisille konfiguraatio-tiedoistoille vähenee. Ruby on Rails siis pinnan alla automaattisesti päättelee nimien perusteella, että kenen vastuulle tiettyyn pyyntöön vastaamisen kuuluukaan.
 
 \paragraph{Don't Repeat Yourself}
 
@@ -290,7 +291,7 @@ Sovelluskehyksenä Ruby on Rails on erittäin tarkka sen omista käytänneistä, kun 
 Kuitenkin muutama heikkous kehyksessä nousee esille. Näitä ovat muun muassa suoritusteho, sovelluksen saaminen verkkoon, legacy-järjestelmän kanssa kommunikointi sekä sovelluskehyksen tuoma rajoittuneisuus \cite{rorad}.
 
 
-\paragraph{Sopiiko suunniteltu arkkitehtuuri järjestelmälle?}
+\paragraph{Arkkitehtuurin sopivuus järjestelmälle}
 
 Kehys ja kehyksestä johdettu MVC-mallinen arkkitehtuuri sopii todella hyvin tekemälleni järjestelmälle. Se on todella helposti muokattavissa sekä erilaisten näkymien/tietokannan vaihtaminen onnistuu hyvinkin nopeasti. 
 

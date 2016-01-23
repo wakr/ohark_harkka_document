@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.21)  22 JAN 2016 17:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.1.21)  23 JAN 2016 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -489,26 +489,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--163
 
  []
 
-[4]
 
 Package Listings Warning: Text dropped after begin of listing on input line 163
 .
 
-
-Overfull \hbox (1.30385pt too wide) in paragraph at lines 175--176
-\T1/lmr/m/n/12 toi-min-taa ha-lut-tuun suun-taa, jol-loin tar-ve mo-ni-mut-kai-
-sil-le konfiguraatio-tiedoistoille
+[4]
+Overfull \hbox (7.83183pt too wide) in paragraph at lines 176--177
+\T1/lmr/m/n/12 toi-min-taa ha-lut-tuun suun-taan, jol-loin tar-ve mo-ni-mut-kai
+-sil-le konfiguraatio-tiedoistoille
  []
 
 [5] <images/RubyOnRailsOverArch.png, id=34, 515.9275pt x 361.35pt>
 File: images/RubyOnRailsOverArch.png Graphic file (type png)
 
 <use images/RubyOnRailsOverArch.png>
-Package pdftex.def Info: images/RubyOnRailsOverArch.png used on input line 195.
+Package pdftex.def Info: images/RubyOnRailsOverArch.png used on input line 196.
 
 (pdftex.def)             Requested size: 320.0935pt x 224.19458pt.
 
-Overfull \hbox (8.8288pt too wide) in paragraph at lines 203--204
+Overfull \hbox (8.8288pt too wide) in paragraph at lines 204--205
  \T1/lmr/bx/n/12 Asiakas-palvelin[] \T1/lmr/m/n/12 Kom-mu-ni-koin-ti kaik-kien 
 kom-po-nent-tien v‰-lil-l‰ ta-pah-tuu asiakas-
  []
@@ -518,25 +517,25 @@ kom-po-nent-tien v‰-lil-l‰ ta-pah-tuu asiakas-
 File: images/RubyCommunication.png Graphic file (type png)
 
 <use images/RubyCommunication.png>
-Package pdftex.def Info: images/RubyCommunication.png used on input line 209.
+Package pdftex.def Info: images/RubyCommunication.png used on input line 210.
 (pdftex.def)             Requested size: 426.79135pt x 78.39006pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 209--210
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 210--211
  [] 
  []
 
 [7 <./images/RubyCommunication.png>]
-Overfull \hbox (1.86174pt too wide) in paragraph at lines 216--216
+Overfull \hbox (1.86174pt too wide) in paragraph at lines 217--217
 []\T1/lmr/bx/n/17.28 Yleisarkkitehtuuri ja kes-kei-sim-m‰t va-ri-aa-tio-pis-
  []
 
 <images/RoRMVC.png, id=44, 789.95125pt x 540.0175pt>
 File: images/RoRMVC.png Graphic file (type png)
  <use images/RoRMVC.png>
-Package pdftex.def Info: images/RoRMVC.png used on input line 221.
+Package pdftex.def Info: images/RoRMVC.png used on input line 222.
 (pdftex.def)             Requested size: 426.79135pt x 291.76166pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 221--222
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 222--223
  [] 
  []
 
@@ -545,27 +544,27 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 221--222
 File: images/RorSisarakenne.png Graphic file (type png)
 
 <use images/RorSisarakenne.png>
-Package pdftex.def Info: images/RorSisarakenne.png used on input line 231.
+Package pdftex.def Info: images/RorSisarakenne.png used on input line 232.
 (pdftex.def)             Requested size: 469.47343pt x 458.08438pt.
 
-Overfull \hbox (49.48207pt too wide) in paragraph at lines 231--232
+Overfull \hbox (49.48207pt too wide) in paragraph at lines 232--233
  [] 
  []
 
 [9 <./images/RorSisarakenne.png>]
-Overfull \hbox (2.07982pt too wide) in paragraph at lines 251--252
+Overfull \hbox (2.07982pt too wide) in paragraph at lines 252--253
 \T1/lmr/m/n/12 RHTML-muotoa. RHTML on muo-dos-tet-tua HTML-koodia, jos-sa on up
 o-tet-tua ruby-
  []
 
 
-Overfull \hbox (3.3452pt too wide) in paragraph at lines 254--255
+Overfull \hbox (3.3452pt too wide) in paragraph at lines 255--256
  \T1/lmr/bx/n/12 Ac-ti-ve Mo-del[] \T1/lmr/m/n/12 M‰‰-rit-te-lee ra-ja-pin-nan 
 edel-l‰ mai-ni-tun Ac-tion Pack-kokonaisuuden
  []
 
 
-Overfull \hbox (5.28561pt too wide) in paragraph at lines 257--258
+Overfull \hbox (5.28561pt too wide) in paragraph at lines 258--259
  \T1/lmr/bx/n/12 Ac-ti-ve Record[] \T1/lmr/m/n/12 Huo-leh-tii da-tan muok-kauk-
 ses-ta ob-jek-tien kaut-ta ja tar-jo-aa CRUD-
  []
@@ -574,15 +573,15 @@ ses-ta ob-jek-tien kaut-ta ja tar-jo-aa CRUD-
 File: images/sekvenssi.png Graphic file (type png)
 
 <use images/sekvenssi.png>
-Package pdftex.def Info: images/sekvenssi.png used on input line 278.
+Package pdftex.def Info: images/sekvenssi.png used on input line 279.
 (pdftex.def)             Requested size: 687.13603pt x 275.76924pt.
 
-Overfull \hbox (32.72266pt too wide) in paragraph at lines 278--279
+Overfull \hbox (32.72266pt too wide) in paragraph at lines 279--280
  [][] 
  []
 
 [12] [13 <./images/sekvenssi.png>] [14]
-Overfull \hbox (3.32083pt too wide) in paragraph at lines 329--330
+Overfull \hbox (3.32083pt too wide) in paragraph at lines 330--331
 \T1/lmr/m/n/12 Kehyst‰ ar-vioi-des-sa kes-ki-ty-t‰‰n t‰s-s‰ ra-por-tis-sa kah-t
 een laa-dul-li-seen te-ki-j‰‰n: muun-
  []
@@ -591,15 +590,15 @@ een laa-dul-li-seen te-ki-j‰‰n: muun-
 File: images/laatupuu.png Graphic file (type png)
 
 <use images/laatupuu.png>
-Package pdftex.def Info: images/laatupuu.png used on input line 338.
+Package pdftex.def Info: images/laatupuu.png used on input line 339.
 (pdftex.def)             Requested size: 426.79135pt x 311.43947pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 338--339
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 339--340
  [] 
  []
 
 [16 <./images/laatupuu.png>]
-Overfull \hbox (4.1693pt too wide) in paragraph at lines 350--351
+Overfull \hbox (4.1693pt too wide) in paragraph at lines 351--352
 \T1/lmr/m/n/12 si sil-loin, kun pro-jek-tis-sa on yk-si ke-hit-t‰-j‰, jo-ka k‰y
 t-t‰‰ Windows-k‰yttˆj‰rjestelm‰‰.
  []
@@ -700,7 +699,7 @@ ons / 1670154 /
 Here is how much of TeX's memory you used:
  5284 strings out of 493085
  72453 string characters out of 6136917
- 175339 words of memory out of 5000000
+ 187339 words of memory out of 5000000
  8628 multiletter control sequences out of 15000+600000
  47943 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -711,7 +710,7 @@ m/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on malli.pdf (22 pages, 390441 bytes).
+Output written on malli.pdf (22 pages, 389897 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream

@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {2.2}Kehyksen erikoistaminen sovelluskohtaisesti}{11}
 \contentsline {subsection}{\numberline {2.3}Sekvenssikaavio}{12}
 \contentsline {section}{\numberline {3}Kehyksen ja sovelluksen arviointi}{14}
-\contentsline {paragraph}{Sopiiko suunniteltu arkkitehtuuri j\"arjestelm\"alle?}{14}
+\contentsline {paragraph}{Arkkitehtuurin sopivuus j\"arjestelm\"alle}{14}
 \contentsline {subsection}{\numberline {3.1}Hyv\"at ja huonot puolet}{14}
 \contentsline {subsubsection}{\numberline {3.1.1}Hyv\"at puolet}{14}
 \contentsline {subsubsection}{\numberline {3.1.2}Huonot puolet}{15}
